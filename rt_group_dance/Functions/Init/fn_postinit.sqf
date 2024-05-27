@@ -1,4 +1,4 @@
-/** Scripts Works Only with Ace */
+/** Script Works Only with Ace */
 if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 
 [] spawn {

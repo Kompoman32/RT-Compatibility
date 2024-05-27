@@ -5,17 +5,17 @@ class CfgMods
 
 class CfgPatches
 {
-    class RT_Utils
+    class RT_Support
     {
         // Meta information for editor
-        name = "RT Compatibility - Utils";
+        name = "RT Compatibility - Support";
         author = "Kompoman32";
 
         // Minimum compatible version. When the game's version is lower, pop-up warning will appear when launching the game. Note: was disabled on purpose some time late into Arma 2: OA.
         requiredVersion = 1.60;
         // Required addons, used for setting load order. (CfgPatches classname NOT PBO filename!)
         // When any of the addons are missing, a pop-up warning will appear when launching the game.
-        requiredAddons[] = {"a3_data_f_mod_loadorder", "cba_events"};
+        requiredAddons[] = {"RT_Utils"};
         // List of objects (CfgVehicles classes) contained in the addon. Important also for Zeus content (units and groups) unlocking.
         units[] = {};
         // List of weapons (CfgWeapons classes) contained in the addon.
@@ -28,28 +28,26 @@ class CfgPatches
 
 class CfgFunctions
 {
-    class RT_Utils
+    class RT_Support
     {
-        class Utils
+        class SUpport
         {
-            file = "rt\utils\Functions\utils";
-            class hasAce
+            file = "rt\spectator\Functions\Support";
+            class expressArtillery
             {
             };
-            class dontHasAce
+        };
+
+        class Init
+        {
+            file = "rt\spectator\Functions\Init";
+            class vars
             {
+                preInit = 1;
             };
-            class hasDLC
+            class postinit
             {
-            };
-            class waitUntilPlayerInit
-            {
-            };
-            class waitUntilTime
-            {
-            };
-            class timer
-            {
+                postInit = 1;
             };
         };
     };
