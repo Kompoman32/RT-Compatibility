@@ -1,0 +1,1 @@
+!([] call RT_UTILS_fnc_hasAce)

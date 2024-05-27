@@ -1,0 +1,26 @@
+// Check for specific mods and add their animations to the list
+// ace extension animations
+if (isClass (configFile >> "CfgPatches" >> "KKA3_ACE_Extension_Anim")) then {
+    PHEN_BigAnimationlist append ["kka3_russiandance", "kka3_robotdance", "kka3_hiphopdance", "kka3_crazydrunkdance", "kka3_dubstepdance", "kka3_nightclubdance", "kka3_Dance", "kka3_Crazy_Dance", "kka3_dubstepPop", "kka3_DuoIvan"];
+};
+
+// ADDED
+// TSP animate mod
+// if (isClass (configFile >> "CfgPatches" >> "tsp_animate")) then {
+//     PHEN_BigAnimationlist append ["a2_duoivan", "a2_duostefan", "a2_stefan", "a2_zozo", "a2_metal"];
+// };
+
+// polpox reimported base games anims
+//"AA_ActsPercMstpSnonWnonDnon_DancingStefan","AA_ActsPercMstpSnonWnonDnon_DancingDuoStefan","AA_ActsPercMstpSnonWnonDnon_DancingDuoIvan","Acts_ZozinoDancing","Acts_MadMetalDancing"
+
+// ADDED
+// webs IMS
+// if (isClass (configFile >> "CfgPatches" >> "WBK_IMS_ANIMS_2")) then {
+//     PHEN_BigAnimationlist append ["WBK_Secretanim_Dance"];
+// };
+
+// NOT WORKING
+// xnooz, pack animtions
+// if (isClass (configFile >> "CfgPatches" >> "Xnooz_Anim")) then {
+//     PHEN_BigAnimationlist append ["xz_anime_fornite"];
+// };
