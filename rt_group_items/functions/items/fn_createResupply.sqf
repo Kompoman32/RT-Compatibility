@@ -18,9 +18,9 @@ _this spawn {
 		private _handgunMagazine = (handgunMagazine _x) select 0;
 
 		{
-			_x params ["_slot", "_num"];
-			if (!(isNil "_slot")) then {
-				_ammoBox addMagazineCargoGlobal [_x, _num]
+			_x params ["_magName", "_num"];
+			if (!(isNil "_magName")) then {
+				_ammoBox addMagazineCargoGlobal [_magName, _num]
 			}
 		} forEach [
 			[_primaryWeaponMagazine, _numPrim],
