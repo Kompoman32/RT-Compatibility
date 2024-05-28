@@ -1,4 +1,5 @@
 #include "CfgPatches.hpp"
+#include "CfgEventHandlers.hpp"
 
 class CfgFunctions
 {
@@ -9,19 +10,6 @@ class CfgFunctions
             file = "rt\support\Functions\Support";
             class expressArtillery
             {
-            };
-        };
-
-        class Init
-        {
-            file = "rt\support\Functions\Init";
-            class vars
-            {
-                preInit = 1;
-            };
-            class postinit
-            {
-                postInit = 1;
             };
         };
     };

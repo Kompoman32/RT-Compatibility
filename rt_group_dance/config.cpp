@@ -1,5 +1,6 @@
 #include "CfgPatches.hpp"
 #include "CfgMoves.hpp"
+#include "CfgEventHandlers.hpp"
 
 class CfgFunctions
 {
@@ -18,18 +19,5 @@ class CfgFunctions
             {
             };
         };
-
-        class Init
-        {
-            file = "rt\dance\Functions\Init";
-            class vars
-            {
-                preInit = 1;
-            };
-            class postinit
-            {
-                postInit = 1;
-            };
-        }
     };
 };

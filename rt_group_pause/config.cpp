@@ -1,4 +1,5 @@
 #include "CfgPatches.hpp"
+#include "CfgEventHandlers.hpp"
 
 class CfgFunctions
 {
@@ -14,18 +15,5 @@ class CfgFunctions
             {
             };
         };
-
-        class Init
-        {
-            file = "rt\pause\Functions\Init";
-            class vars
-            {
-                preInit = 1;
-            };
-            class postinit
-            {
-                postInit = 1;
-            };
-        }
     };
 };

@@ -1,4 +1,5 @@
 #include "CfgPatches.hpp"
+#include "CfgEventHandlers.hpp"
 
 class CfgPatches
 {
