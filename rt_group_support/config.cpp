@@ -30,9 +30,9 @@ class CfgFunctions
 {
     class RT_Support
     {
-        class SUpport
+        class Support
         {
-            file = "rt\spectator\Functions\Support";
+            file = "rt\support\Functions\Support";
             class expressArtillery
             {
             };
@@ -40,7 +40,7 @@ class CfgFunctions
 
         class Init
         {
-            file = "rt\spectator\Functions\Init";
+            file = "rt\support\Functions\Init";
             class vars
             {
                 preInit = 1;

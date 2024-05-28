@@ -10,7 +10,7 @@ if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 		if (leader player != player) exitWith {};
 		if (_ammo != "SmokeShellRed" and (_ammo != "G_40mm_SmokeRed")) exitWith {};
 
-		[_projectile] call RT_SUPPORT_fnc_expressArtillery;
+		[_projectile] spawn RT_SUPPORT_fnc_expressArtillery;
 	}] call CBA_fnc_addEventHandler;
 
 	player setVariable [RT_SUPPORT_VAR_FIRED_HANDLER, _handler];
