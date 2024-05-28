@@ -1,0 +1,1 @@
+*.hpp, *.sqf, *.rtm, *.paa, *ogg
