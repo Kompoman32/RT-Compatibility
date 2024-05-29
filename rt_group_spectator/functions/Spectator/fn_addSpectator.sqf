@@ -4,7 +4,9 @@ if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 /** Only if real player */
 if (!hasinterface) exitwith {};
 
-[] spawn {
+// run on Local in Sheduled
+if ([_this, true, false] call RT_Utils_fnc_callByScriptName) exitWith {};
+
 	[] call RT_UTILS_fnc_waitUntilPlayerInit;
 	waitUntil {!(isNull findDisplay 46)};
     
@@ -48,4 +50,3 @@ if (!hasinterface) exitwith {};
 	_ctrl ctrlCommit 0;
 
 	player setVariable [RT_SPECTATOR_VAR_HINT_CTRL, _ctrl];
-}

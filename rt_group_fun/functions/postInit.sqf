@@ -1,23 +1,31 @@
 /** Only if real player */
 if (!hasInterface) exitwith {};
+/** Script Works Only with Ace */
+if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
+
+// run on Local in Sheduled
+if ([_this, true, false] call RT_Utils_fnc_callByScriptName) exitWith {};
 
 params ["_event", "_JIP"];
 
-private _handler = ["ace_glassesCracked", {
+[] call RT_UTILS_fnc_waitUntilPlayerInit;
+
+if (_JIP) then {
+	[player, "ace_glassesCracked", RT_SPECTATOR_VAR_KILLED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
+	[player, "ace_firedPlayer", RT_FUN_VAR_FIRED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
+};
+
+[player, "ace_glassesCracked", RT_SPECTATOR_VAR_KILLED_HANDLER, {
 	params ["_unit"];
 
 	if (!(isPlayer _unit)) exitWith {};
 	if (goggles _unit !=  "G_Goggles_VR") exitWith {};
 	
 	playSoundUI ["RTBoom"];
-}] call CBA_fnc_addEventHandler;
+}] call Rt_Utils_fnc_addCBAEventhandler;
 
-player setVariable [RT_FUN_VAR_GLASSES_CRACKED, _handler];
 
-[] spawn {
-	[] call RT_UTILS_fnc_waitUntilPlayerInit;
-
-	private _handler = ["ace_firedPlayer", {
+[player, "ace_firedPlayer", RT_FUN_VAR_FIRED_HANDLER, {
 		_this spawn {
 			private _ammo = _this select 4;
 			private _projectile = _this select 6;
@@ -66,7 +74,4 @@ player setVariable [RT_FUN_VAR_GLASSES_CRACKED, _handler];
 			};
 		}
 
-	}] call CBA_fnc_addEventHandler;
-
-	player setVariable [RT_FUN_VAR_FIRED_HANDLER, _handler];
-}
+	}] call Rt_Utils_fnc_addCBAEventhandler;

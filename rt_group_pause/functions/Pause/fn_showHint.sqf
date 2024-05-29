@@ -12,6 +12,9 @@
 	* [false, false] call RT_Utils_fnc_showStopStartHint;
 */
 
+/** Only local and not in local server */
+if (!hasInterface || isServer) exitwith {};
+
 params [["_showPauseHint", false], ["_showResumeHint", true]];
 
 IDC_STOPSTART = 9999;

@@ -15,10 +15,17 @@
 	missionNamespace setVariable [RT_PAUSE_VAR_IGNORE_UNITS, [zeus]];
 */
 
+/** Only local and not in local server */
+if (!hasInterface || isServer) exitwith {};
+
 params [["_stopThisShit", false], ["_ignoreUnits", missionNamespace getVariable [RT_PAUSE_VAR_IGNORE_UNITS, []]]];
 
+private _allCuratorsUnits = allCurators apply {getAssignedCuratorUnit _x};
+
+_ignoreUnits = _ignoreUnits + _allCuratorsUnits;
+
 // Проверка на isServer и _ignoreUnits
-if (isServer || (_ignoreUnits findIf { _x == player } > -1)) exitWith {};
+if (_ignoreUnits findIf { _x == player } > -1) exitWith {};
 
 // Показываем текст паузы
 [_stopThisShit] call RT_Pause_fnc_showHint;

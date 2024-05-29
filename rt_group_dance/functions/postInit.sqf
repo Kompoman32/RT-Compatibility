@@ -1,17 +1,18 @@
 /** Script Works Only with Ace */
 if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 
-[] spawn {
+// run on Local in Sheduled
+if ([_this, true, false] call RT_Utils_fnc_callByScriptName) exitWith {};
+
 	[] call RT_UTILS_fnc_waitUntilPlayerInit;
 
-	private _handler = ["ace_interactMenuClosed", {
+	// Отключение танцев при закрытии ACE Menu
+	[player, "ace_interactMenuClosed", RT_DANCE_VAR_CHECK_HANDLER, {
 		// Проверям что есть танцы
 		if (!([player] call RT_Dance_fnc_isDancing))  exitWith {};
 
 		[player] call RT_Dance_fnc_StopDance;
-	}] call CBA_fnc_addEventHandler;
-
-	player setVariable [RT_DANCE_VAR_CHECK_HANDLER, _handler];
+	}] call Rt_Utils_fnc_addCBAEventhandler;
 
 	// Creating Actions Recursively
 	private _createDances = {
@@ -94,4 +95,3 @@ if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 
 	_action = ["RT_DANCE_STOP", "Stop Dancing!", "", _code, _condition] call ace_interact_menu_fnc_createAction;
 	[player, 1, ["ACE_SelfActions","RT_DANCE_MAIN"], _action] call ace_interact_menu_fnc_addActionToObject;
-}
