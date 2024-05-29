@@ -1,6 +1,8 @@
 /** 
   * Calls current function (gets by _fnc_scriptNameParent) in call or spawn on Server or on Local
   * 
+  * ATTENTION: dont use it in CBA event handlers
+  * 
   * _arguments - arguments goes to script (usually just use _this)
   * _spawn - use Sheduled environment or not (default: false)
   * _onServer - should call/spawn on Server (default: false)
@@ -16,7 +18,14 @@
   * @returns Boolean - means you need to interrupt your current script, this function will call or spawn another your function unstance
   */
 
+if ( ["CBA_fnc_", _fnc_scriptNameParent] call BIS_fnc_inString) exitWith {
+	diag_log text "[RT_GROUP] ERROR: You cant call RT_Utils_fnc_callByScriptName in CBA functions";
+	true
+};
+
 params ["_arguments", ["_spawn", false], ["_onServer", false], ["_JIP", false]];
+
+diag_log format ["fn_callByScriptName: %1", [_this, _fnc_scriptNameParent, _fnc_scriptName] ];
 
 if (isServer && !_onServer) then {
 	_onServer = true;
@@ -32,7 +41,7 @@ if (isServer && !_onServer) then {
 	TRUE	TRUE	FALSE	TRUE		_onServer => true
 	TRUE	TRUE	TRUE	TRUE
 */
-if (canSuspend === _spawn && isServer === _onServer) exitWith {false};
+if (canSuspend == _spawn && isServer == _onServer) exitWith {false};
 
 /*
 	spawn

@@ -14,6 +14,9 @@ class CfgFunctions
             class removeSpectator
             {
             };
+            class initServer
+            {
+            };
         };
     };
 };

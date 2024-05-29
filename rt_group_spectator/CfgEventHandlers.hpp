@@ -13,6 +13,12 @@ class Extended_PreInit_EventHandlers {
 
 class Extended_PostInit_EventHandlers {
     class RT_Spectator {
-        init = "call compileScript ['rt\spectator\functions\postInit.sqf']; call compileScript ['rt\spectator\functions\init\fn_checkSpectatorUnits.sqf']; call compileScript ['rt\spectator\functions\init\fn_keyHandler.sqf']";
+        init = "call compileScript ['rt\spectator\functions\postInit.sqf']";
+    };
+    class RT_Spectator_CheckUnits {
+        init = "call compileScript ['rt\spectator\functions\init\fn_checkSpectatorUnits.sqf']";
+    };
+    class RT_Spectator_KeyHandler {
+        init = "call compileScript ['rt\spectator\functions\init\fn_keyHandler.sqf']";
     };
 };

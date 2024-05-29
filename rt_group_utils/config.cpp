@@ -26,6 +26,9 @@ class CfgFunctions
             class addCBAEventhandler
             {
             };
+            class addDisplayEventhandler
+            {
+            };
             class removeScripthandler
             {
             };

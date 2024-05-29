@@ -3,29 +3,23 @@ if (!hasInterface) exitwith {};
 /** Script Works Only with Ace */
 if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 
-// run on Local in Sheduled
-if ([_this, true, false] call RT_Utils_fnc_callByScriptName) exitWith {};
+_this spawn {
+	[] call RT_UTILS_fnc_waitUntilPlayerInit;
 
-params ["_event", "_JIP"];
-
-[] call RT_UTILS_fnc_waitUntilPlayerInit;
-
-if (_JIP) then {
 	[player, "ace_glassesCracked", RT_SPECTATOR_VAR_KILLED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
 	[player, "ace_firedPlayer", RT_FUN_VAR_FIRED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
-};
 
-[player, "ace_glassesCracked", RT_SPECTATOR_VAR_KILLED_HANDLER, {
-	params ["_unit"];
+	[player, "ace_glassesCracked", RT_SPECTATOR_VAR_KILLED_HANDLER, {
+		params ["_unit"];
 
-	if (!(isPlayer _unit)) exitWith {};
-	if (goggles _unit !=  "G_Goggles_VR") exitWith {};
-	
-	playSoundUI ["RTBoom"];
-}] call Rt_Utils_fnc_addCBAEventhandler;
+		if (!(isPlayer _unit)) exitWith {};
+		if (goggles _unit !=  "G_Goggles_VR") exitWith {};
+		
+		playSoundUI ["RTBoom"];
+	}] call Rt_Utils_fnc_addCBAEventhandler;
 
 
-[player, "ace_firedPlayer", RT_FUN_VAR_FIRED_HANDLER, {
+	[player, "ace_firedPlayer", RT_FUN_VAR_FIRED_HANDLER, {
 		_this spawn {
 			private _ammo = _this select 4;
 			private _projectile = _this select 6;
@@ -75,3 +69,4 @@ if (_JIP) then {
 		}
 
 	}] call Rt_Utils_fnc_addCBAEventhandler;
+}

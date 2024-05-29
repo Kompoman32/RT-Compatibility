@@ -3,6 +3,8 @@ if ([_this, true, true] call RT_Utils_fnc_callByScriptName) exitWith {};
 
 [] call RT_UTILS_fnc_waitUntilTime;
 
+[missionNameSpace, "ace_unconscious", RT_SPECTATOR_VAR_UNCOSCIOUS_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
+
 [missionNameSpace, "ace_unconscious", RT_SPECTATOR_VAR_UNCOSCIOUS_HANDLER, {
     params ["_unit", "_state"];
 
