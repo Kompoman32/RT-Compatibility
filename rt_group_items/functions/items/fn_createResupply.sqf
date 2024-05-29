@@ -8,14 +8,13 @@ params ["_ammoBox", ["_numPrim", 10], ["_numHand", 2], ["_numSec", 2], ["_numUnd
 
 private _players = [] call CBA_fnc_players;
 {
-	private _primaryWeaponMagazine = (primaryWeaponMagazine _x) select 0;
-	private _primaryWeaponUndBarMagazine = (primaryWeaponMagazine _x) select 1;
-	private _secondaryWeaponMagazine = (secondaryWeaponMagazine _x) select 0;
-	private _handgunMagazine = (handgunMagazine _x) select 0;
+	(primaryWeaponMagazine _x) params [["_primaryWeaponMagazine", ""], ["_primaryWeaponUndBarMagazine", ""]];
+	(secondaryWeaponMagazine _x) params [["_secondaryWeaponMagazine", ""]];
+	(handgunMagazine _x) params [["_handgunMagazine", ""]];
 
 	{
 		_x params ["_magName", "_num"];
-		if (!(isNil "_magName")) then {
+		if (!(_magName isEqualTo "")) then {
 			_ammoBox addMagazineCargoGlobal [_magName, _num]
 		}
 	} forEach [
