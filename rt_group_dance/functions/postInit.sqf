@@ -45,11 +45,11 @@ _this spawn {
 			_condition = {
 				params ["_target", "_player", "_params"];
 				_params params ["_createDances", "_danceAnim", ["_childDances", []]];
-				true
+				// true
 
 				// if (count _childDances) exitWith {true};
 
-				// !(animationState _player == _danceAnim)
+				!(animationState _player == _danceAnim)
 			};
 		};
 
@@ -72,7 +72,22 @@ _this spawn {
 	private _condition = {
 		params ["_target", "_player", "_params"];
 
-		isNull objectParent _player && RT_DANCE_ALLOWED
+		RT_DANCE_ALLOWED && [player,objNull,[
+			"isnotdead",
+			"notonmap",
+			"isnotinside",
+			"isnotinzeus",
+			"isnotunconscious",
+			"isnotswimming",
+			"isnotonladder",
+			"isnotrefueling",
+			"isnotescorting",
+			"isnothandcuffed",
+			"isnotsurrendering",
+			"isnotdragging",
+			"isnotcarrying",
+			"isnotsitting"
+		]] call ACE_common_fnc_canInteractWith
 	};
 
 	private _action = ["RT_DANCE_MAIN", "Dancing", "", {}, _condition, _insertChildren, _createDances] call ace_interact_menu_fnc_createAction;
