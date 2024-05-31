@@ -5,6 +5,8 @@ class CfgPatches
     {
         name = "RT Compatibility - Fun";
         requiredAddons[] = {
+            "RT_Main",
+            "RT_Settings",
             "RT_Utils",
             "RT_Support",
             "A3_Sounds_F",

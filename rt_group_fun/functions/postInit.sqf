@@ -7,19 +7,33 @@ _this spawn {
 	[] call RT_UTILS_fnc_waitUntilPlayerInit;
 
 	[player, "ace_glassesCracked", RT_SPECTATOR_VAR_KILLED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
-	[player, "ace_firedPlayer", RT_FUN_VAR_FIRED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
-
 	[player, "ace_glassesCracked", RT_SPECTATOR_VAR_KILLED_HANDLER, {
 		params ["_unit"];
 
 		if (!(isPlayer _unit)) exitWith {};
 		if (goggles _unit !=  "G_Goggles_VR") exitWith {};
+
+		if (!(RT_SETTINGS_FUN_enable call CBA_settings_fnc_get) || !(RT_SETTINGS_FUN_enable_glasses call CBA_settings_fnc_get)) exitWith {
+			[] spawn {
+				private _glassesCondition = ACE_PLAYER getVariable ["ace_goggles_condition", [false, [false, 0,0,0], false]];
+				_glassesCondition set [2, false];
+				ACE_PLAYER setVariable ["ace_goggles_condition", _glassesCondition];
+
+				[ACE_PLAYER, goggles ACE_PLAYER] call ace_goggles_fnc_applyGlassesEffect;
+			};
+		};
 		
 		playSoundUI ["RTBoom"];
 	}] call Rt_Utils_fnc_addCBAEventhandler;
 
 
+	[player, "ace_firedPlayer", RT_FUN_VAR_FIRED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
 	[player, "ace_firedPlayer", RT_FUN_VAR_FIRED_HANDLER, {
+		params ["_unit"];
+		if (goggles _unit !=  "G_Goggles_VR") exitWith {};
+
+		if (!(RT_SETTINGS_FUN_enable call CBA_settings_fnc_get) || !(RT_SETTINGS_FUN_enable_helldivers_artillery call CBA_settings_fnc_get)) exitWith {};
+
 		_this spawn {
 			private _ammo = _this select 4;
 			private _projectile = _this select 6;

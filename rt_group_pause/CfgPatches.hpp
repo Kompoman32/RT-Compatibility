@@ -4,6 +4,6 @@ class CfgPatches
     class RT_Pause: RT_GROUP_CFG_PATCHES
     {
         name = "RT Compatibility - Pause";
-        requiredAddons[] = {"RT_Utils"};
+        requiredAddons[] = {"RT_Main", "RT_Utils"};
     };
 };

@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class RT_GROUP_CFG_PATCHES {
         // Meta information for editor
-        name = "RT Compatibility - Utils";
+        name = "RT Compatibility - Main";
         author = "Kompoman32";
 
          // Minimum compatible version. When the game's version is lower, pop-up warning will appear when launching the game. Note: was disabled on purpose some time late into Arma 2: OA.
@@ -10,7 +10,7 @@ class CfgPatches
 
         // Required addons, used for setting load order. (CfgPatches classname NOT PBO filename!)
         // When any of the addons are missing, a pop-up warning will appear when launching the game.
-        requiredAddons[] = {"RT_Main"};
+        requiredAddons[] = {"a3_data_f_mod_loadorder"};
 
         // List of objects (CfgVehicles classes) contained in the addon. Important also for Zeus content (units and groups) unlocking.
         units[] = {};
@@ -21,7 +21,7 @@ class CfgPatches
         skipWhenMissingDependencies = 0;
     };
 
-    class RT_Utils: RT_GROUP_CFG_PATCHES
+    class RT_Main: RT_GROUP_CFG_PATCHES
     {
     };
 };
