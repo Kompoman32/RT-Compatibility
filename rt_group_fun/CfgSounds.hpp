@@ -12,7 +12,7 @@ class CfgSFX
     class HellDivers
     {
         sounds[] = {"sound0"};
-        sound0[] = {"rt\fun\sounds\helldivers.ogg", 1, 1, 500, 1, 0, 0, 0};
+        sound0[] = {"rt\fun\sounds\helldivers.ogg", 3, 1, 500, 1, 0, 0, 0};
         empty[] = {"", 1, 1, 2000, 1, 0, 0, 0};
     };
 };

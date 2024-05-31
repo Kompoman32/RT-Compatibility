@@ -13,4 +13,46 @@ RT_SUPPORT_VAR_EXPRESS_ARTILLERY_PARAMS = [
 	100, // altitude where the shell will be created
 	150, // descending velocity, in m/s. if you use flare as ammo, set it to lower value (1-5) to let it fall down slowly
 	[""] // sounds to be played on the incoming shell
-]
+];
+
+["CBA_SettingChanged", {
+    params ["_setting", "_value"];
+
+	if (!(["SETTINGS_RT_SETTINGS_SUPPORT", _setting] call BIS_fnc_inString)) exitWith {};
+
+	private ["_dropTime",
+			"_artilleryAmmo",
+			"_radius",
+			"_rounds",
+			"_roundDelay",
+			"_conditionEnd",
+			"_safezoneRadius",
+			"_altitude",
+			"_roundSpeed",
+			"_sounds"];
+
+	_conditionEnd = {false};
+	_sounds = [""];
+
+	_dropTime = parseNumber (RT_SETTINGS_SUPPORT_artillery_sleep_before call CBA_settings_fnc_get);
+	_artilleryAmmo = RT_SETTINGS_SUPPORT_artillery_ammo call CBA_settings_fnc_get;
+	_radius = parseNumber (RT_SETTINGS_SUPPORT_artillery_target_radius call CBA_settings_fnc_get);
+	_rounds = parseNumber (RT_SETTINGS_SUPPORT_artillery_shots_count call CBA_settings_fnc_get);
+	_roundDelay = parseNumber (RT_SETTINGS_SUPPORT_artillery_shots_delay call CBA_settings_fnc_get);
+	_safezoneRadius = parseNumber (RT_SETTINGS_SUPPORT_artillery_safe_zone_radius call CBA_settings_fnc_get);
+	_altitude = parseNumber (RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_altitude call CBA_settings_fnc_get);
+	_roundSpeed = parseNumber (RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed call CBA_settings_fnc_get);
+
+	RT_SUPPORT_VAR_EXPRESS_ARTILLERY_PARAMS = [
+		_dropTime,
+		_artilleryAmmo,
+		_radius,
+		_rounds,
+		_roundDelay,
+		_conditionEnd,
+		_safezoneRadius,
+		_altitude,
+		_roundSpeed,
+		_sounds
+	];
+}] call CBA_fnc_addEventHandler;

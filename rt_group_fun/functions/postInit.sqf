@@ -33,6 +33,7 @@ _this spawn {
 		if (goggles _unit !=  "G_Goggles_VR") exitWith {};
 
 		if (!(RT_SETTINGS_FUN_enable call CBA_settings_fnc_get) || !(RT_SETTINGS_FUN_enable_helldivers_artillery call CBA_settings_fnc_get)) exitWith {};
+		if (!(RT_SETTINGS_SUPPORT_enable_artillery call CBA_settings_fnc_get)) exitWith {};
 
 		_this spawn {
 			private _ammo = _this select 4;

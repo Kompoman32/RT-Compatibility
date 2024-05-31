@@ -1,3 +1,5 @@
+if (!(RT_SETTINGS_SUPPORT_enable_artillery call CBA_settings_fnc_get)) exitWith {};
+
 params ["_projectile"];
 
 RT_SUPPORT_VAR_EXPRESS_ARTILLERY_PARAMS params [
