@@ -19,7 +19,7 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
 ] call CBA_fnc_addSetting;
 [
     RT_SETTINGS_SUPPORT_artillery_sleep_before, "EDITBOX",
-    "Время перед стартом бомбардировки (в секундах)",
+    ["Время перед стартом бомбардировки", "Время перед стартом бомбардировки (в секундах)"],
     [RT_SETTINGS_category, _subCategoryStr],
     "10",
     1
@@ -59,7 +59,7 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
 ] call CBA_fnc_addSetting;
 [
     RT_SETTINGS_SUPPORT_artillery_target_radius, "EDITBOX",
-    "Радиус поражения (в метрах)",
+    ["Радиус поражения", "Радиус поражения артиллерией (в метрах)"],
     [RT_SETTINGS_category, _subCategoryStr],
     "50",
     1
@@ -73,35 +73,28 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
 ] call CBA_fnc_addSetting;
 [
     RT_SETTINGS_SUPPORT_artillery_shots_delay, "EDITBOX",
-    "Задержка между запусками (в секундах)",
+    ["Задержка между прилётом снарядов", "Задержка между прилётом снарядов (в секундах)"],
     [RT_SETTINGS_category, _subCategoryStr],
     "0.25",
     1
 ] call CBA_fnc_addSetting;
 [
     RT_SETTINGS_SUPPORT_artillery_safe_zone_radius, "EDITBOX",
-    "Радиус safe-зоны (в метрах)",
-    [RT_SETTINGS_category, _subCategoryStr],
-    "0",
-    1
-] call CBA_fnc_addSetting;
-[
-    RT_SETTINGS_SUPPORT_artillery_safe_zone_radius, "EDITBOX",
-    "Радиус safe-зоны",
+    ["Радиус safe-зоны", "Радиус зоны в которую точно не прилетит снаряд (в метрах), (осколочное поражение всё ещё возможно)"],
     [RT_SETTINGS_category, _subCategoryStr],
     "0",
     1
 ] call CBA_fnc_addSetting;
 [
     RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_altitude, "EDITBOX",
-    "Высота спавна снаряда (в метрах)",
+    ["Высота появления снаряда", "Высота появления снаряда над точкой поражения (в метрах)"],
     [RT_SETTINGS_category, _subCategoryStr],
     "100",
     1
 ] call CBA_fnc_addSetting;
 [
     RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed, "EDITBOX",
-    "Скорость снаряда при спавне (в метрах в секунду)",
+    ["Скорость снаряда", "Скорость снаряда при появлении (в метрах в секунду)"],
     [RT_SETTINGS_category, _subCategoryStr],
     "150",
     1
