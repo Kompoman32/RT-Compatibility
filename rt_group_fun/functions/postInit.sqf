@@ -6,8 +6,26 @@ if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 _this spawn {
 	[] call RT_UTILS_fnc_waitUntilPlayerInit;
 
-	[player, "ace_glassesCracked", RT_SPECTATOR_VAR_KILLED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
-	[player, "ace_glassesCracked", RT_SPECTATOR_VAR_KILLED_HANDLER, {
+	["CAManBase", "explosion", {
+		params ["_unit"];
+
+		if (!(isPlayer _unit)) exitWith {};
+		if (goggles _unit !=  "G_Goggles_VR") exitWith {};
+
+		if (!(RT_SETTINGS_FUN_enable call CBA_settings_fnc_get) || !(RT_SETTINGS_FUN_enable_glasses call CBA_settings_fnc_get)) exitWith {
+			[] spawn {
+				private _glassesCondition = ACE_PLAYER getVariable ["ace_goggles_condition", [false, [false, 0,0,0], false]];
+				_glassesCondition set [0, false];
+				ACE_PLAYER setVariable ["ace_goggles_condition", _glassesCondition];
+
+				[ACE_PLAYER, goggles ACE_PLAYER] call ace_goggles_fnc_applyGlassesEffect;
+			};
+		};
+	}] call CBA_fnc_addClassEventHandler;
+
+
+	[player, "ace_glassesCracked", RT_FUN_VAR_GLASSES_CRACKED] call Rt_Utils_fnc_removeCBAEventhandler;
+	[player, "ace_glassesCracked", RT_FUN_VAR_GLASSES_CRACKED, {
 		params ["_unit"];
 
 		if (!(isPlayer _unit)) exitWith {};

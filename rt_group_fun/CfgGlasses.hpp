@@ -12,6 +12,7 @@ class CfgGlasses
         ACE_TintAmount = 8.0;
 
         ACE_Overlay = "";
+        ACE_OverlayDirt = "rt\fun\textures\valmar.paa";
         ACE_OverlayCracked = "rt\fun\textures\valmar.paa";
         ACE_Resistance = 1;
         ACE_Protection = 0;
