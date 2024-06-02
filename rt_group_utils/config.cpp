@@ -8,12 +8,27 @@ class CfgFunctions
         class Utils
         {
             file = "rt\utils\functions\utils";
+            class timer
+            {
+            };
+        };
+        class Checking
+        {
+            file = "rt\utils\functions\checking";
             class hasAce
             {
             };
             class dontHasAce
             {
             };
+            class hasDLC
+            {
+            };
+        };
+        class ScriptFlow
+        {
+            file = "rt\utils\functions\scriptFlow";
+
             class callByScriptName
             {
             };
@@ -41,16 +56,10 @@ class CfgFunctions
             class removeDisplayEventhandler
             {
             };
-            class hasDLC
-            {
-            };
             class waitUntilPlayerInit
             {
             };
             class waitUntilTime
-            {
-            };
-            class timer
             {
             };
         };
