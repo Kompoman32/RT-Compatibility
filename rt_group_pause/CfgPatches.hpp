@@ -1,8 +1,9 @@
 class CfgPatches
 {
-	class RT_GROUP_CFG_PATCHES;
-    class RT_Pause: RT_GROUP_CFG_PATCHES
+    class RT_Pause
     {
+        addonRootClass = "RT_Main";
+
         name = "RT Compatibility - Pause";
         requiredAddons[] = {"RT_Main", "RT_Utils"};
     };

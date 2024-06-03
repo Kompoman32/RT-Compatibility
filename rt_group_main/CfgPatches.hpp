@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class RT_GROUP_CFG_PATCHES {
+	class RT_Main {
         // Meta information for editor
         name = "RT Compatibility - Main";
         author = "Kompoman32";
@@ -19,9 +19,5 @@ class CfgPatches
 
         // Optional. If this is 1, if any of requiredAddons[] entry is missing in your game the entire config will be ignored and return no error (but in rpt) so useful to make a compat Mod (Since Arma 3 2.14)
         skipWhenMissingDependencies = 0;
-    };
-
-    class RT_Main: RT_GROUP_CFG_PATCHES
-    {
     };
 };

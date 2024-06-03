@@ -1,9 +1,9 @@
 class CfgPatches
 {
-	class RT_GROUP_CFG_PATCHES;
-
-    class RT_Movement: RT_GROUP_CFG_PATCHES
+    class RT_Movement
     {
+        addonRootClass = "RT_Main";
+
         name = "RT Compatibility - Movement";
         author = "Kompoman32 and others";
         authors[] = {"Kompoman32", "Alkanet", "POLPOX"};

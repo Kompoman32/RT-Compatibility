@@ -1,6 +1,6 @@
 #include "CfgPatches.hpp"
-#include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgSounds.hpp"
 #include "CfgGlasses.hpp"
 #include "CfgEventHandlers.hpp"
 
