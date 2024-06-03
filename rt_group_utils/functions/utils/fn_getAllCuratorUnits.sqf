@@ -1,0 +1,1 @@
+allCurators apply {getAssignedCuratorUnit _x}

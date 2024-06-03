@@ -11,6 +11,12 @@ class CfgFunctions
             class timer
             {
             };
+            class getAllCuratorUnits
+            {
+            };
+            class getAllPlayersWithoutCurators
+            {
+            };
         };
         class Checking
         {
