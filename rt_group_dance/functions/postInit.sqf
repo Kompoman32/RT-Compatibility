@@ -72,7 +72,7 @@ _this spawn {
 	private _condition = {
 		params ["_target", "_player", "_params"];
 
-		RT_DANCE_ALLOWED && [player,objNull,[]] call ACE_common_fnc_canInteractWith
+		(RT_SETTINGS_DANCE_enable call CBA_settings_fnc_get) && [player,objNull,[]] call ACE_common_fnc_canInteractWith
 	};
 
 	private _action = ["RT_DANCE_MAIN", "Dancing", "", {}, _condition, _insertChildren, _createDances] call ace_interact_menu_fnc_createAction;

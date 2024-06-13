@@ -1,6 +1,3 @@
-// (local) Можно ли танцевать
-RT_DANCE_ALLOWED = true;
-
 // (local) Список танцев
 RT_DANCE_AVAILABLE_DANCES = [
 	["A3_Dance1", "Dance 1"],
