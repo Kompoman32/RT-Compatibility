@@ -2,8 +2,6 @@ class CfgPatches
 {
     class RT_Fun
     {
-        addonRootClass = "RT_Main";
-
         name = "RT Compatibility - Fun";
         requiredAddons[] = {
             "RT_Main",
@@ -14,6 +12,11 @@ class CfgPatches
             "ace_common",
             "ace_goggles",
         };
-        units[] = {"HellDiversSound"};
+        units[]={"HellDiversSound"};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

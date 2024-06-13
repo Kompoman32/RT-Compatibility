@@ -2,9 +2,14 @@ class CfgPatches
 {
     class RT_Units
     {
-        addonRootClass = "RT_Main";
-
         name = "RT Compatibility - Units";
-        requiredAddons[] = {"RT_Main"};
+        requiredAddons[] = {"RT_Main"};     
+        
+        units[] = {};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };
