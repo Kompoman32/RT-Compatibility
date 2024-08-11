@@ -3,7 +3,7 @@ class CfgPatches
     class RT_Respawn
     {
         name = "RT Compatibility - Respawn";
-        requiredAddons[] = {"RT_Main", "RT_Utils"};
+        requiredAddons[] = {"RT_Main", "RT_Utils", "RT_Settings" };
         
         units[] = {};
         weapons[] = {};

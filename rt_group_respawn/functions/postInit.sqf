@@ -8,6 +8,11 @@ _this spawn {
 
 	[player, RT_RESPAWN_VAR_CHECK_HANDLER, [], {
 		waitUntil {
+			if (!(RT_SETTINGS_RESPAWN_enable call CBA_settings_fnc_get)) exitWith {
+				sleep 10;
+				false
+			};
+
 			private _needToUpdate = [player getVariable [RT_RESPAWN_VAR_TARGET, nil]] call {
 				params ["_target"];
 				if (isNil "_target") exitWith {true};
