@@ -1,3 +1,6 @@
+// (local missionNamespace) Задержка между проверками видимых юнитов в spectator'е
+RT_SPECTATOR_VAR_CHECKUNITS_DELAY = 5;
+
 // (local player) Control с текстом Подсказки
 RT_SPECTATOR_VAR_HINT_CTRL = "VARS_RT_SPECTATOR_VAR_HINT_CTRL";
 // (local player) Handler нажатия Enter

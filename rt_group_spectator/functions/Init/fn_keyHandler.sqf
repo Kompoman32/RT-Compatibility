@@ -11,6 +11,8 @@ _this spawn {
     [player, "KeyUp", 46, RT_SPECTATOR_VAR_KEY_HANDLER] call Rt_Utils_fnc_removeDisplayEventhandler;
 
     [player, "KeyUp", 46, RT_SPECTATOR_VAR_KEY_HANDLER, {
+        if (!(RT_SETTINGS_SPECTATOR_enable call CBA_settings_fnc_get)) exitWith {};
+
         params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt"];
         
         /**

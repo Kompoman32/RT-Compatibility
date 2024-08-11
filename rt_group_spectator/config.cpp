@@ -17,6 +17,9 @@ class CfgFunctions
             class initServer
             {
             };
+            class getAvailableSides
+            {
+            };
         };
     };
 };

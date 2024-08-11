@@ -1,3 +1,6 @@
+// Если выключено, то не добавляем подсказку
+if (!(RT_SETTINGS_SPECTATOR_enable call CBA_settings_fnc_get)) exitWith {};
+
 /** Script Works Only with Ace */
 if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 
