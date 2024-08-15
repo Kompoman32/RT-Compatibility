@@ -1,6 +1,9 @@
 private _subCategoryStr = "SUPPORT";
 
 RT_SETTINGS_SUPPORT_enable_artillery = "SETTINGS_RT_SETTINGS_SUPPORT_enable_artillery";
+RT_SETTINGS_SUPPORT_support_throwable = "SETTINGS_RT_SETTINGS_SUPPORT_support_throwable";
+RT_SETTINGS_SUPPORT_enable_grenade_launcher = "SETTINGS_RT_SETTINGS_SUPPORT_enable_grenade_launcher";
+RT_SETTINGS_SUPPORT_support_gl_throwable = "SETTINGS_RT_SETTINGS_SUPPORT_support_gl_throwable";
 RT_SETTINGS_SUPPORT_artillery_sleep_before = "SETTINGS_RT_SETTINGS_SUPPORT_artillery_sleepBefore";
 RT_SETTINGS_SUPPORT_artillery_ammo = "SETTINGS_RT_SETTINGS_SUPPORT_artillery_ammo";
 RT_SETTINGS_SUPPORT_artillery_target_radius = "SETTINGS_RT_SETTINGS_SUPPORT_artillery_target_radius";
@@ -17,6 +20,32 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
     true,
     1
 ] call CBA_fnc_addSetting;
+
+[
+    RT_SETTINGS_SUPPORT_support_throwable, "EDITBOX",
+    ["Бросаемый предмет для вызова", "Бросаемый предмет для вызова артиллерии как красная граната"],
+    [RT_SETTINGS_category, _subCategoryStr],
+    "SmokeShellRed",
+    1
+] call CBA_fnc_addSetting;
+
+[
+    RT_SETTINGS_SUPPORT_enable_grenade_launcher, "CHECKBOX",
+
+    ["Включить быструю артиллерию для подствольника", "Включить быструю артиллерию, при выстреле красной дымовой гранаты из подствольного гранатомёта, если вы team leader"],
+    [RT_SETTINGS_category, _subCategoryStr],
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    RT_SETTINGS_SUPPORT_support_throwable, "EDITBOX",
+    ["Гранатомётный снаряд для вызова", "Гранатомётный снаряд для вызова артиллерии как красная граната для гранатомёта"],
+    [RT_SETTINGS_category, _subCategoryStr],
+    "G_40mm_SmokeRed",
+    1
+] call CBA_fnc_addSetting;
+
 [
     RT_SETTINGS_SUPPORT_artillery_sleep_before, "EDITBOX",
     ["Время перед стартом бомбардировки", "Время перед стартом бомбардировки (в секундах)"],
@@ -24,6 +53,7 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
     "10",
     1
 ] call CBA_fnc_addSetting;
+
 [
     RT_SETTINGS_SUPPORT_artillery_ammo, "LIST",
     "Используемый снаряд",
@@ -57,6 +87,7 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
     ], 0],
     1
 ] call CBA_fnc_addSetting;
+
 [
     RT_SETTINGS_SUPPORT_artillery_target_radius, "EDITBOX",
     ["Радиус поражения", "Радиус поражения артиллерией (в метрах)"],
@@ -64,6 +95,7 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
     "50",
     1
 ] call CBA_fnc_addSetting;
+
 [
     RT_SETTINGS_SUPPORT_artillery_shots_count, "EDITBOX",
     "Количество запусков",
@@ -71,6 +103,7 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
     "12",
     1
 ] call CBA_fnc_addSetting;
+
 [
     RT_SETTINGS_SUPPORT_artillery_shots_delay, "EDITBOX",
     ["Задержка между прилётом снарядов", "Задержка между прилётом снарядов (в секундах)"],
@@ -78,6 +111,7 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
     "0.25",
     1
 ] call CBA_fnc_addSetting;
+
 [
     RT_SETTINGS_SUPPORT_artillery_safe_zone_radius, "EDITBOX",
     ["Радиус safe-зоны", "Радиус зоны в которую точно не прилетит снаряд (в метрах), (осколочное поражение всё ещё возможно)"],
@@ -85,6 +119,7 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
     "0",
     1
 ] call CBA_fnc_addSetting;
+
 [
     RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_altitude, "EDITBOX",
     ["Высота появления снаряда", "Высота появления снаряда над точкой поражения (в метрах)"],
@@ -92,6 +127,7 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
     "100",
     1
 ] call CBA_fnc_addSetting;
+
 [
     RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed, "EDITBOX",
     ["Скорость снаряда", "Скорость снаряда при появлении (в метрах в секунду)"],
