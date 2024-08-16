@@ -32,14 +32,14 @@ RT_SETTINGS_SUPPORT_artillery_safe_shell_spawn_speed = "SETTINGS_RT_SETTINGS_SUP
 [
     RT_SETTINGS_SUPPORT_enable_grenade_launcher, "CHECKBOX",
 
-    ["Включить быструю артиллерию для подствольника", "Включить быструю артиллерию, при выстреле красной дымовой гранаты из подствольного гранатомёта, если вы team leader"],
+    ["Включить артиллерию для подствольника", "Включить быструю артиллерию, при выстреле красной дымовой гранаты из подствольного гранатомёта, если вы team leader"],
     [RT_SETTINGS_category, _subCategoryStr],
     false,
     1
 ] call CBA_fnc_addSetting;
 
 [
-    RT_SETTINGS_SUPPORT_support_throwable, "EDITBOX",
+    RT_SETTINGS_SUPPORT_support_gl_throwable, "EDITBOX",
     ["Гранатомётный снаряд для вызова", "Гранатомётный снаряд для вызова артиллерии как красная граната для гранатомёта"],
     [RT_SETTINGS_category, _subCategoryStr],
     "G_40mm_SmokeRed",
