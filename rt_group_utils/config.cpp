@@ -14,6 +14,9 @@ class CfgFunctions
             class stopTimer
             {
             };
+            class skipTime
+            {
+            };
             class getAllCuratorUnits
             {
             };
