@@ -1,1 +1,1 @@
-*.hpp, *.sqf, *.rtm, *.paa, *ogg
+*.hpp, *.sqf, *.sqm, *.rtm, *.paa, *ogg, stringtable.xml, *.ogv
