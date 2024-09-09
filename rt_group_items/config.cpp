@@ -8,6 +8,9 @@ class CfgFunctions
         class Items
         {
             file = "rt\items\Functions\Items";
+            class CreateItemStash
+            {
+            };
             class CreateResupply
             {
             };
