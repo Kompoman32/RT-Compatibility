@@ -3,10 +3,10 @@
   * 
   * ATTENTION: dont use it in CBA event handlers
   * 
-  * _arguments - arguments goes to script (usually just use _this)
-  * _spawn - use Sheduled environment or not (default: false)
-  * _onServer - should call/spawn on Server (default: false)
-  * _JIP - should use JIP if remoteExec (if _spawn && _onServer && !isServer or !_spawn && canSuspend) (default: false)
+  * 0: _arguments - arguments goes to script (usually just use _this)
+  * 1: _spawn - use Sheduled environment or not (default: false)
+  * 2: _onServer - should call/spawn on Server (default: false)
+  * 3: _JIP - should use JIP if remoteExec (if _spawn && _onServer && !isServer or !_spawn && canSuspend) (default: false)
   * 
   * ex:
   *    [_this, false, true, true] call RT_Utils_fnc_callByScriptName;
