@@ -11,6 +11,9 @@ class CfgFunctions
             class timer
             {
             };
+            class stopTimer
+            {
+            };
             class getAllCuratorUnits
             {
             };
