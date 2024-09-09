@@ -16,6 +16,10 @@ _input params [
 	["_isCuratorPlaced", false, [true]]	
 ];
 
+if (!hasInterface) then {
+	[_teleporter] remoteExec ["RT_Teleport_fnc_initTeleporterToPositionsLocal", -2, true];
+} else {
+	[_teleporter] remoteExec ["RT_Teleport_fnc_initTeleporterToPositionsLocal", 0, true];
+};
 
-[_teleporter] remoteExec ["RT_Teleport_fnc_initTeleporterToPositionsLocal", -2, true];
 
