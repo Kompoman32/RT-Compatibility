@@ -76,15 +76,4 @@ class CfgFunctions
             };
         };
     };
-
-    class RT_Utils_Math
-    {
-        class Math
-        {
-            file = "rt\utils\functions\math";
-            class getRandomPointInEllipse
-            {
-            };
-        };
-    }
 };

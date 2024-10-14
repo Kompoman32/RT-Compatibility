@@ -15,15 +15,8 @@ private _position = _allPositions select (_index + (_currentPage - 1) * 5);
 closeDialog 2;
 
 
-
-private _positionPos = getPosWorld _position;
 private _positionArea = _position getvariable ["objectArea",[0,0,0,false,0]];
-private _offsets = [_positionArea#0, _positionArea#1, _positionArea#2] call Rt_Utils_Math_fnc_getRandomPointInEllipse;
-_offsets pushBack 0;
-
-_positionPos = [0,1,2] apply {
-	_positionPos#_x + _offsets#_x
-};
+private _positionPos = [getPosWorld _position, _positionArea] call BIS_fnc_randomPosTrigger;
 
 titleText ["", "BLACK OUT", 1]; 
 1 fadeSound 0; 

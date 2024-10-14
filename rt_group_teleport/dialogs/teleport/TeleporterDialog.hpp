@@ -66,7 +66,7 @@ class TeleporterDialog
 			x = safeZoneX + safeZoneW * 0.35;
 			y = safeZoneY + safeZoneH * 0.25;
 			w = safeZoneW * 0.3;
-			text = "Where are to?";
+			text = "Where to?";
 			
 		};
 		class PageTitle : RT_Teleport_Text 
