@@ -5,3 +5,4 @@ RT_SETTINGS_category = "RT Group Compatibility";
 #include "spectator\settings.sqf";
 #include "support\settings.sqf";
 #include "fun\settings.sqf";
+#include "medical\settings.sqf";
