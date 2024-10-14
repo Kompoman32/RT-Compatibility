@@ -11,6 +11,9 @@ class CfgFunctions
             class expressArtillery
             {
             };
+            class fireSupportVirtualSquare
+            {
+            };
         };
     };
 };
