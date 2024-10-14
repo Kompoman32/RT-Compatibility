@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RT">
+    <Package name="AMMO">
+        <Key ID="STR_RT_AMMO_Potato_itemName">
+            <English>Belarusian Original Potato</English>
+            <Russian>Белорусская Оригинальная Картошка</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Potato_itemNameShort">
+            <English>Potato</English>
+            <Russian>Картошка</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Potato_itemDescription">
+            <English>A unique product with a post-Soviet taste.</English>
+            <Russian>Уникальный продукт с постсоветским вкусом.</Russian>
+        </Key>
+    </Package>
+</Project>
