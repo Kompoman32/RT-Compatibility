@@ -19,6 +19,11 @@ RT_DANCE_AVAILABLE_DANCES = [
 		["kka3_russiandance", "Russian Dance"],
 		["kka3_hiphopdance", "Hiphop"]
 	]],
+	["WBK_Workout", "Workout", [
+		["WBK_Workout_1", "Waist Drop Plank"],
+		["WBK_Workout_2", "Kneeling Plank Thrusts"],
+		["WBK_Workout_3", "Kneeling Hip Thrusts"]
+	]],
 	["TPose", "T-Pose"]
 ];
 

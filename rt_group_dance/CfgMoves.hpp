@@ -126,5 +126,63 @@ class CfgMovesMaleSdr : CfgMovesBasic
             speed = -32.299999;
             file = "rt\dance\dances\kka3\russiandance.rtm";
         };
+
+        class HubShootingRangeKneel_move1; 
+		class WBK_Workout_Anim_Base: HubShootingRangeKneel_move1 {
+			minPlayTime = 1;
+			ignoreMinPlayTime[] = {"Unconscious"};
+			actions = "NoActions";
+		    file = "a3\anims_f_epa\data\anim\sdr\cts\hubcleaned\briefing\hubbriefing_loop.rtm";
+			speed = 0.0306;
+			looped = true;
+			showHandGun=0;
+			soundEnabled = 0;
+            mask="BodyFull";
+			interpolationSpeed = 3;
+            leftHandIKBeg=0;
+            leftHandIKCurve[]={};
+            leftHandIKEnd=0;
+            rightHandIKBeg=0;
+            rightHandIKCurve[]={};
+            rightHandIKEnd=0;
+            weaponIK=0;
+            enableOptics=0;
+            showWeaponAim=0;
+            disableWeapons=1;
+            disableWeaponsLong=1;
+            leaning="empty";
+            aimingBody="empty";
+            aiming="empty";
+            forceAim=1;
+            limitGunMovement=9.1000004;
+			head = "headNo";
+			headBobMode = 2;
+			headBobStrength = 0;
+            canPullTrigger=1;
+            enableDirectControl=0;
+            weaponLowered=0;
+            variantsPlayer[]={};
+            variantsAI[]={};
+			ConnectTo[]=
+			{
+			};
+			InterpolateTo[]=
+			{
+				"Unconscious",
+				0.1
+			};
+		};
+		class WBK_Workout_1: WBK_Workout_Anim_Base {
+		    file = "rt\dance\dances\wbk-workout\meme_1.rtm";
+			speed = -0.6;
+		};
+		class WBK_Workout_2: WBK_Workout_Anim_Base {
+		    file = "rt\dance\dances\wbk-workout\meme_2.rtm";
+			speed = -0.45;
+		};
+		class WBK_Workout_3: WBK_Workout_Anim_Base {
+		    file = "rt\dance\dances\wbk-workout\meme_3.rtm";
+			speed = -0.5;
+		};
     };
 };
