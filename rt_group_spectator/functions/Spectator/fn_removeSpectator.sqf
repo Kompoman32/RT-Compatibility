@@ -1,9 +1,9 @@
-[false, false, false] call ace_spectator_fnc_setSpectator;
+params [["_onlyMessage", false]];
 
-private _hintCtrl = player getVariable [RT_SPECTATOR_VAR_HINT_CTRL, nil];
+if (!_onlyMessage) then {
 
-if (!(isnil "_hintCtrl")) then {
-    ctrlDelete _hintCtrl;
+    [false, false, false] call ace_spectator_fnc_setSpectator;
 };
 
-player setVariable [RT_SPECTATOR_VAR_HINT_CTRL, nil];
+"Rsc_RT_Spectator_UI" cutFadeOut 0;
+"Rsc_RT_Spectator_Quotes_UI" cutFadeOut 0;

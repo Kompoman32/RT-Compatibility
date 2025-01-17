@@ -1,5 +1,6 @@
 #include "CfgPatches.hpp"
 #include "CfgEventHandlers.hpp"
+#include "RscTitles.hpp"
 
 class CfgFunctions
 {
@@ -9,6 +10,12 @@ class CfgFunctions
         {
             file = "rt\spectator\Functions\Spectator";
             class addSpectator
+            {
+            };
+            class spectatorQuotesDisplayOnLoad
+            {
+            };
+            class spectatorGetQuote
             {
             };
             class removeSpectator

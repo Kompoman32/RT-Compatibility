@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RT">
+    <Package name="SPECTATOR">
+        <Container name="Button Text">
+            <Key ID="STR_RT_SPECTATOR_Enter">
+                <English>&lt;t size='2.5'&gt;&lt;t size='1' align='center' valign='middle'&gt;Press Enter to switch to Spectator mode   &lt;/t&gt; &lt;/t&gt;</English>
+                <Russian>&lt;t size='2.5'&gt;&lt;t size='1' align='center' valign='middle'&gt;Нажмите Enter чтобы перейти в режим наблюдателя   &lt;/t&gt; &lt;/t&gt;</Russian>
+            </Key>
+        </Container>
+        <Container name="Quotes">
+            <Key ID="STR_RT_SPECTATOR_Quote_1">
+                <English>War is one of the greatest blasphemies against man and nature.</English>
+                <Russian>Война есть одно из величайших кощунств над человеком и природой.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_1">
+                <English>Vladimir Mayakovsky</English>
+                <Russian>Владимир Маяковский</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_2">
+                <English>Do you feel like a hero yet?</English>
+                <Russian>Уже чувствуешь себя героем?</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_2">
+                <English>Konrad, "Spec Ops: The Line </English>
+                <Russian>Конрад, "Spec Ops: The Line</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_3">
+                <English>A hand accustomed to striking finds it hard to learn how to caress.</English>
+                <Russian>Руке, привыкшей бить, трудно научиться гладить.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_3">
+                <English>Yevgeny Yevtushenko</English>
+                <Russian>Евгений Евтушенко</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_4">
+                <English>Welcome to the Hell.</English>
+                <Russian>Добро пожаловать в ад.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_4">
+                <English>The writing on the wall in Grozny</English>
+                <Russian>Надпись на стене в Грозном</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_5">
+                <English>I know not with what weapons World War III will be fought,\\but World War IV will be fought with sticks and stones.</English>
+                <Russian>Я не знаю, каким оружием будут сражаться в Третьей мировой войне,\\но в Четвертой мировой войне будут сражаться палками и камнями.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_5">
+                <English>Albert Einstein</English>
+                <Russian>Альберт Эйнштейн</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_6">
+                <English>It is easy to take liberty for granted\\when you have never had it taken from you.</English>
+                <Russian>Легко принимать свободу как должное, если никогда ее не лишался.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_6">
+                <English>Dick Cheney</English>
+                <Russian>Дик Чейни</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_7">
+                <English>Older men declare war. But it is the youth that must fight and die.</English>
+                <Russian>Старики развязывают войну, а умирать идут молодые.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_7">
+                <English>Herbert Hoover</English>
+                <Russian>Герберт Гувер</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_8">
+                <English>Give me six hours to chop down a tree and\\I will spend the first four sharpening the ax.</English>
+                <Russian>Дайте мне шесть часов, чтобы срубить дерево,\\и первые четыре я потрачу на заточку топора.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_8">
+                <English>Abraham Lincoln</English>
+                <Russian>Авраам Линкольн</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_9">
+                <English>Never think that war, no matter how necessary,\\nor how justified, is not a crime.</English>
+                <Russian>Война, какая бы она ни была необходимая и справедливая,\\всегда преступление.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_9">
+                <English>Ernest Hemingway</English>
+                <Russian>Эрнест Хемингуэй</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_10">
+                <English>Soldiers usually win the battles and generals get the credit for them.</English>
+                <Russian>Обычно солдаты выигрывают сражения,\\а генералам достаются почести.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_10">
+                <English>Napoleon Bonaparte</English>
+                <Russian>Наполеон Бонапарт</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_11">
+                <English>Traditional nationalism cannot survive the fissioning of the atom.\\One world or none.</English>
+                <Russian>Традиционный национализм не может выжить после расщепления атома.\\Один мир или никакого.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_11">
+                <English>Stuart Chase</English>
+                <Russian>Стюарт Чейз</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_12">
+                <English>It doesn't take a hero to order men into battle.\\It takes a hero to be one of those men who goes into battle.</English>
+                <Russian>Чтобы отправить людей в бой, не нужно быть героем.\\Герой — это тот, кто сам идет в бой.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_12">
+                <English>General Norman Schwarzkopf</English>
+                <Russian>Генерал Норман Шварцкопф</Russian>
+            </Key>
+
+            <Key ID="STR_RT_SPECTATOR_Quote_13">
+                <English>War. War never changes.</English>
+                <Russian>Война. Война никогда не меняется.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_13">
+                <English>Mark O'Green, Fallout</English>
+                <Russian>Марк О'Грин, Fallout</Russian>
+            </Key>
+        </Container>
+    </Package>
+</Project>
