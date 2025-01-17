@@ -2,13 +2,6 @@
 
 class CfgUnitInsignia
 {
-    class RT_insignia_logo
-    {
-        displayName = "RT Logo";
-        author = "Voxtell";
-        texture = "rt\insignia\data\rt_logo_ca.paa";
-        textureVehicle = "";
-    };
     class RT_insignia_group_logo
     {
         displayName = "RT Group Logo";
