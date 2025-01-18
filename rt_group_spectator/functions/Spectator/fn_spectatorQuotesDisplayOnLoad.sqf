@@ -8,7 +8,17 @@ private _quoteTextSplitted = _quoteText splitString "\";
 
 _quoteText = _quoteTextSplitted joinString "<br/>";
 
+
+if !(player getVariable ["ACE_isUnconscious", false]) exitWith {};
+
 [ format ["<t color='#ffffff' size='0.8'>%1</t><br/><t color='#ffffff' size='0.6'>%2</t>", _quoteText, _author] ,-1,-1,1e+011,0.5,0,["Rsc_RT_Spectator_Quotes_UI"] call BIS_fnc_rscLayer] spawn BIS_fnc_dynamicText;
+
+[] spawn {
+    sleep 1;
+    if !(player getVariable ["ACE_isUnconscious", false]) then {
+        "Rsc_RT_Spectator_Quotes_UI" cutFadeOut 0;
+    }
+}
 	
 
 // disableSerialization;
