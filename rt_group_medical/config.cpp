@@ -3,7 +3,7 @@
 #include "CfgFunctions.hpp"
 
 class AMA_menu {
-	onLoad="[180025] spawn AMA_fnc_dialogFadeIn; [] spawn AMA_fnc_initMenu; [] spawn RT_Medical_Assitant_Init";
+	onLoad="[180025] spawn AMA_fnc_dialogFadeIn; [] spawn AMA_fnc_initMenu; [] spawn RT_Medical_fnc_initArrows";
 }
 
 class ace_medical_treatment_actions
