@@ -23,7 +23,7 @@ if (!hasInterface) exitWith {};
 
     while {_time > 0} do {
         _time = _time - 1;  
-        hintSilent format[_text, [((_time)/60)+.01,"HH:MM"] call BIS_fnc_timetostring];
+        hintSilent format[_text, [_time, "MM:SS"] call BIS_fnc_secondsToString];
         sleep 1;
     };
 }] call Rt_Utils_fnc_addScripthandler;	
