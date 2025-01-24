@@ -38,6 +38,8 @@ _this findIf {
 		case "Spearhead" : { 1175380 in _dlcs };
 		// Arma 3 Creator DLC: Reaction Forces
 		case "ReactionForces" : { 2647760 in _dlcs };
+		// Arma 3 Creator DLC: Expeditionary Forces
+		case "ExpeditionaryForces" : { 2647830 in _dlcs };
 		default { false };
 	})
 } == -1
