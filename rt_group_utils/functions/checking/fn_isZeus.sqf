@@ -1,0 +1,1 @@
+!isNull (getAssignedCuratorLogic player)

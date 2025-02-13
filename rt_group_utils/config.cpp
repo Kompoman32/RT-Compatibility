@@ -36,6 +36,15 @@ class CfgFunctions
             class hasDLC
             {
             };
+            class isAdmin
+            {
+            };
+            class isZeus
+            {
+            };
+            class isAdminOrZeus
+            {
+            };
         };
         class ScriptFlow
         {
