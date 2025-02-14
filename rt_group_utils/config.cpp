@@ -23,6 +23,9 @@ class CfgFunctions
             class getAllPlayersWithoutCurators
             {
             };
+            class getUnitRoleInfo
+            {
+            };
         };
         class Checking
         {

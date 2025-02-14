@@ -2,17 +2,26 @@ params [["_control", controlNull]];
 
 if (isNull _control) exitWith {};
 
-private _role = roleDescription player;
-private _squadName = str group player;
-if (_role == "") then {
-	_role = "Rifleman";
-};
+private _units = ((units group player) - [player]);
 
-if ("@" in _role) then {
-	private _splitted = _role splitString "@";
-	_role = _splitted#0; 
-	_squadName = _splitted#1;
-};
+([player] call RT_Utils_fnc_getUnitRoleInfo) params ["_name", "_role",  "_squadName"];
 
-_control ctrlSetStructuredText parseText format ["<t align='right'>%1</t><br/><t align='right'>%2, %3</t>", _squadName, name player,_role];
+private _text = [format ["<t size='1.2' align='right'>%1</t>", _squadName], format ["<t align='right'>%1, %2</t>", _name, _role], ""];
+
+{
+	([_x] call RT_Utils_fnc_getUnitRoleInfo) params ["_name", "_role"];
+
+	_text pushBack ( format ["<t align='right'>%1, %2</t>", _name, _role]);
+} forEach _units;
+
+_control ctrlSetStructuredText parseText (_text joinString "<br/>");
+_control ctrlCommit 0;
+
+private _ctrlPos =  ctrlPosition _control;
+_control ctrlSetPositionX (_ctrlPos#0 + _ctrlPos#2 - (ctrlTextWidth _control));
+_control ctrlSetPositionW (ctrlTextWidth _control);
+_control ctrlSetPositionH (ctrlTextHeight _control);
+_control ctrlCommit 0;
+
+_control ctrlSetPositionH (ctrlTextHeight _control);
 _control ctrlCommit 0;
