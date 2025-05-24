@@ -9,9 +9,16 @@ class CfgFunctions
         class PauseDisplay
         {
             file = "rt\pausedisplay\Functions\Display";
-            class SetPlayerInfo
-            {
-            };
+            class SetPlayerInfo {};
+        };
+
+        class AdminPanel
+        {
+            file = "rt\pausedisplay\Functions\adminPanel";
+            class SetSoundSlider {};
+            class SetSoundSliderText {};
+            class SetSound {};
+            class HideControlIfNoZeus {};
         };
     };
 };

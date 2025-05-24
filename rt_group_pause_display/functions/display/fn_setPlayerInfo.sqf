@@ -2,6 +2,10 @@ params [["_control", controlNull]];
 
 if (isNull _control) exitWith {};
 
+if ([] call RT_Utils_fnc_isAdminOrZeus) exitWith {};
+
+_control ctrlSetBackgroundColor [0,0,0,0.4];
+
 private _units = ((units group player) - [player]);
 
 ([player] call RT_Utils_fnc_getUnitRoleInfo) params ["_name", "_role",  "_squadName"];
