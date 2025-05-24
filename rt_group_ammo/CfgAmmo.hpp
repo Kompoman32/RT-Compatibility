@@ -9,7 +9,7 @@ class CfgAmmo {
         explosive = 1E-7;
         deflecting = 1;
         explosionTime = 3;
-        timeToLive = 1000;
+        timeToLive = 300;
         grenadeFireSound[] = {};
         grenadeBurningSound[] = {};
         smokeColor[] = {0,0,0,0};
