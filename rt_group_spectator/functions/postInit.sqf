@@ -24,6 +24,7 @@ _this spawn {
 		};
 
 		// because in ace_spectator_fnc_setSpectator it set to value of argument 0
-		ace_hearing_disableVolumeUpdate = true;
+		// ace_hearing_disableVolumeUpdate = !_set;
+
 	}] call Rt_Utils_fnc_addCBAEventhandler;
 }
