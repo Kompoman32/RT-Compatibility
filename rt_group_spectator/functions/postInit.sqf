@@ -6,7 +6,14 @@ _this spawn {
 
 	[player, "Killed", RT_SPECTATOR_VAR_KILLED_HANDLER] call Rt_Utils_fnc_removeEventhandler;
 	[player, "Killed", RT_SPECTATOR_VAR_KILLED_HANDLER, { 
-		params ["_unit", "_killer", "_instigator", "_useEffects"];
+		// params ["_unit", "_killer", "_instigator", "_useEffects"];
+
+		[] call RT_Spectator_fnc_removeSpectator;
+	}] call Rt_Utils_fnc_addEventhandler;
+
+	[player, "Respawn", RT_SPECTATOR_VAR_RESPAWN_HANDLER] call Rt_Utils_fnc_removeEventhandler;
+	[player, "Respawn", RT_SPECTATOR_VAR_RESPAWN_HANDLER, { 
+		// params ["_unit", "_corpse"];
 
 		[] call RT_Spectator_fnc_removeSpectator;
 	}] call Rt_Utils_fnc_addEventhandler;
