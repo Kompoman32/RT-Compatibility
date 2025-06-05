@@ -13,5 +13,18 @@
             <English>A unique product with a post-Soviet taste.</English>
             <Russian>Уникальный продукт с постсоветским вкусом.</Russian>
         </Key>
+
+        <Key ID="STR_RT_AMMO_AfghanPotato_itemName">
+            <English>Afghanistanian Diet Potato</English>
+            <Russian>Афганская Диетическая Картошка</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_AfghanPotato_itemNameShort">
+            <English>Afghan Potato</English>
+            <Russian>Афганская Картошка </Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_AfghanPotato_itemDescription">
+            <English>Unique item for Afghan children from the game "Hot Potato".</English>
+            <Russian>Уникальный предмет для афганских детей из игры "Горячая картошка".</Russian>
+        </Key>
     </Package>
 </Project>
