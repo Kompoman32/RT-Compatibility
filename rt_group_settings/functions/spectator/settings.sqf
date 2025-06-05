@@ -9,6 +9,8 @@ RT_SETTINGS_SPECTATOR_resistance = "SETTINGS_RT_SETTINGS_SPECTATOR_resistance";
 RT_SETTINGS_SPECTATOR_civilian = "SETTINGS_RT_SETTINGS_SPECTATOR_civilian";
 
 RT_SETTINGS_SPECTATOR_enable_quotes = "SETTINGS_RT_SETTINGS_SPECTATOR_enable_quotes";
+RT_SETTINGS_SPECTATOR_enable_add_fun_quotes = "SETTINGS_RT_SETTINGS_SPECTATOR_enable_add_fun_quotes";
+RT_SETTINGS_SPECTATOR_enable_only_fun_quotes = "SETTINGS_RT_SETTINGS_SPECTATOR_enable_only_fun_quotes";
 
 [
     RT_SETTINGS_SPECTATOR_enable, "CHECKBOX",
@@ -47,11 +49,24 @@ RT_SETTINGS_SPECTATOR_enable_quotes = "SETTINGS_RT_SETTINGS_SPECTATOR_enable_quo
     1
 ] call CBA_fnc_addSetting;
 
-
 [
     RT_SETTINGS_SPECTATOR_enable_quotes, "CHECKBOX",
     ["Цитаты в режиме присмерти", "Включить показ цитат при падении в Unconscious"],
     [RT_SETTINGS_category, _sub3CategoryStr],
     true,
+    1
+] call CBA_fnc_addSetting;
+[
+    RT_SETTINGS_SPECTATOR_enable_add_fun_quotes, "CHECKBOX",
+    ["Добавлять FUN цитаты", "Добавлять fun цитат в перемешку с обычными"],
+    [RT_SETTINGS_category, _sub3CategoryStr],
+    false,
+    1
+] call CBA_fnc_addSetting;
+[
+    RT_SETTINGS_SPECTATOR_enable_only_fun_quotes, "CHECKBOX",
+    ["Только FUN цитаты", "Включить показ ТОЛЬКО fun цитат"],
+    [RT_SETTINGS_category, _sub3CategoryStr],
+    false,
     1
 ] call CBA_fnc_addSetting;

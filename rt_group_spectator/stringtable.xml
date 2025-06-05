@@ -121,8 +121,298 @@
                 <Russian>Война. Война никогда не меняется.</Russian>
             </Key>
             <Key ID="STR_RT_SPECTATOR_Quote_Author_13">
-                <English>Mark O'Green, Fallout</English>
-                <Russian>Марк О'Грин, Fallout</Russian>
+                <English>Fallout</English>
+                <Russian>Fallout</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_14">
+                <English>Have the courage to use your own understanding.</English>
+                <Russian>Имей мужество пользоваться собственным умом.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_14">
+                <English>Immanuel Kant</English>
+                <Russian>Иммануил Кант</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_15">
+                <English>Cowards die many times before their deaths;\\The valiant never taste of death but once.</English>
+                <Russian>Трус умирает при каждой опасности, грозящей ему, храброго же смерть настигает только раз.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_15">
+                <English>William Shakespeare</English>
+                <Russian>Уильям Шекспир</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_16">
+                <English>A people that oppresses other peoples cannot be free.\\The force it needs to suppress another people will, in the end, always turn against itself.</English>
+                <Russian>Не может быть свободен народ, угнетающий другие народы.\\Сила, нужная ему для подавления другого народа,\\в конце концов всегда обращается против него самого.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_16">
+                <English>Friedrich Engels</English>
+                <Russian>Фридрих Энгельс</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_17">
+                <English>Sometimes violence can quickly remove obstacles,\\but violence has never been able to create anything.</English>
+                <Russian>Порой при помощи насилия удаётся быстро устранить препятствия,\\но ни разу ещё насилию не удалось ничего создать.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_17">
+                <English>Albert Einstein</English>
+                <Russian>Альберт Эйнштейн</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_18">
+                <English>Better ten years of negotiations than one day of war.</English>
+                <Russian>Лучше десять лет переговоров, чем один день войны.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_18">
+                <English>Andrey Gromyko</English>
+                <Russian>Андрей Громыко</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_19">
+                <English>Laws are silent amidst the clash of arms.</English>
+                <Russian>Законы молчат среди лязга оружия.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_19">
+                <English>Cicero</English>
+                <Russian>Цицерон</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_20">
+                <English>An unjust peace is better than a just war.</English>
+                <Russian>Несправедливый мир лучше справедливой войны.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_20">
+                <English>Cicero</English>
+                <Russian>Цицерон</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_21">
+                <English>Nothing costs so much as war, and nothing brings so little profit.</English>
+                <Russian>Ничто не обходится так дорого,\\как война и ничто не приносит так мало пользы.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_21">
+                <English>Benjamin Franklin</English>
+                <Russian>Бенджамин Франклин</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_22">
+                <English>War is a way to lose even the truth for which you are fighting.</English>
+                <Russian>Война — это способ проиграть даже ту правду, за которую борешься.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_22">
+                <English>Albert Camus</English>
+                <Russian>Альбер Камю</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_23">
+                <English>Peace cannot be kept by force.\\It can only be achieved by understanding.</English>
+                <Russian>Мир не удержится силой.\\Его можно достичь только через понимание.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_23">
+                <English>Albert Einstein</English>
+                <Russian>Альберт Эйнштейн</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_24">
+                <English>Never doubt that a small group of thoughtful,\\committed citizens can change the world;\\indeed, it's the only thing that ever has.</English>
+                <Russian>Никогда не сомневайтесь, что небольшая группа\\сознательных людей может изменить мир.\\Именно так он всегда и менялся.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_24">
+                <English>Margaret Mead</English>
+                <Russian>Маргарет Мид</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_25">
+                <English>The only way to destroy an enemy is to make him your friend.</English>
+                <Russian>Уничтожить врага можно только одним способом —\\сделать его другом.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_25">
+                <English>Abraham Lincoln</English>
+                <Russian>Авраам Линкольн</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_26">
+                <English>Only the dead see the end of war</English>
+                <Russian>Только мертвые увидят конец войны.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_26">
+                <English>George Santayana</English>
+                <Russian>Джордж Сантаяна</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_27">
+                <English>War is never an end, but always the beginning of new troubles.</English>
+                <Russian>Война никогда не бывает окончанием,\\а всегда только началом новых бедствий.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_27">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_28">
+                <English>Humanity starts with compassion for others.</English>
+                <Russian>Гуманность начинается с сострадания к другим людям.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_28">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_29">
+                <English>War is murder in the name of peace.</English>
+                <Russian>Война — это убийство во имя мира.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_29">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_30">
+                <English>Those who wish to rule over people must first learn to serve them.</English>
+                <Russian>Тот, кто хочет управлять людьми,\\должен сначала научиться им служить.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_30">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_31">
+                <English>To be humane\\is to strive for the happiness of not just oneself but also of those around.</English>
+                <Russian>Быть человечным — значит стремиться к счастью\\ не только своему, но и окружающих.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_31">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_32">
+                <English>To win a war, one must first conquer the fear of it.</English>
+                <Russian>Чтобы победить в войне, нужно победить страх перед ней.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_32">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_33">
+                <English>Without truth, no power can save a society.</English>
+                <Russian>Когда правды нет, никакая сила не спасет общество.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_33">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_34">
+                <English>Freedom begins where violence ends.</English>
+                <Russian>Свобода начинается там, где заканчивается насилие.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_34">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_35">
+                <English>He who kills for an idea has already lost.</English>
+                <Russian>Тот, кто убивает ради идеи, уже проиграл.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_35">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_36">
+                <English>True courage is the ability to reject hatred.</English>
+                <Russian>Истинная храбрость — это умение отказаться от ненависти.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_36">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_37">
+                <English>No one emerges victorious from a war, not even the winners.</English>
+                <Russian>Никто не выигрывает в войне, даже победители.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_37">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_38">
+                <English>When words fail, violence takes over.</English>
+                <Russian>Когда заканчиваются слова, начинается насилие.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_38">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_39">
+                <English>Only peace can foster the conditions for genuine progress.</English>
+                <Russian>Лишь мир способен создать условия для подлинного прогресса.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_39">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_40">
+                <English>Freedom should not be the privilege of just one nation.</English>
+                <Russian>Свобода не должна быть привилегией одного народа.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_40">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_41">
+                <English>Let reason always triumph over force.</English>
+                <Russian>Пусть разум всегда побеждает силу.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_41">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_42">
+                <English>All wars start because someone thinks they are better than others.</English>
+                <Russian>Все войны начинаются из-за того, что кто-то считает себя лучше другого.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_42">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_43">
+                <English>War is a defeat for all humanity.</English>
+                <Russian>Война — это поражение для всего человечества.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Quote_Author_43">
+                <English>Unknowm</English>
+                <Russian>Неизвестный</Russian>
+            </Key>
+        </Container>
+        <Container name="Quotes">
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_1">
+                <English>The intrigue is to kill your own mother and\\start eating chips from her vagina.</English>
+                <Russian>Интрига — это убить собственную мать и\\начать есть чипсы из её влагалища.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_Author_1">
+                <English>Holy Father Gregory</English>
+                <Russian>Св.Отец Григорий</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_2">
+                <English>Today I will not be a hero...</English>
+                <Russian>Сегодня я не буду героем...</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_Author_2">
+                <English>Rolanishe</English>
+                <Russian>Rolanishe</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_3">
+                <English>Buy Deus Ex.</English>
+                <Russian>Купи Deus Ex.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_Author_3">
+                <English>Gravekeeper</English>
+                <Russian>Gravekeeper</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_4">
+                <English>Oh, my &lt;t color='#cc0000'&gt;f&lt;/t&gt; &lt;t color='#6aa84f'&gt;i&lt;/t&gt; &lt;t color='#f1c232'&gt;n&lt;/t&gt; &lt;t color='#3d85c6'&gt;a&lt;/t&gt; &lt;t color='#a64d79'&gt;n&lt;/t&gt; &lt;t color='#9fc5e8'&gt;c&lt;/t&gt; &lt;t color='#6aa84f'&gt;e&lt;/t&gt; &lt;t color='#e06666'&gt;s&lt;/t&gt; on Webmoney are 8 rubles!</English>
+                <Russian>О, мои &lt;t color='#cc0000'&gt;ф&lt;/t&gt; &lt;t color='#6aa84f'&gt;и&lt;/t&gt; &lt;t color='#f1c232'&gt;н&lt;/t&gt; &lt;t color='#3d85c6'&gt;а&lt;/t&gt; &lt;t color='#a64d79'&gt;н&lt;/t&gt; &lt;t color='#9fc5e8'&gt;с&lt;/t&gt; &lt;t color='#6aa84f'&gt;ы&lt;/t&gt; на Webmoney — 8 рублей!</English>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_Author_4">
+                <English>ReloadKey</English>
+                <Russian>ReloadKey</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_5">
+                <English>A goat was walking across a field, and the field was a football field.</English>
+                <Russian>Шёл козёл по полю, а поле было футбольным.</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_Author_5">
+                <English>Gravekeeper</English>
+                <Russian>Gravekeeper</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_6">
+                <English>Извините, бегите!</English>
+                <Russian>Sorry, run away!</Russian>
+            </Key>
+            <Key ID="STR_RT_SPECTATOR_Fun_Quote_Author_6">
+                <English>Valmar</English>
+                <Russian>Valmar</Russian>
             </Key>
         </Container>
     </Package>
