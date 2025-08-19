@@ -11,8 +11,6 @@ _this spawn {
 	[missionNamespace, "ace_arsenal_displayClosed", RT_RECORDINGS_VAR_ACE_ARSENAL_CLOSED_HANDLER, {
 		private _openTime = diag_tickTime - (missionNamespace getVariable [RT_RECORDINGS_VAR_ACE_ARSENAL_TIME_HANDLER, diag_tickTime]);
 
-		systemChat str ["ArsenalUI", _openTime];
-
 		steamGameRecordingEvent ["ArsenalUI", _openTime, [], -_openTime];
 		missionNamespace setVariable [RT_RECORDINGS_VAR_ACE_ARSENAL_TIME_HANDLER, nil];
 	}] call Rt_Utils_fnc_addCBAEventhandler;
