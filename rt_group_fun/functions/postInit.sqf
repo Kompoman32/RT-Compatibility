@@ -48,7 +48,8 @@ _this spawn {
 	[player, "ace_firedPlayer", RT_FUN_VAR_FIRED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
 	[player, "ace_firedPlayer", RT_FUN_VAR_FIRED_HANDLER, {
 		params ["_unit"];
-		if (goggles _unit !=  "G_Goggles_VR") exitWith {};
+
+		if (_unit != player) exitWith {};
 
 		if (!(RT_SETTINGS_FUN_enable call CBA_settings_fnc_get) || !(RT_SETTINGS_FUN_enable_helldivers_artillery call CBA_settings_fnc_get)) exitWith {};
 		if (!(RT_SETTINGS_SUPPORT_enable_artillery call CBA_settings_fnc_get)) exitWith {};
@@ -60,18 +61,7 @@ _this spawn {
 			if (leader player != player) exitWith {};
 			if (_ammo != "SmokeShellRed" and (_ammo != "G_40mm_SmokeRed")) exitWith {};
 
-			RT_SUPPORT_VAR_EXPRESS_ARTILLERY_PARAMS params [
-				"_dropTime",
-				"_artilleryAmmo",
-				"_radius",
-				"_rounds",
-				"_roundDelay",
-				"_conditionEnd",
-				"_safezoneRadius",
-				"_altitude",
-				"_roundSpeed",
-				"_sounds"
-				];
+			RT_SUPPORT_VAR_EXPRESS_ARTILLERY_PARAMS params ["_dropTime"];
 
 			private _offsetBeforeDrop = 12.5;
 
