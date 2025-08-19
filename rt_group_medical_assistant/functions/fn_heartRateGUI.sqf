@@ -3,7 +3,7 @@ params ["_ctrl","_parentCtrl"];
 private _display = (findDisplay 180025);
 
 private _heartBeatCtrl = _display ctrlCreate ["RscPicture",(15000 + (random 15000)),_parentCtrl];
-_heartBeatCtrl ctrlSetText "\rt\medical\images\hr1.paa";
+_heartBeatCtrl ctrlSetText "\rt\medical_assistant\images\hr1.paa";
 
 _heartBeatCtrl ctrlShow false;
 

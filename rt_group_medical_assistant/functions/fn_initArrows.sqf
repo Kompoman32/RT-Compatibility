@@ -20,7 +20,7 @@ private _setPic = {
     // private _picture = "\a3\UI_F_Enoch\Data\CfgMarkers\arrowSmall1_ca.paa";
     // private _picture = "\A3\ui_f\data\map\mapcontrol\ViewTower_CA.paa"; // BEST
     
-    private _picture = "\rt\medical\images\arrow_CA.paa";
+    private _picture = "\rt\medical_assistant\images\arrow_CA.paa";
 
     _ctrl ctrlSetText _picture;  
 };

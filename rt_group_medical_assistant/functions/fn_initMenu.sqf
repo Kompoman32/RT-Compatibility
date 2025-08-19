@@ -86,7 +86,7 @@ for "_i" from 0 to (18-1) do
         _ctrl_dir ctrlSetPosition [4.67151e-007 * safezoneW, 0.033 * safezoneH, 0.034062 * safezoneW, 0.055 * safezoneH];
         _ctrl_dir ctrlSetBackgroundColor [0,0,0,0];
         _ctrl_dir ctrlSetTextColor [1,1,1,0.5];
-        _ctrl_dir ctrlSetText "\rt\medical\images\arrow_CA.paa";
+        _ctrl_dir ctrlSetText "\rt\medical_assistant\images\arrow_CA.paa";
 
         private _ctrl_blood_rate = _display ctrlCreate ["RscPicture", (1100 + _i), _ctrl];
         _ctrl_blood_rate ctrlSetPosition [0.1 * safezoneW - 1.67151e-007 * safezoneW, 0.033 * safezoneH, 0.017031 * safezoneW, 0.0275 * safezoneH];
@@ -166,7 +166,7 @@ for "_o" from 0 to 1 step 0 do
 
                                         if (_unit != player) then
                                         {
-                                                _ctrl_dir ctrlSetText "\rt\medical\images\arrow_CA.paa";
+                                                _ctrl_dir ctrlSetText "\rt\medical_assistant\images\arrow_CA.paa";
                                                 _ctrl_dir ctrlSetAngle [[[player, _unit] call BIS_fnc_dirTo, getDir player] call BIS_fnc_getAngleDelta, 0.5, 0.5, false];
                                         }
                                         else 
@@ -221,10 +221,10 @@ for "_o" from 0 to 1 step 0 do
                                                 private _loss_rate = switch (true) do {
                                                         case (!(alive _unit));
                                                         case (_bleedRate == 0): {[[1, 1, 1, 0], "", ""]};
-                                                        case (_bleedRate < _bleedRateKO * 0.1): {[[1, 1, 0, 1], "Slow bleeding", "\rt\medical\images\loss_rate1.paa"]};
-                                                        case (_bleedRate < _bleedRateKO * 0.5): {[[1, 0.67, 0, 1], "Moderate bleeding", "\rt\medical\images\loss_rate2.paa"]};
-                                                        case (_bleedRate < _bleedRateKO * 1): {[[1, 0.33, 0, 1], "Severe bleeding", "\rt\medical\images\loss_rate3.paa"]};
-                                                        default {[[1, 0, 0, 1], "Massive bleeding", "\rt\medical\images\loss_rate4.paa"]};
+                                                        case (_bleedRate < _bleedRateKO * 0.1): {[[1, 1, 0, 1], "Slow bleeding", "\rt\medical_assistant\images\loss_rate1.paa"]};
+                                                        case (_bleedRate < _bleedRateKO * 0.5): {[[1, 0.67, 0, 1], "Moderate bleeding", "\rt\medical_assistant\images\loss_rate2.paa"]};
+                                                        case (_bleedRate < _bleedRateKO * 1): {[[1, 0.33, 0, 1], "Severe bleeding", "\rt\medical_assistant\images\loss_rate3.paa"]};
+                                                        default {[[1, 0, 0, 1], "Massive bleeding", "\rt\medical_assistant\images\loss_rate4.paa"]};
                                                 };
 
                                                 _ctrl_blood_rate ctrlSetTextColor _loss_rate#0;
