@@ -17,3 +17,9 @@ class CfgFunctions
         };
     };
 };
+
+class CfgSurfaces {
+	class Default {
+		AIAvoidStance = 2;
+	};
+};
