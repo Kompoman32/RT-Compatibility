@@ -15,6 +15,9 @@ class CfgFunctions
             class isDancing
             {
             };
+            class isActing
+            {
+            };
             class StopDance
             {
             };

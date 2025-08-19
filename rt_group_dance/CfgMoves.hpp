@@ -54,6 +54,33 @@ class CfgMovesMaleSdr : CfgMovesBasic
             speed = -11;
         };
 
+        // WebKnight - Helldivers Salute
+        // src: https://steamcommunity.com/sharedfiles/filedetails/?id=3503413024
+        class WBK_HellDivers_SaluteIn : rt_dances
+        {
+            file = "rt\dance\dances\wbk-helldivers-salute\Salute_In.rtm";
+            InterpolateTo[] = {"WBK_HellDivers_SaluteLoop", 2};
+            looped = 0;
+            speed=-1.5;
+            showHandGun  = 0;
+            disableWeapons = 1;
+            disableWeaponsLong = 1;
+        };
+        class WBK_HellDivers_SaluteLoop : WBK_HellDivers_SaluteIn
+        {
+            file = "rt\dance\dances\wbk-helldivers-salute\Salute_Loop.rtm";
+            looped = 1;
+            InterpolateTo[] = {};
+			speed=1e+010;
+        };
+        class WBK_HellDivers_SaluteOut : WBK_HellDivers_SaluteIn
+        {
+            file = "rt\dance\dances\wbk-helldivers-salute\Salute_Out.rtm";
+            // minPlayTime=0.69999999;
+			speed=-0.5;
+            InterpolateTo[] = {"", 2};
+        };
+
         // ASmallDinosaur - Animate
         // src: https://steamcommunity.com/sharedfiles/filedetails/?id=2819732932
         class a2_dances : rt_dances
