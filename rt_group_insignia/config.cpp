@@ -2,18 +2,18 @@
 
 class CfgUnitInsignia
 {
-    class RT_insignia_group_logo
+    class RTGroupID
     {
-        displayName = "RT Group Logo";
+        displayName = "RT Group Emblem (2018)";
         author = "Voxtell";
-        texture = "rt\insignia\data\rt_group_logo_ca.paa";
+        texture = "rt\insignia\data\RT18.paa";
         textureVehicle = "";
     };
-    class RT_insignia_old_logo
+    class RTGroup17ID
     {
-        displayName = "RT Old Logo";
+        displayName = "RT Group Emblem (2017)";
         author = "Voxtell";
-        texture = "rt\insignia\data\rt_logo_old_ca.paa";
+        texture = "rt\insignia\data\RT17.paa";
         textureVehicle = "";
     };
 };
