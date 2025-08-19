@@ -1,1 +1,1 @@
-*.hpp, *.sqf, *.sqm, *.rtm, *.paa, *ogg, stringtable.xml, *.ogv, *.p3d, *.rvmat
+*.hpp, *.sqf, *.sqm, *.rtm, *.paa, *ogg, stringtable.xml, *.ogv, *.p3d, *.rvmat, *.jpg
