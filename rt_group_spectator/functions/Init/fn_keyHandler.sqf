@@ -24,7 +24,7 @@ _this spawn {
         if (!(player getVariable ["ACE_isUnconscious", false])) exitWith {};
 
         if ((_key isEqualto 0x1C) or (_key isEqualto 0x9C)) exitwith {
-            [true, false, false] call ace_spectator_fnc_setSpectator
+            [true, false, false] call ace_spectator_fnc_setSpectator;
         };
         
         false
