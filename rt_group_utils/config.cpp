@@ -59,6 +59,9 @@ class CfgFunctions
             class addScripthandler
             {
             };
+            class addScriptedEventHandler
+            {
+            };
             class addEventhandler
             {
             };
@@ -69,6 +72,9 @@ class CfgFunctions
             {
             };
             class removeScripthandler
+            {
+            };
+            class removeScriptedEventHandler
             {
             };
             class removeEventhandler

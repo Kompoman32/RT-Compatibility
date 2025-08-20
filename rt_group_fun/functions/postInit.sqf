@@ -3,6 +3,7 @@ if (!hasInterface) exitwith {};
 /** Script Works Only with Ace */
 if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 
+
 _this spawn {
 	[] call RT_UTILS_fnc_waitUntilPlayerInit;
 
@@ -92,4 +93,17 @@ _this spawn {
 		}
 
 	}] call Rt_Utils_fnc_addCBAEventhandler;
+
+	// Arsenal music
+	[missionNamespace, "ace_arsenal_displayOpened", RT_FUN_VAR_ACE_ARSENAL_OPENED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
+	[missionNamespace, "ace_arsenal_displayOpened", RT_FUN_VAR_ACE_ARSENAL_OPENED_HANDLER, RT_FUN_fnc_onOpenArsenal] call Rt_Utils_fnc_addCBAEventhandler;
+
+	[missionNamespace, "ace_arsenal_displayClosed", RT_FUN_VAR_ACE_ARSENAL_CLOSED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
+	[missionNamespace, "ace_arsenal_displayClosed", RT_FUN_VAR_ACE_ARSENAL_CLOSED_HANDLER, RT_FUN_fnc_onCloseArsenal] call Rt_Utils_fnc_addCBAEventhandler;
+
+	[missionNamespace, "arsenalOpened", RT_FUN_VAR_ARSENAL_OPENED_HANDLER] call Rt_Utils_fnc_removeScriptedEventhandler;
+	[missionNamespace, "arsenalOpened", RT_FUN_VAR_ARSENAL_OPENED_HANDLER, RT_FUN_fnc_onOpenArsenal] call Rt_Utils_fnc_addScriptedEventhandler;
+
+	[missionNamespace, "arsenalClosed", RT_FUN_VAR_ARSENAL_CLOSED_HANDLER] call Rt_Utils_fnc_removeScriptedEventhandler;
+	[missionNamespace, "arsenalClosed", RT_FUN_VAR_ARSENAL_CLOSED_HANDLER, RT_FUN_fnc_onCloseArsenal] call Rt_Utils_fnc_addScriptedEventhandler;
 }
