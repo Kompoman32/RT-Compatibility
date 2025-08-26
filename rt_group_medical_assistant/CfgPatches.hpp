@@ -4,6 +4,7 @@ class CfgPatches
     {
         name = "RT Compatibility - Medical Assistant";
         requiredAddons[] = {
+            "A3_Ui_F",
             "A3_Ui_F_Data",
             "RT_Main",
             "RT_Settings",

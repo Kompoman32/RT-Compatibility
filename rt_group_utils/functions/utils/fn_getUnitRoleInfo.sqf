@@ -3,7 +3,7 @@ params ["_unit"];
 if (isNil "_unit") exitWith {[]};
 
 private _role = roleDescription _unit;
-private _squadName = str group _unit;
+private _squadName = groupID group _unit;
 if (_role == "") then {
 	_role = "Rifleman";
 };

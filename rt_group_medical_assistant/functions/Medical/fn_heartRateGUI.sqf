@@ -47,35 +47,9 @@ _heartBeatCtrl ctrlShow false;
 
     _hr = (round _hr) min 180 max 1;
 
-    _time = 60/(_hr);  //(2 - linearConversion [0, 120, (round _hr) min 240, 0.05, 1, false]);
+    _time = 60/(_hr);
     _heartBeatCtrl ctrlCommit _time;
 
-    sleep  _time;
+    uiSleep _time;
   };
 }
-
-/*
-    // _color set [2, 0];
-    // _heartBeatCtrl ctrlSetForegroundColor _color;
-    _heartBeatCtrl ctrlSetTextColor _color;
-    _heartBeatCtrl ctrlSetFade 0;
-    _heartBeatCtrl ctrlCommit 0;
-
-    _heartBeatCtrl ctrlSetFade 1;
-
-    // _color set [2, 1];
-    // _heartBeatCtrl ctrlSetForegroundColor _color;
-    // _heartBeatCtrl ctrlSetTextColor _color;
-
-    // _heartBeatCtrl ctrlSetPositionX _endX;
-
-    _hr = (round _hr) min 180 max 1;
-
-    _time = 60/(_hr);  //(2 - linearConversion [0, 120, (round _hr) min 240, 0.05, 1, false]);
-    _heartBeatCtrl ctrlCommit _time / 2;
-
-    sleep _time / 2;
-
-    _heartBeatCtrl ctrlSetFade 0;
-    _heartBeatCtrl ctrlCommit _time / 2;
-    sleep _time / 2;
