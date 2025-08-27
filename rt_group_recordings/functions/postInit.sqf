@@ -20,7 +20,7 @@ _this spawn {
 	[missionNameSpace, "ace_unconscious", RT_RECORDINGS_VAR_UNCOSCIOUS_HANDLER, {
 		params ["_unit", "_state"];
 
-		if (!(isPlayer _unit) || !(alive _unit)) exitWith {};
+		if (!(isPlayer _unit) || !(alive _unit) || (_unit != player)) exitWith {};
 
 		if (_state) then {
 			[] call RT_Recordings_fnc_Spectator_Fall;
@@ -31,11 +31,19 @@ _this spawn {
 
 	[player, "Killed", RT_RECORDINGS_VAR_KILLED_HANDLER] call Rt_Utils_fnc_removeEventhandler;
 	[player, "Killed", RT_RECORDINGS_VAR_KILLED_HANDLER, { 
+		params ["_unit"];
+
+		if (_unit != player) exitWith {};
+
 		[] call RT_Recordings_fnc_Spectator_Standup;
 	}] call Rt_Utils_fnc_addEventhandler;
 
 	[player, "Respawn", RT_RECORDINGS_VAR_RESPAWN_HANDLER] call Rt_Utils_fnc_removeEventhandler;
 	[player, "Respawn", RT_RECORDINGS_VAR_RESPAWN_HANDLER, { 
+		params ["_unit"];
+
+		if (_unit != player) exitWith {};
+
 		[] call RT_Recordings_fnc_Spectator_Standup;
 	}] call Rt_Utils_fnc_addEventhandler;
 
