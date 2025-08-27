@@ -7,5 +7,11 @@ class CfgFunctions
             file = "rt\medical\Functions\Bandages";
 			class getBandageTime;
 		};
+
+		class Stamina
+        {
+            file = "rt\medical\Functions\Stamina";
+			class triggerSecondWind;
+		};
     };
 };

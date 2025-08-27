@@ -1,5 +1,6 @@
 #include "CfgPatches.hpp"
 #include "CfgFunctions.hpp"
+#include "CfgEventHandlers.hpp"
 
 class ace_medical_treatment_actions
 {
@@ -27,4 +28,8 @@ class ace_medical_replacementItems {
 		{"ACE_adenosine", 1},
 		{"ACE_salineIV_250", 1}
     };
+};
+
+class CfgMovesFatigue {
+	staminaCooldown = 0.1;
 };
