@@ -24,7 +24,7 @@ class AMA_menu {
 			{
 				class ExitButton: RscButtonTextOnly
 				{
-					idc=9570;
+					idc=-1;
 					x="0.23 * safezoneW";
 					y="0.042 * safezoneH";
 					w="0.0171 * safezoneW";
@@ -36,7 +36,7 @@ class AMA_menu {
 
 				class Group1Button: RscButtonTextOnly
 				{
-	  				idc=9571;
+	  				idc=-1;
 					x="0.0733 * safezoneW";
 					y="0.042 * safezoneH";
 					w="0.016 * safezoneW";
@@ -48,7 +48,7 @@ class AMA_menu {
 
 				class Group2Button: RscButtonTextOnly
 				{
-	  				idc=9571;
+	  				idc=-1;
 					x="0.0925 * safezoneW";
 					y="0.042 * safezoneH";
 					w="0.016 * safezoneW";
@@ -60,7 +60,7 @@ class AMA_menu {
 
 				class Group3Button: RscButtonTextOnly
 				{
-	  				idc=9571;
+	  				idc=-1;
 					x="0.1117 * safezoneW";
 					y="0.042 * safezoneH";
 					w="0.016 * safezoneW";
@@ -72,7 +72,7 @@ class AMA_menu {
 
 				class Group4Button: RscButtonTextOnly
 				{
-	  				idc=9571;
+	  				idc=-1;
 					x="0.131 * safezoneW";
 					y="0.042 * safezoneH";
 					w="0.016 * safezoneW";
@@ -84,7 +84,7 @@ class AMA_menu {
 
 				class Group5Button: RscButtonTextOnly
 				{
-	  				idc=9571;
+	  				idc=-1;
 					x="0.1502 * safezoneW";
 					y="0.042 * safezoneH";
 					w="0.016 * safezoneW";
@@ -96,7 +96,7 @@ class AMA_menu {
 
 				class Group6Button: RscButtonTextOnly
 				{
-	  				idc=9571;
+	  				idc=-1;
 					x="0.1694 * safezoneW";
 					y="0.042 * safezoneH";
 					w="0.016 * safezoneW";
@@ -104,6 +104,18 @@ class AMA_menu {
 					text="";
 					tooltip="Group 6"
 					onButtonClick="5 call RT_Medical_Assistant_fnc_onGroupButtonClick"
+				};
+
+				class GroupAllButton: RscButtonTextOnly
+				{
+	  				idc=-1;
+					x="0.191 * safezoneW";
+					y="0.032 * safezoneH";
+					w="0.017 * safezoneW";
+					h="0.022 * safezoneH";
+					text="";
+					tooltip="All Units"
+					onButtonClick="-1 call RT_Medical_Assistant_fnc_onGroupButtonClick"
 				};
 			};
 		};

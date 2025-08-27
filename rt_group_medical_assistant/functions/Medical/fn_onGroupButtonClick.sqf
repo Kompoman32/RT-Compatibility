@@ -22,13 +22,17 @@ if (_showAll) then {
 	} forEach (groups _playerSide);
 };
 
+if (_index == -1) exitWith {
+	RT_MEDICAL_ASSSISTANT_VAR_MENU_CURRENT_INDEX = _index;
+	[_groups] call AMA_fnc_initMenuAll;
+	[objNull, _index] call RT_Medical_Assistant_fnc_setGroupText;
+};
+
 private _selectedGroup = objNull;
 
 if (_index < (count _groups)) then {
 	_selectedGroup = (_groups#_index);
 };
-
-// if (isNull _selectedGroup) exitWith {};
 
 RT_MEDICAL_ASSSISTANT_VAR_MENU_CURRENT_INDEX = _index;
 

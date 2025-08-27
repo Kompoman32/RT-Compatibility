@@ -26,6 +26,8 @@ if (_cardsCount > _minCardCount) then {
     _cardsCount = _minCardCount + ceil ((_cardsCount - _minCardCount) / 3) * 3;
 };
 
+[] call RT_Medical_Assistant_fnc_clearControls;
+
 private _controls = [_cardsCount] call RT_Medical_Assistant_fnc_initControls;
 
 [_units, _controls] spawn {

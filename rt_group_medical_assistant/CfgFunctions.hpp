@@ -12,6 +12,10 @@ class CfgFunctions
 			{
 				file="rt\medical_assistant\Functions\Medical\fn_initMenu.sqf";
 			};
+            class initMenuAll
+			{
+				file="rt\medical_assistant\Functions\Medical\fn_initMenuAll.sqf";
+			};
             class heartRateGUI
 			{
 				file="rt\medical_assistant\Functions\Medical\fn_heartRateGUI.sqf";
@@ -31,6 +35,7 @@ class CfgFunctions
 
 			class onGroupButtonClick {};
 			class setGroupText {};
+			class getGroupColor {};
 		};
 	};
 };

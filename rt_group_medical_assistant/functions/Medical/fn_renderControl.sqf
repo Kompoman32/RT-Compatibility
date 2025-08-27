@@ -1,5 +1,5 @@
 
-(_this#0) params ["_ctrl","_ctrl_name","_ctrl_info","_ctrl_pulse", "_ctrl_dir", "_ctrl_blood_rate"];
+(_this#0) params ["_ctrl","_ctrl_name","_ctrl_info","_ctrl_pulse", "_ctrl_dir", "_ctrl_blood_rate", ["_ctrl_groupIcon", objNull], ["_ctrl_groupIconBG", objNull]];
 private _index = _this#1;
 private _unitsList = _this#2;
 
@@ -13,7 +13,17 @@ if (_index < (count _unitsList)) then {
 
 if ((isNull _unit) || !(_unit getVariable ["AMA_Medical_Device",true])) exitWith
 {
-	[_ctrl_name,_ctrl_info,_ctrl_pulse, _ctrl_dir, _ctrl_blood_rate] call RT_Medical_Assistant_fnc_searchControl;
+	[_ctrl_name,_ctrl_info,_ctrl_pulse, _ctrl_dir, _ctrl_blood_rate, _ctrl_groupIcon, _ctrl_groupIconBG] call RT_Medical_Assistant_fnc_searchControl;
+};
+
+if !(isNull _ctrl_groupIcon) then {
+	_ctrl_groupIcon ctrlShow true;
+	_ctrl_groupIcon ctrlCommit 0;
+};
+
+if !(isNull _ctrl_groupIconBG) then {
+	_ctrl_groupIconBG ctrlShow true;
+	_ctrl_groupIconBG ctrlCommit 0;
 };
 
 private _bp = [_unit] call ace_medical_status_fnc_getbloodpressure;
