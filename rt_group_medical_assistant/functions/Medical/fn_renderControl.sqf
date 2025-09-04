@@ -3,7 +3,7 @@
 private _index = _this#1;
 private _unitsList = _this#2;
 
-if ((isNull _ctrl) || (isNull (findDisplay 180025))) exitWith {};
+if ((isNull _ctrl) || (isNull (findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC))) exitWith {};
 
 private _unit = objNull;
 

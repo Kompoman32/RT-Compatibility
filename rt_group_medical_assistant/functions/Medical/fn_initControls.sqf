@@ -1,4 +1,4 @@
-private _display = (findDisplay 180025);
+private _display = (findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC);
 if (isNull _display) exitWith {};
 
 private _mainCtrlGroup = (_display displayCtrl 956);
@@ -53,7 +53,7 @@ for "_i" from 0 to (_count-1) do
 	_ctrl_blood_rate ctrlSetBackgroundColor [0,0,0,0.75];
 	_ctrl_blood_rate ctrlSetTextColor [1,1,1,1];
 
-	[_ctrl_pulse,_ctrl] spawn AMA_fnc_heartRateGUI;
+	[_ctrl_pulse,_ctrl] spawn RT_Medical_Assistant_fnc_heartRateGUI;
 
 	private _ctrls = [_ctrl_name,_ctrl_info,_ctrl_pulse, _ctrl_dir, _ctrl_blood_rate];
 

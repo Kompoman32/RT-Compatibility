@@ -1,4 +1,4 @@
-private _display = (findDisplay 180025);
+private _display = (findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC);
 
 if (isNull _display) exitWith {};
 

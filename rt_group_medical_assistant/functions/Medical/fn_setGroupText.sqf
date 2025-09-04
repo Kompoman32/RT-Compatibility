@@ -2,7 +2,7 @@ params [["_selectedGroup", objNull], ["_index", 0]];
 
 // Set color and text of GroupText control
 disableSerialization;
-private _display = (findDisplay 180025);
+private _display = (findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC);
 
 private _groupTextBGCtrl = (_display displayCtrl 9580);
 private _groupTextCtrl = (_display displayCtrl 9581);

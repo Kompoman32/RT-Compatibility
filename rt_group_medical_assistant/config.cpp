@@ -9,7 +9,10 @@ class RscStructuredText;
 class ScrollBar;
 
 class AMA_menu {
-	onLoad = "[180025] spawn AMA_fnc_dialogFadeIn; 0 spawn RT_Medical_Assistant_fnc_onGroupButtonClick";
+	onLoad = "call RT_Medical_Assistant_fnc_displayLoad";
+	onUnload = "call RT_Medical_Assistant_fnc_displayUnload";
+	onKeyDown = "call RT_Medical_Assistant_fnc_displayKeyDown";
+	onKeyUp = "call RT_Medical_Assistant_fnc_displayKeyUp";
 
 	class controls
 	{
@@ -31,7 +34,7 @@ class AMA_menu {
 					h="0.0275 * safezoneH";
 					text="";
 					tooltip="Close"
-					onButtonClick="(findDisplay 180025) closeDisplay 2"
+					onButtonClick="(findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC) closeDisplay 2"
 				};
 
 				class Group1Button: RscButtonTextOnly

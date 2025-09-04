@@ -24,7 +24,7 @@ if (_showAll) then {
 
 if (_index == -1) exitWith {
 	RT_MEDICAL_ASSSISTANT_VAR_MENU_CURRENT_INDEX = _index;
-	[_groups] call AMA_fnc_initMenuAll;
+	[_groups] call RT_Medical_Assistant_fnc_initMenuAll;
 	[objNull, _index] call RT_Medical_Assistant_fnc_setGroupText;
 };
 
@@ -36,6 +36,6 @@ if (_index < (count _groups)) then {
 
 RT_MEDICAL_ASSSISTANT_VAR_MENU_CURRENT_INDEX = _index;
 
-[_selectedGroup] call AMA_fnc_initMenu;
+[_selectedGroup] call RT_Medical_Assistant_fnc_initMenu;
 
 [_selectedGroup, _index] call RT_Medical_Assistant_fnc_setGroupText;

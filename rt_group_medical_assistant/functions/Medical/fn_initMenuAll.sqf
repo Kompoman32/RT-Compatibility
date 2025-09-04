@@ -1,9 +1,9 @@
 disableSerialization;
 
 //== No dialog, no display or is dedicated server/headless client
-if (isNull (findDisplay 180025) || !hasInterface) exitWith {};
+if (isNull (findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC) || !hasInterface) exitWith {};
 
-private _display = (findDisplay 180025);
+private _display = (findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC);
 private _mainCtrlGroup = (_display displayCtrl 956);
 if (isNull _mainCtrlGroup) exitWith {};
 
@@ -53,7 +53,7 @@ private _YSpot = 0;
         params ["_allUnits", "_allControls"];
         while {true} do
         {
-            if (isNull (findDisplay 180025)) exitWith {
+            if (isNull (findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC)) exitWith {
                 [missionNamespace, RT_MEDICAL_ASSSISTANT_VAR_MENU_SPAWN] call RT_Utils_fnc_removeScriptHandler;
             };
 

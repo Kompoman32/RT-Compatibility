@@ -8,18 +8,6 @@ class CfgFunctions
 			{
 				file="rt\medical_assistant\Functions\Medical\fn_init.sqf";
             };
-            class initMenu
-			{
-				file="rt\medical_assistant\Functions\Medical\fn_initMenu.sqf";
-			};
-            class initMenuAll
-			{
-				file="rt\medical_assistant\Functions\Medical\fn_initMenuAll.sqf";
-			};
-            class heartRateGUI
-			{
-				file="rt\medical_assistant\Functions\Medical\fn_heartRateGUI.sqf";
-			};
         };
     };
 
@@ -28,6 +16,16 @@ class CfgFunctions
 		class Medical
 		{
 			file="rt\medical_assistant\Functions\Medical";
+
+			class displayLoad {};
+			class displayUnload {};
+			class displayKeyDown {};
+			class displayKeyUp {};
+
+			class initMenu {};
+			class initMenuAll {};
+
+			class heartRateGUI {};
 			class searchControl {};
 			class initControls {};
 			class clearControls {};

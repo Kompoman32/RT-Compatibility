@@ -1,6 +1,6 @@
 params ["_ctrl","_parentCtrl"];
 
-private _display = (findDisplay 180025);
+private _display = (findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC);
 
 private _heartBeatCtrl = _display ctrlCreate ["RscPicture",(15000 + (random 15000)),_parentCtrl];
 _heartBeatCtrl ctrlSetText "\rt\medical_assistant\images\hr1.paa";

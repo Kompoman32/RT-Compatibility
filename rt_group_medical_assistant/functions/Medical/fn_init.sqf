@@ -9,7 +9,6 @@ private _toggleActionMenu = ['MedicalAssistantMenu','Medical Assistant','\A3\Ui_
         if !(isNull (findDisplay 46)) then
         {
             [] spawn {
-                RT_MEDICAL_ASSSISTANT_VAR_MENU_CURRENT_INDEX = -1;
                 (findDisplay 46) createDisplay "AMA_menu";
             };
         };
@@ -36,9 +35,8 @@ private _toggleAction = ['MedicalAssistantToggle','Toggle Medical Assistant','\A
 ["Ace3 Medical Assistant","show_menu_key", "Open Medical Tablet",
 "",
 {
-    if !(isNull (findDisplay 180025)) exitWith {};
+    if !(isNull (findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC)) exitWith {};
 
-    RT_MEDICAL_ASSSISTANT_VAR_MENU_CURRENT_INDEX = -1;
     (findDisplay 46) createDisplay "AMA_menu";
 }, [DIK_NUMPAD5, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 ["Ace3 Medical Assistant","toggle_data_transfer_key", "Toggle Medical Data Transfer",
