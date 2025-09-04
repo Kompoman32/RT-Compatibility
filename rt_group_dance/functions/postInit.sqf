@@ -1,6 +1,8 @@
 /** Script Works Only with Ace */
 if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 
+if !(RT_SETTINGS_INITIALIZATION_dance call CBA_settings_fnc_get) exitwith {};
+
 _this spawn {
 	[] call RT_UTILS_fnc_waitUntilPlayerInit;
 
@@ -179,7 +181,4 @@ _this spawn {
 
 	_action = ["RT_DANCES_ACTIONS_STOP", "Stop Acting!", "", _code, _condition] call ace_interact_menu_fnc_createAction;
 	[player, 1, ["ACE_SelfActions","RT_DANCES_ACTIONS_MAIN"], _action] call ace_interact_menu_fnc_addActionToObject;
-
-	
-
 }

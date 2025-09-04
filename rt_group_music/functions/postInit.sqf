@@ -2,6 +2,8 @@ if (!isServer) exitWith {};
 
 RT_Music_Playlist_Current = [];
 
+if !(RT_SETTINGS_INITIALIZATION_music call CBA_settings_fnc_get) exitwith {};
+
 [] spawn {
     [5] call RT_UTILS_fnc_waitUntilTime;
 

@@ -1,6 +1,8 @@
 /** Script Works Only with Ace */
 if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 
+if !(RT_SETTINGS_INITIALIZATION_support call CBA_settings_fnc_get) exitwith {};
+
 _this spawn {
 	[] call RT_UTILS_fnc_waitUntilPlayerInit;
 

@@ -1,5 +1,7 @@
 private _time = call ace_medical_treatment_fnc_getBandageTime;
 
+if !(RT_SETTINGS_INITIALIZATION_medical call CBA_settings_fnc_get) exitwith { _time };
+
 private _bandage = param [3, ""];
 
 if (_bandage == 'BasicBandage') then {

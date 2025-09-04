@@ -3,6 +3,8 @@ if ([] call RT_UTILS_fnc_dontHasAce) exitwith {};
 
 if (!hasInterface) exitWith {};
 
+if !(RT_SETTINGS_INITIALIZATION_units call CBA_settings_fnc_get) exitwith {};
+
 _this spawn {
 
     private _icon = "z\ace\addons\dragging\UI\icons\person_carry.paa";

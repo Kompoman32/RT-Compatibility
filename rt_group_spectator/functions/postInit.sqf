@@ -1,6 +1,8 @@
 /** Only if real player */
 if (!hasInterface) exitwith {};
 
+if !(RT_SETTINGS_INITIALIZATION_spectator call CBA_settings_fnc_get) exitwith {};
+
 _this spawn {
 	[] call RT_UTILS_fnc_waitUntilPlayerInit;
 

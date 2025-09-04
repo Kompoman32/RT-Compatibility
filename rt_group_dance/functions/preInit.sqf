@@ -1,3 +1,5 @@
+if !(RT_SETTINGS_INITIALIZATION_dance call CBA_settings_fnc_get) exitwith {};
+
 // (local) Список танцев
 RT_DANCE_AVAILABLE_DANCES = [
 	["A2_Dances", "Arma 2 Dances", [

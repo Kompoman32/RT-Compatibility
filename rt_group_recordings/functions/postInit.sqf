@@ -1,6 +1,8 @@
 /** Only if real player */
 if (!hasInterface) exitwith {};
 
+if !(RT_SETTINGS_INITIALIZATION_recordings call CBA_settings_fnc_get) exitwith {};
+
 _this spawn {
 	[missionNamespace, "ace_arsenal_displayOpened", RT_RECORDINGS_VAR_ACE_ARSENAL_OPENED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
 	[missionNamespace, "ace_arsenal_displayOpened", RT_RECORDINGS_VAR_ACE_ARSENAL_OPENED_HANDLER, {
