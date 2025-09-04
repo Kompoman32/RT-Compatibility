@@ -1,4 +1,6 @@
-private _unit = player ;
+if !(RT_SETTINGS_MOVEMENT_enable_ladderSlide call CBA_Settings_fnc_get) exitWith {};
+
+private _unit = player;
 
 if !(getText (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "actions") in ["LadderCivilActions","LadderRifleActions"]) exitWith {} ;	// is the unit on ladder?
 

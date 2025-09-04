@@ -2,6 +2,7 @@ RT_SETTINGS_INITIALIZATION_dance = "SETTINGS_RT_SETTINGS_INITIALIZATION_dance";
 RT_SETTINGS_INITIALIZATION_fun = "SETTINGS_RT_SETTINGS_INITIALIZATION_fun";
 RT_SETTINGS_INITIALIZATION_medical = "SETTINGS_RT_SETTINGS_INITIALIZATION_medical";
 RT_SETTINGS_INITIALIZATION_music = "SETTINGS_RT_SETTINGS_INITIALIZATION_music";
+RT_SETTINGS_INITIALIZATION_movement = "SETTINGS_RT_SETTINGS_INITIALIZATION_movement";
 RT_SETTINGS_INITIALIZATION_pause = "SETTINGS_RT_SETTINGS_INITIALIZATION_pause";
 RT_SETTINGS_INITIALIZATION_recordings = "SETTINGS_RT_SETTINGS_INITIALIZATION_recordings";
 RT_SETTINGS_INITIALIZATION_respawn = "SETTINGS_RT_SETTINGS_INITIALIZATION_respawn";
@@ -32,6 +33,16 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
 [
     RT_SETTINGS_INITIALIZATION_medical, "CHECKBOX",
     ["Medical", "Включение обработчиков эвентов для ace_medical_injured для второго дыхания и настройки бинтов"],
+    RT_SETTINGS_category_initialization,
+    true,
+    1,
+	{},
+	true
+] call CBA_fnc_addSetting;
+
+[
+    RT_SETTINGS_INITIALIZATION_movement, "CHECKBOX",
+    ["Movement", "Включение обработчиков анимаций при доставании medical assistant"],
     RT_SETTINGS_category_initialization,
     true,
     1,
