@@ -20,11 +20,623 @@
         </Key>
         <Key ID="STR_RT_AMMO_AfghanPotato_itemNameShort">
             <English>Afghan Potato</English>
-            <Russian>Афганская Картошка </Russian>
+            <Russian>Афганская Картошка</Russian>
         </Key>
         <Key ID="STR_RT_AMMO_AfghanPotato_itemDescription">
             <English>Unique item for Afghan children from the game "Hot Potato".</English>
             <Russian>Уникальный предмет для афганских детей из игры "Горячая картошка".</Russian>
+        </Key>
+    </Package>
+    <Package name="Medical_Damage">
+        <Key ID="STR_ACE_Medical_Damage_RubberBulletHit">
+            <English>Rubber Bullet Hit</English>
+            <Russian>Ушиб резиновой пулей</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_RubberBulletHit_Large">
+            <English>Large rubber bullet hit</English>
+            <Russian>Большой ушиб резиновой пулей</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_RubberBulletHit_Medium">
+            <English>Medium rubber bullet hit</English>
+            <Russian>Средний ушиб резиновой пулей</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_RubberBulletHit_Minor">
+            <English>Minor rubber bullet hit</English>
+            <Russian>Слабый ушиб резиновой пулей</Russian>
+        </Key>
+
+        <Key ID="STR_ACE_Medical_Damage_RubberBallHit">
+            <English>Rubber Ball Hit</English>
+            <Russian>Ушиб резиновым шариком</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_RubberBallHit_Large">
+            <English>Large rubber ball hit</English>
+            <Russian>Большой ушиб резиновым шариком</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_RubberBallHit_Medium">
+            <English>Medium rubber ball hit</English>
+            <Russian>Средний ушиб резиновым шариком</Russian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_RubberBallHit_Minor">
+            <English>Minor rubber ball hit</English>
+            <Russian>Слабый ушиб резиновым шариком</Russian>
+        </Key>
+    </Package>
+
+    <Package name="RubberAmmo">
+        <Key ID="STR_RT_AMMO_Rubber_HandGrenade_Name">
+            <English>Stinger Rubber Ball Grenade</English>
+            <Russian>Stinger Граната с резиновыми шариками</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_HandGrenade_NameShort">
+            <English>Stinger</English>
+            <Russian>Stinger</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_HandGrenade_Description">
+            <English>Type: Rubber Ball Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Russian>Тип: Граната с резиновыми шариками&lt;br /&gt;Кол-во: 1&lt;br /&gt;Применение: рука</Russian>
+        </Key>
+
+
+        <Key ID="STR_RT_AMMO_Rubber_2Rnd_12Gauge_Pellets_No0_Buck_Name">
+            <English>12 Gauge 2Rnd #0 Rubber</English>
+            <Russian>12 Калибр 2 патр. #0 Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_12Gauge_Pellets_No0_Buck_NameShort">
+            <English>#0 Rubber</English>
+            <Russian>#0 Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_12Gauge_Pellets_No0_Buck_Description">
+            <English>#0 Rubber</English>
+            <Russian>#0 Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_6Rnd_12Gauge_Pellets_No4_Bird_Name">
+            <English>12 Gauge 6Rnd #4 Rubber</English>
+            <Russian>12 Калибр 6 патр. #4 Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_12Gauge_Pellets_No4_Bird_NameShort">
+            <English>#4 Rubber</English>
+            <Russian>#4 Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_12Gauge_Pellets_No4_Bird_Description">
+            <English>#4 Rubber</English>
+            <Russian>#4 Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_65x39_caseless_mag_Tracer_Dim_Name">
+            <English>6.5 mm 30Rnd Rubber</English>
+            <Russian>Магазин из 30-ти 6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_65x39_caseless_mag_Tracer_Dim_NameShort">
+            <English>6.5 mm Rubber</English>
+            <Russian>6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_65x39_caseless_mag_Tracer_Dim_Description">
+            <English>Caliber: 6.5x39 mm Rubber&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
+            <Russian>Калибр: 6,5x39 мм Резина&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: MX/C/M/SW/3GL</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_100Rnd_65x39_caseless_mag_Tracer_Dim_Name">
+            <English>6.5 mm 100Rnd Rubber Mag</English>
+            <Russian>Магазин из 100 6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_100Rnd_65x39_caseless_mag_Tracer_Dim_NameShort">
+            <English>6.5 mm Rubber</English>
+            <Russian>6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_100Rnd_65x39_caseless_mag_Tracer_Dim_Description">
+            <English>6.5 mm 100Rnd Rubber&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: MX LSW</English>
+            <Russian>Магазин из 100 6,5 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_65x39_caseless_green_mag_Tracer_Dim_Name">
+            <English>6.5 mm 30Rnd Rubber Mag</English>
+            <Russian>Магазин из 30-ти 6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_65x39_caseless_green_mag_Tracer_Dim_NameShort">
+            <English>6.5 mm Rubber</English>
+            <Russian>6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_65x39_caseless_green_mag_Tracer_Dim_Description">
+            <English>Caliber: 6.5x39 mm Rubber&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: Katiba</English>
+            <Russian>Калибр: 6,5x39 мм Резина&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: Katiba</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_200Rnd_65x39_cased_Box_Tracer_Dim_Name">
+            <English>6.5 mm 200Rnd Belt Rubber</English>
+            <Russian>Короб из 200-т 6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_200Rnd_65x39_cased_Box_Tracer_Dim_NameShort">
+            <English>6.5 mm Rubber</English>
+            <Russian>6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_200Rnd_65x39_cased_Box_Tracer_Dim_Description">
+            <English>6.5 mm 200Rnd Belt Rubber&lt;br /&gt;Rounds: 200&lt;br /&gt;Used in: Stoner 99 LMG</English>
+            <Russian>Короб из 200-т 6,5 мм Резина&lt;br /&gt;Патронов: 200&lt;br /&gt;Используются с: Stoner 99 LMG</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_556x45_mag_Tracer_Dim_Name">
+            <English>5.56 mm 30rnd Mag (Rubber)</English>
+            <Russian>Магазин из 30-ти 5,56 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_556x45_mag_Tracer_Dim_NameShort">
+            <English>5.56 mm Rubber</English>
+            <Russian>5,56 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_556x45_mag_Tracer_Dim_Description">
+            <English>Caliber: 5.56x45 mm Rubber&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</English>
+            <Russian>Калибр: 5,56x45 мм Резина&lt;br /&gt;Патронов: 30&lt;br /&gt;Используются с: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_762x51_mag_SD_Name">
+            <English>7.62 mm 10Rnd Mag (Rubber)</English>
+            <Russian>Магазин из 10-ти 7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_762x51_mag_SD_NameShort">
+            <English>7.62 mm Rubber</English>
+            <Russian>7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_762x51_mag_SD_Description">
+            <English>Caliber: 7.62x51 mm Rubber&lt;br /&gt;Rounds: 10&lt;br /&gt;Used in: Mk18 ABR</English>
+            <Russian>Калибр: 7,62x51 мм Резина&lt;br /&gt;Патронов: 10&lt;br /&gt;Используются с: Mk18 ABR</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_762x51_mag_SD_Name">
+            <English>7.62 mm 20Rnd Mag (Rubber)</English>
+            <Russian>Магазин из 20-ти 7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_762x51_mag_SD_NameShort">
+            <English>7.62 mm Rubber</English>
+            <Russian>7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_762x51_mag_SD_Description">
+            <English>Caliber: 7.62x51 mm Rubber&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: Mk18 ABR</English>
+            <Russian>Калибр: 7,62x51 мм Резина&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: Mk18 ABR</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_338_300gr_HPBT_Mag_Name">
+            <English>.338 LRubber 10Rnd Mag (300gr Lapua Rubber)</English>
+            <Russian>Магазин из 10-ти .338 LRubber (300 гран Lapua Rubber)</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_338_300gr_HPBT_Mag_NameShort">
+            <English>.338 Rubber</English>
+            <Russian>.338 Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_338_300gr_HPBT_Mag_Description">
+            <English>Caliber: 8.6x70mm (300gr Lapua Rubber)&lt;br /&gt;Rounds: 10</English>
+            <Russian>Калибр: 8,6x70mm (300 гран Lapua Rubber)&lt;br /&gt;Патронов: 10</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_762x67_Mk248_Mod_0_Mag_Name">
+            <English>.300 WRubber 20Rnd Mag</English>
+            <Russian>Магазин из 20-ти .300 WRubber</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_762x67_Mk248_Mod_0_Mag_NameShort">
+            <English>.300 WRubber</English>
+            <Russian>.300 WRubber</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_762x67_Mk248_Mod_0_Mag_Description">
+            <English>Caliber: .300 WRubber&lt;br /&gt;Rounds: 20</English>
+            <Russian>Калибр: .300 WRubber&lt;br /&gt;Патронов: 20</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_65x47_Scenar_mag_Name">
+            <English>6.5x47 mm 20Rnd Mag (Rubber Scenar)</English>
+            <Russian>Магазин из 20-ти 6,5x47 мм (Резина Scenar)</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_65x47_Scenar_mag_NameShort">
+            <English>6.5 mm Lapua Rubber</English>
+            <Russian>6,5 мм Lapua Rubber</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_65x47_Scenar_mag_Description">
+            <English>Caliber: 6.5x47 mm (Rubber Scenar)&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: QBU-88</English>
+            <Russian>Калибр: 6,5x47 мм (Резина Scenar)&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: QBU-88</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_7Rnd_408_305gr_Mag_Name">
+            <English>.408 7Rnd Rubber Mag (305gr)</English>
+            <Russian>Магазин из 7-ти .408 Резина (305gr)</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_7Rnd_408_305gr_Mag_NameShort">
+            <English>.408 Rubber</English>
+            <Russian>.408 Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_7Rnd_408_305gr_Mag_Description">
+            <English>Caliber: .408 Rubber (305gr)&lt;br /&gt;Rounds: 7</English>
+            <Russian>Калибр: .408 Резина (305gr)&lt;br /&gt;Патронов: 7</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_5Rnd_127x99_Mag_Name">
+            <English>12.7x99 mm 5Rnd Rubber Mag</English>
+            <Russian>Магазин из 5-ти 12,7x99 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_127x99_Mag_NameShort">
+            <English>12.7 mm Rubber</English>
+            <Russian>12,7 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_5Rnd_127x99_Mag_Description">
+            <English>Caliber: 12.7x99 mm Rubber&lt;br /&gt;Rounds: 5</English>
+            <Russian>Калибр: 12,7x99 мм Резина&lt;br /&gt;Патронов: 5</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_127x99_AMAX_Mag_Name">
+            <English>12.7x99 mm 10Rnd Rubber Mag</English>
+            <Russian>Магазин из 10-ти 12,7x99 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_127x99_AMAX_Mag_NameShort">
+            <English>12.7 mm Rubber</English>
+            <Russian>12,7 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_127x99_AMAX_Mag_Description">
+            <English>Caliber: 12.7x99 mm Rubber&lt;br /&gt;Rounds: 10</English>
+            <Russian>Калибр: 12,7x99 мм Резина&lt;br /&gt;Патронов: 10</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_16Rnd_9x19_mag_Name">
+            <English>9x19 mm 16Rnd Rubber Mag</English>
+            <Russian>Магазин из 16-ти 9х19 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_16Rnd_9x19_mag_NameShort">
+            <English>9x19 mm Rubber</English>
+            <Russian>9х19 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_16Rnd_9x19_mag_Description">
+            <English>9x19 mm 30Rnd Rubber Mag</English>
+            <Russian>Магазин из 16-ти 9х19 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_762x54_Tracer_mag_Name">
+            <English>7.62x54 mm 10Rnd Rubber Mag</English>
+            <Russian>Магазин из 10-ти 7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_762x54_Tracer_mag_NameShort">
+            <English>7.62 mm Rubber</English>
+            <Russian>7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_762x54_Tracer_mag_Description">
+            <English>7.62x54 mm 10Rnd Rubber Mag</English>
+            <Russian>Магазин из 10-ти 7,62 мм Резина</Russian>
+        </Key>
+
+        <!-- Нагенерено -->
+
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_762x39_AK12_Mag_F_Name">
+            <English>7.62 mm 30Rnd Rubber Mag</English>
+            <Russian>Магазин из 30-ти 7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_762x39_AK12_Mag_F_NameShort">
+            <English>7.62 mm Rubber</English>
+            <Russian>7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_762x39_AK12_Mag_F_Description">
+            <English>Caliber: 7.62x39 mm Rubber</English>
+            <Russian>Калибр: 7,62x39 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_762x39_Mag_F_Name">
+            <English>7.62 mm 30Rnd Rubber Mag</English>
+            <Russian>Магазин из 30-ти 7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_762x39_Mag_F_NameShort">
+            <English>7.62 mm Rubber</English>
+            <Russian>7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_762x39_Mag_F_Description">
+            <English>Caliber: 7.62x39 mm Rubber</English>
+            <Russian>Калибр: 7,62x39 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_75Rnd_762x39_AK12_Mag_F_Name">
+            <English>7.62 mm 75Rnd Rubber Mag</English>
+            <Russian>Магазин из 75-ти 7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_75Rnd_762x39_AK12_Mag_F_NameShort">
+            <English>7.62 mm Rubber</English>
+            <Russian>7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_75Rnd_762x39_AK12_Mag_F_Description">
+            <English>Caliber: 7.62x39 mm Rubber</English>
+            <Russian>Калибр: 7,62x39 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_75Rnd_762x39_Mag_F_Name">
+            <English>7.62 mm 75Rnd Rubber Mag</English>
+            <Russian>Магазин из 75-ти 7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_75Rnd_762x39_Mag_F_NameShort">
+            <English>7.62 mm Rubber</English>
+            <Russian>7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_75Rnd_762x39_Mag_F_Description">
+            <English>Caliber: 7.62x39 mm Rubber</English>
+            <Russian>Калибр: 7,62x39 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_545x39_Mag_F_Name">
+            <English>5.45 mm 30Rnd Rubber Mag</English>
+            <Russian>Магазин из 30-ти 5,45 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_545x39_Mag_F_NameShort">
+            <English>5.45 mm Rubber</English>
+            <Russian>5,45 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_545x39_Mag_F_Description">
+            <English>Caliber: 5.45x39 mm Rubber</English>
+            <Russian>Калибр: 5,45x39 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_580x42_Mag_F_Name">
+            <English>5.80 mm 30Rnd Rubber Mag</English>
+            <Russian>Магазин из 30-ти 5,80 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_580x42_Mag_F_NameShort">
+            <English>5.80 mm Rubber</English>
+            <Russian>5,80 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_580x42_Mag_F_Description">
+            <English>Caliber: 5.80x42 mm Rubber</English>
+            <Russian>Калибр: 5,80x42 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_100Rnd_580x42_Mag_F_Name">
+            <English>5.80 mm 100Rnd Rubber Mag</English>
+            <Russian>Магазин из 100 5,80 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_100Rnd_580x42_Mag_F_NameShort">
+            <English>5.80 mm Rubber</English>
+            <Russian>5,80 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_100Rnd_580x42_Mag_F_Description">
+            <English>Caliber: 5.80x42 mm Rubber</English>
+            <Russian>Калибр: 5,80x42 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_65x39_caseless_msbs_Mag_F_Name">
+            <English>6.5 mm 30Rnd Rubber Mag</English>
+            <Russian>Магазин из 30-ти 6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_65x39_caseless_msbs_Mag_F_NameShort">
+            <English>6.5 mm Rubber</English>
+            <Russian>6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_65x39_caseless_msbs_Mag_F_Description">
+            <English>Caliber: 6.5x39 mm Rubber</English>
+            <Russian>Калибр: 6,5x39 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_127x54_Mag_F_Name">
+            <English>12.7 mm 10Rnd Rubber Mag</English>
+            <Russian>Магазин из 10-ти 12,7 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_127x54_Mag_F_NameShort">
+            <English>12.7 mm Rubber</English>
+            <Russian>12,7 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_127x54_Mag_F_Description">
+            <English>Caliber: 12.7x54 mm Rubber</English>
+            <Russian>Калибр: 12,7x54 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_93x64_DMR_05_Mag_F_Name">
+            <English>9.3 mm 10Rnd Rubber Mag</English>
+            <Russian>Магазин из 10-ти 9,3 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_93x64_DMR_05_Mag_F_NameShort">
+            <English>9.3 mm Rubber</English>
+            <Russian>9,3 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_93x64_DMR_05_Mag_F_Description">
+            <English>Caliber: 9.3x64 mm Rubber</English>
+            <Russian>Калибр: 9,3x64 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_650x39_Cased_Mag_F_Name">
+            <English>6.5 mm 20Rnd Rubber Mag</English>
+            <Russian>Магазин из 20-ти 6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_650x39_Cased_Mag_F_NameShort">
+            <English>6.5 mm Rubber</English>
+            <Russian>6,5 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_20Rnd_650x39_Cased_Mag_F_Description">
+            <English>Caliber: 6.5x39 mm Rubber</English>
+            <Russian>Калибр: 6,5x39 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_16Rnd_9x21_Mag_Name">
+            <English>9 mm 16Rnd Rubber Mag</English>
+            <Russian>Магазин из 16-ти 9 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_16Rnd_9x21_Mag_NameShort">
+            <English>9 mm Rubber</English>
+            <Russian>9 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_16Rnd_9x21_Mag_Description">
+            <English>Caliber: 9x21 mm Rubber</English>
+            <Russian>Калибр: 9x21 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_9x21_Mag_Name">
+            <English>9 mm 30Rnd Rubber Mag</English>
+            <Russian>Магазин из 30-ти 9 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_9x21_Mag_NameShort">
+            <English>9 mm Rubber</English>
+            <Russian>9 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_9x21_Mag_Description">
+            <English>Caliber: 9x21 mm Rubber</English>
+            <Russian>Калибр: 9x21 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_9x21_Mag_Name">
+            <English>9 mm 10Rnd Rubber Mag</English>
+            <Russian>Магазин из 10-ти 9 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_9x21_Mag_NameShort">
+            <English>9 mm Rubber</English>
+            <Russian>9 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_10Rnd_9x21_Mag_Description">
+            <English>Caliber: 9x21 mm Rubber</English>
+            <Russian>Калибр: 9x21 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_6Rnd_45ACP_Cylinder_Name">
+            <English>.45 ACP 6Rnd Rubber Cylinder</English>
+            <Russian>Цилиндр из 6-ти .45 ACP Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_6Rnd_45ACP_Cylinder_NameShort">
+            <English>.45 ACP Rubber</English>
+            <Russian>.45 ACP Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_6Rnd_45ACP_Cylinder_Description">
+            <English>Caliber: .45 ACP Rubber</English>
+            <Russian>Калибр: .45 ACP Резина</Russian>
+        </Key>
+        
+        <Key ID="STR_RT_AMMO_Rubber_9Rnd_45ACP_Mag_Name">
+            <English>.45 ACP 9Rnd Rubber Mag</English>
+            <Russian>Магазин из 9-ти .45 ACP Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_9Rnd_45ACP_Mag_NameShort">
+            <English>.45 ACP Rubber</English>
+            <Russian>.45 ACP Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_9Rnd_45ACP_Mag_Description">
+            <English>Caliber: .45 ACP Rubber</English>
+            <Russian>Калибр: .45 ACP Резина</Russian>
+        </Key>
+        
+        <Key ID="STR_RT_AMMO_Rubber_11Rnd_45ACP_Mag_Name">
+            <English>.45 ACP 11Rnd Rubber Mag</English>
+            <Russian>Магазин из 11-ти .45 ACP Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_11Rnd_45ACP_Mag_NameShort">
+            <English>.45 ACP Rubber</English>
+            <Russian>.45 ACP Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_11Rnd_45ACP_Mag_Description">
+            <English>Caliber: .45 ACP Rubber</English>
+            <Russian>Калибр: .45 ACP Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_45ACP_Mag_SMG_01_Name">
+            <English>.45 ACP 30Rnd Rubber Mag</English>
+            <Russian>Магазин из 30-ти .45 ACP Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_45ACP_Mag_SMG_01_NameShort">
+            <English>.45 ACP Rubber</English>
+            <Russian>.45 ACP Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_45ACP_Mag_SMG_01_Description">
+            <English>Caliber: .45 ACP Rubber</English>
+            <Russian>Калибр: .45 ACP Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_9x21_Mag_SMG_02_Name">
+            <English>9 mm 30Rnd Rubber Mag</English>
+            <Russian>Магазин из 30-ти 9 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_9x21_Mag_SMG_02_NameShort">
+            <English>9 mm Rubber</English>
+            <Russian>9 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_30Rnd_9x21_Mag_SMG_02_Description">
+            <English>Caliber: 9x21 mm Rubber</English>
+            <Russian>Калибр: 9x21 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_150RNd_93x64_Mag_Name">
+            <English>9.3 mm 150Rnd Rubber Mag</English>
+            <Russian>Магазин из 150-ти 9,3 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_150RNd_93x64_Mag_NameShort">
+            <English>9.3 mm Rubber</English>
+            <Russian>9,3 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_150RNd_93x64_Mag_Description">
+            <English>Caliber: 9.3x64 mm Rubber</English>
+            <Russian>Калибр: 9,3x64 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_130Rnd_338_Mag_Name">
+            <English>.338 130Rnd Rubber Mag</English>
+            <Russian>Магазин из 130-ти .338 Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_130Rnd_338_Mag_NameShort">
+            <English>.338 Rubber</English>
+            <Russian>.338 Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_130Rnd_338_Mag_Description">
+            <English>Caliber: .338 Rubber</English>
+            <Russian>Калибр: .338 Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_200Rnd_556x45_Box_F_Name">
+            <English>5.56 mm 200Rnd Rubber Mag</English>
+            <Russian>Короб из 200-т 5,56 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_200Rnd_556x45_Box_F_NameShort">
+            <English>5.56 mm Rubber</English>
+            <Russian>5,56 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_200Rnd_556x45_Box_F_Description">
+            <English>Caliber: 5.56x45 mm Rubber</English>
+            <Russian>Калибр: 5,56x45 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_150Rnd_762x54_Box_Name">
+            <English>7.62 mm 150Rnd Rubber Mag</English>
+            <Russian>Магазин из 150-ти 7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_150Rnd_762x54_Box_NameShort">
+            <English>7.62 mm Rubber</English>
+            <Russian>7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_150Rnd_762x54_Box_Description">
+            <English>Caliber: 7.62x54 mm Rubber</English>
+            <Russian>Калибр: 7,62x54 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_40Rnd_46x30_Mag_F_Name">
+            <English>4.6 mm 40Rnd Rubber Mag</English>
+            <Russian>Магазин из 40-ка 4,6 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_40Rnd_46x30_Mag_F_NameShort">
+            <English>4.6 mm Rubber</English>
+            <Russian>4,6 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_40Rnd_46x30_Mag_F_Description">
+            <English>Caliber: 4.6x30 mm Rubber</English>
+            <Russian>Калибр: 4,6x30 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_50Rnd_570x28_SMG_03_Name">
+            <English>5.7 mm 50Rnd Rubber Mag</English>
+            <Russian>Магазин из 50-ти 5,7 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_50Rnd_570x28_SMG_03_NameShort">
+            <English>5.7 mm Rubber</English>
+            <Russian>5,7 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_50Rnd_570x28_SMG_03_Description">
+            <English>Caliber: 5.7x28 mm Rubber</English>
+            <Russian>Калибр: 5,7x28 мм Резина</Russian>
+        </Key>
+
+        <Key ID="STR_RT_AMMO_Rubber_RPG7_F_Name">
+            <English>RPG Rubber Ball Round</English>
+            <Russian>РПГ Снаряд c резиновыми шариками</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_RPG7_F_NameShort">
+            <English>RPG Rubber</English>
+            <Russian>РПГ Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_RPG7_F_Description">
+            <English>Caliber: RPG Rubber</English>
+            <Russian>Калибр: РПГ Резина</Russian>
         </Key>
     </Package>
 </Project>
