@@ -6,12 +6,12 @@ if !(RT_SETTINGS_INITIALIZATION_spectator call CBA_settings_fnc_get) exitwith {}
 _this spawn {
 	[] call RT_UTILS_fnc_waitUntilPlayerInit;
 
-	[player, "Killed", RT_SPECTATOR_VAR_KILLED_HANDLER] call Rt_Utils_fnc_removeEventhandler;
-	[player, "Killed", RT_SPECTATOR_VAR_KILLED_HANDLER, { 
-		// params ["_unit", "_killer", "_instigator", "_useEffects"];
+	// [player, "Killed", RT_SPECTATOR_VAR_KILLED_HANDLER] call Rt_Utils_fnc_removeEventhandler;
+	// [player, "Killed", RT_SPECTATOR_VAR_KILLED_HANDLER, { 
+	// 	// params ["_unit", "_killer", "_instigator", "_useEffects"];
 
-		[] call RT_Spectator_fnc_removeSpectator;
-	}] call Rt_Utils_fnc_addEventhandler;
+	// 	[] call RT_Spectator_fnc_removeSpectator;
+	// }] call Rt_Utils_fnc_addEventhandler;
 
 	[player, "Respawn", RT_SPECTATOR_VAR_RESPAWN_HANDLER] call Rt_Utils_fnc_removeEventhandler;
 	[player, "Respawn", RT_SPECTATOR_VAR_RESPAWN_HANDLER, { 
