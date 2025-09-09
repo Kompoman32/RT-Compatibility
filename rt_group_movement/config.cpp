@@ -24,6 +24,14 @@ class CfgFunctions
             {
             };
         };
+
+        class Animations
+        {
+            file = "rt\movement\animations";
+            class initAnimations
+            {
+            };
+        };
     };
 };
 
