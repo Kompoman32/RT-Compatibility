@@ -41,6 +41,7 @@ RT_SETTINGS_MEDICAL_QuikClot = "SETTINGS_RT_SETTINGS_MEDICAL_QuikClot";
 RT_SETTINGS_MEDICAL_SecondWind = "SETTINGS_RT_SETTINGS_MEDICAL_SecondWind";
 RT_SETTINGS_MEDICAL_SecondWindCooldown = "SETTINGS_RT_SETTINGS_MEDICAL_SecondWindCooldown";
 RT_SETTINGS_MEDICAL_SecondWindAddedSeconds = "SETTINGS_RT_SETTINGS_MEDICAL_SecondWindAddedSeconds";
+RT_SETTINGS_MEDICAL_SecondWindStaminaToTrigger = "SETTINGS_RT_SETTINGS_MEDICAL_SecondWindStaminaToTrigger";
 
 [
     RT_SETTINGS_MEDICAL_SecondWind, "CHECKBOX",
@@ -63,5 +64,13 @@ RT_SETTINGS_MEDICAL_SecondWindAddedSeconds = "SETTINGS_RT_SETTINGS_MEDICAL_Secon
     ["Добавляемое время бега", "Сколько секунд бега (стамины) добавится при активации Второго дыхания"],
     [RT_SETTINGS_category, _subCategoryStaminaStr],
     [0, 60, 10],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    RT_SETTINGS_MEDICAL_SecondWindStaminaToTrigger, "SLIDER",
+    ["Процент активации", "При скольки процентах стамины может активироваться Второе дыхание"],
+    [RT_SETTINGS_category, _subCategoryStaminaStr],
+    [0.01, 1, 0.1, 0, true],
     1
 ] call CBA_fnc_addSetting;
