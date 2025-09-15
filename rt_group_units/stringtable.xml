@@ -3,11 +3,11 @@
     <Package name="UNITS">
         <Key ID="STR_RT_UNITS_Allow_Carry">
             <English>Allow to carry yourself</English>
-            <Russian>Разрешить тащить себя</Russian>
+            <Russian>Разрешить таскать себя</Russian>
         </Key>
         <Key ID="STR_RT_UNITS_Disallow_Carry">
             <English>Disallow to carry yourself</English>
-            <Russian>Запретить тащить себя</Russian>
+            <Russian>Запретить таскать себя</Russian>
         </Key>
     </Package>
 </Project>
