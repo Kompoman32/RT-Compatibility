@@ -30,7 +30,7 @@ class CfgVehicles
         portrait = "\a3\3den\data\displays\display3den\panelleft\entitylist_location_ca.paa";
 
         scope = 2;
-        scopeCurator = 2;
+        scopeCurator = 0;
 		curatorCanAttach = 0;
 
         is3DEN = 1;
@@ -61,7 +61,7 @@ class CfgVehicles
         portrait = "\rt\teleport\assets\tp.paa";
 
         scope = 2;
-        scopeCurator = 2;
+        scopeCurator = 0;
 		curatorCanAttach = 0;
 
         is3DEN = 1;
