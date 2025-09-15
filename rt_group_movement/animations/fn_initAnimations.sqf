@@ -1,5 +1,9 @@
 while {true} do {
 	waitUntil {uiSleep 0.1; !(isNull (findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC))};
+
+	// Если нет анимаций, то и эта не нужна
+	if !(isClass (configFile >> "CfgPatches" >> "WBK_ItemAnimationMod"))	exitWith {};
+
 	_unit = missionNamespace getVariable["bis_fnc_moduleRemoteControl_unit", player];
 	_reloadAnim = getText (configfile >> "CfgWeapons" >> currentWeapon _unit >> "reloadAction");
 	if (!(isNull objectParent _unit) or !(alive _unit) or (gestureState _unit == _reloadAnim) or (stance _unit == "PRONE") or (lifeState _unit == "INCAPACITATED")) then {
@@ -16,7 +20,11 @@ while {true} do {
 		];
 
 		_obj = "Land_Tablet_02_F" createVehicle [0,0,0];
-		[_obj, 0, "rt\movement\images\tablet_ca.paa"] remoteExec ["setObjectTexture"];
+		_obj setObjectMaterialGlobal [0, "\a3\data_f\default.rvmat"];
+		sleep 0.01;
+		_obj setObjectTextureGlobal [0, "\rt\movement\images\tablet_ca.paa"];
+		
+		// [_obj, 0, "rt\movement\images\tablet_ca.paa"] remoteExec ["setObjectTexture"];
 
 		if (currentWeapon _unit == primaryWeapon _unit && currentWeapon _unit != "" && weaponLowered _unit) then {
 			_unit playActionNow "WBK_map_start";
