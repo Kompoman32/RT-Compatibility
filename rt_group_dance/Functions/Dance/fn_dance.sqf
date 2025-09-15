@@ -5,4 +5,4 @@ sleep 0.1;
 
 params ["_player", ["_danceAnim", "Acts_Dance_01"]];
 
-[_player, _danceAnim] remoteExec ["switchMove", 0, true];
+[_player, [_danceAnim, 0, 0.1]] remoteExec ["switchMove", 0, true];
