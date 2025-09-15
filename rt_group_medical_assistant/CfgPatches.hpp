@@ -9,8 +9,7 @@ class CfgPatches
             "RT_Main",
             "RT_Settings",
 			"ace_common",
-			"ace_medical",
-            "ASAAYU_ACE_MEDICAL_ASSISTANT"
+			"ace_medical"
         };
         units[] = {};
 

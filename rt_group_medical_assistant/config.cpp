@@ -1,5 +1,6 @@
 #include "CfgPatches.hpp"
 #include "CfgFunctions.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgEventHandlers.hpp"
 
 class RscControlsGroup;
@@ -7,15 +8,66 @@ class RscButtonTextOnly;
 class RscText;
 class RscStructuredText;
 class ScrollBar;
+class RscPicture;
+class MedAssistRscTextCenter: RscText
+{
+	style=2;
+};
 
 class AMA_menu {
+	idd=180025;
+	name="AMA_menu";
+	movingEnable=0;
+	enableSimulation=1;
 	onLoad = "call RT_Medical_Assistant_fnc_displayLoad";
 	onUnload = "call RT_Medical_Assistant_fnc_displayUnload";
 	onKeyDown = "call RT_Medical_Assistant_fnc_displayKeyDown";
 	onKeyUp = "call RT_Medical_Assistant_fnc_displayKeyUp";
 
+	class controlsBackground
+	{
+		class Background_Tablet_Image: RscPicture
+		{
+			idc=-1;
+			text="\rt\medical_assistant\images\tablet_ca.paa";
+			x="0.242604 * safezoneW + safezoneX";
+			y="0.0743704 * safezoneH + safezoneY";
+			w="0.509948 * safezoneW";
+			h="0.871889 * safezoneH";
+		};
+		class Background_Line_Left_RSC: RscText
+		{
+			idc=-1;
+			x="0.432969 * safezoneW + safezoneX";
+			y="0.236 * safezoneH + safezoneY";
+			w="0.002 * safezoneW";
+			h="0.528 * safezoneH";
+			colorBackground[]={0,0,0,0.69999999};
+		};
+		class Background_Line_Right_RSC: RscText
+		{
+			idc=-1;
+			x="0.566606 * safezoneW + safezoneX";
+			y="0.236 * safezoneH + safezoneY";
+			w="0.002 * safezoneW";
+			h="0.528 * safezoneH";
+			colorBackground[]={0,0,0,0.69999999};
+		};
+	};
 	class controls
 	{
+		class Main_ControlGroup: RscControlsGroup
+		{
+			idc=956;
+			x="0.298906 * safezoneW + safezoneX";
+			y="0.236 * safezoneH + safezoneY";
+			w="0.402187 * safezoneW";
+			h="0.528 * safezoneH";
+			class Controls
+			{
+			};
+		};
+
 		class Additional_ControlGroup: RscControlsGroup
 		{
 			idc=957;
@@ -144,22 +196,16 @@ class AMA_menu {
 	};
 };
 
-class ace_medical_replacementItems {
-    ItemType_401[] = {
-		{"ACE_fieldDressing", 3},
-		{"ACE_painkillers", 1},
-		{"ACE_splint", 1},
-		{"ACE_tourniquet", 1}
-    };
-    ItemType_619[] = {
-		{"ACE_fieldDressing", 6},
-		{"ACE_epinephrine", 2},
-		{"ACE_morphine", 2},
-		{"ACE_tourniquet", 1},
-		{"ACE_splint", 1},
-		{"ACE_suture", 1},
-		{"ACE_painkillers", 1},
-		{"ACE_adenosine", 1},
-		{"ACE_salineIV_250", 1}
-    };
+class CfgSounds
+{
+	class warning_medical
+	{
+		sound[]=
+		{
+			"\rt\medical_assistant\sounds\warning.ogg",
+			1,
+			1
+		};
+		titles[]={};
+	};
 };

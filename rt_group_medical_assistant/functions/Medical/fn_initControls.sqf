@@ -30,7 +30,7 @@ for "_i" from 0 to (_count-1) do
 
 	_ctrl ctrlCommit 0;
 
-	private _ctrl_name = _display ctrlCreate ["RscTextCenter", -1, _ctrl];
+	private _ctrl_name = _display ctrlCreate ["MedAssistRscTextCenter", -1, _ctrl];
 	_ctrl_name ctrlSetPosition [-2.45869e-008 * safezoneW, -3.27826e-008 * safezoneH,0.134062 * safezoneW,0.033 * safezoneH];
 	_ctrl_name ctrlSetFont "PuristaBold";
 

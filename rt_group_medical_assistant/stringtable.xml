@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RT">
+    <Package name="MedicalAssistant">
+        <Key ID="STR_RT_MEDICAL_ASSISTANT_Open">
+            <English>Open</English>
+            <Russian>Открыть</Russian>
+        </Key>
+        <Key ID="STR_RT_MEDICAL_ASSISTANT_Enable">
+            <English>Enable</English>
+            <Russian>Включить</Russian>
+        </Key>
+        <Key ID="STR_RT_MEDICAL_ASSISTANT_Disable">
+            <English>Disable</English>
+            <Russian>Выключить</Russian>
+        </Key>
+    </Package>
+</Project>

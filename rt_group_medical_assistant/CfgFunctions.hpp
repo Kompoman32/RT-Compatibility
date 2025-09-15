@@ -17,6 +17,8 @@ class CfgFunctions
 		{
 			file="rt\medical_assistant\Functions\Medical";
 
+			class toggle {};
+
 			class displayLoad {};
 			class displayUnload {};
 			class displayKeyDown {};
