@@ -23,8 +23,20 @@ class ACE_Medical_Injuries {
             bleeding = 0;
             pain = 1.0;
         };
-
+        
         class RubberBallHit: RubberBulletHit {};
+
+        class RadiationBurn {
+            bleeding = 0;
+            pain = 0.3;
+            minDamage = 0;
+        };
+
+        class RadiationBurnBleed {
+            bleeding = 0.1;
+            pain = 0.3;
+            minDamage = 0;
+        };
     };
 
     class damageTypes {
@@ -37,6 +49,24 @@ class ACE_Medical_Injuries {
                 weighting[] = {{0.01, 1}, {0.01, 0}};
             };
         }
+
+        class radiationburn {
+            thresholds[] = {{0, 1}};
+            selectionSpecific = 0;
+            class RadiationBurn {
+                weighting[] = {{0, 1}};
+            };
+        };
+
+        class radiationburnbleed {
+            thresholds[] = {{0, 1}};
+            selectionSpecific = 0;
+            class RadiationBurnBleed {
+                weighting[] = {{0, 1}};
+            };
+        };
+
+        
 
         class rubberexplosion {
             thresholds[] = {{20, 15}, {8, 7}, {2, 3}, {1.2, 2}, {0.4, 1}, {0,0}};
