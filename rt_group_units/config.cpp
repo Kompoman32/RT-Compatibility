@@ -15,6 +15,9 @@ class CfgFunctions
             class stalkF
             {
             };
+            class addCarry
+            {
+            };
         };
     };
 };
