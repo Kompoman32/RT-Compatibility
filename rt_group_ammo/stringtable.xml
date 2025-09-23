@@ -587,6 +587,19 @@
             <Russian>Калибр: 5,56x45 мм Резина</Russian>
         </Key>
 
+        <Key ID="STR_RT_AMMO_Rubber_150Rnd_762x51_Box_Name">
+            <English>7.62 mm 150Rnd Rubber Mag</English>
+            <Russian>Магазин из 150-ти 7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_150Rnd_762x51_Box_NameShort">
+            <English>7.62 mm Rubber</English>
+            <Russian>7,62 мм Резина</Russian>
+        </Key>
+        <Key ID="STR_RT_AMMO_Rubber_150Rnd_762x51_Box_Description">
+            <English>Caliber: 7.62x51 mm Rubber</English>
+            <Russian>Калибр: 7,62x51 мм Резина</Russian>
+        </Key>
+
         <Key ID="STR_RT_AMMO_Rubber_150Rnd_762x54_Box_Name">
             <English>7.62 mm 150Rnd Rubber Mag</English>
             <Russian>Магазин из 150-ти 7,62 мм Резина</Russian>

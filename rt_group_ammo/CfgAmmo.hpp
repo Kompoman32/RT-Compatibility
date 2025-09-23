@@ -591,6 +591,15 @@ class CfgMagazines {
         descriptionShort = "$STR_RT_AMMO_Rubber_200Rnd_556x45_Box_F_Description";
     };
     
+    class 150Rnd_762x51_Box ;
+    class RT_150Rnd_762x51_Rubber_Box : 150Rnd_762x51_Box  {
+        author = "Kompoman32";
+        ammo = "RT_B_762x54_Rubber_Tracer_Green";
+        displayName = "$STR_RT_AMMO_Rubber_150Rnd_762x51_Box_Name";
+        displayNameShort = "$STR_RT_AMMO_Rubber_150Rnd_762x51_Box_NameShort";
+        descriptionShort = "$STR_RT_AMMO_Rubber_150Rnd_762x51_Box_Description";
+    };
+
     class 150Rnd_762x54_Box ;
     class RT_150Rnd_762x54_Rubber_Box : 150Rnd_762x54_Box  {
         author = "Kompoman32";
