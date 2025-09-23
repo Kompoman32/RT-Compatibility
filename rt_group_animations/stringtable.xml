@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RT">
+    <Package name="AMMO">
+        <Key ID="STR_RT_ANIMATIONS_Stop_Category">
+            <English>Stop animating</English>
+            <Russian>Остановить анимацию</Russian>
+        </Key>
+        <Key ID="STR_RT_ANIMATIONS_Animatations_Category">
+            <English>Animations</English>
+            <Russian>Анимации</Russian>
+        </Key>
+        <Key ID="STR_RT_ANIMATIONS_Dances_Category">
+            <English>Dances</English>
+            <Russian>Танцы</Russian>
+        </Key>
+        <Key ID="STR_RT_ANIMATIONS_Emotes_Category">
+            <English>Emotes</English>
+            <Russian>Эмоции</Russian>
+        </Key>
+        <Key ID="STR_RT_ANIMATIONS_Actions_Category">
+            <English>Actions</English>
+            <Russian>Действия</Russian>
+        </Key>
+    </Package>
+</Project>

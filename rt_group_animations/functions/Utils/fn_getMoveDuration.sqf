@@ -1,0 +1,1 @@
+abs (1/(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> _this >> "speed")+0.01))-0.1

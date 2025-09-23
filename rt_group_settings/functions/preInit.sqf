@@ -1,7 +1,7 @@
 RT_SETTINGS_category = "RT Group Compatibility";
 RT_SETTINGS_category_initialization = "RT Group Compatibility - Initialization";
 
-#include "dance\settings.sqf";
+#include "animations\settings.sqf";
 #include "respawn\settings.sqf";
 #include "spectator\settings.sqf";
 #include "support\settings.sqf";

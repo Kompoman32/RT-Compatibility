@@ -1,0 +1,1 @@
+abs (1/(getNumber (configFile >> "CfgGesturesMale" >> "States" >> _this >> "speed")+0.01))-0.1
