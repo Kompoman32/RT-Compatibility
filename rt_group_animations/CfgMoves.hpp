@@ -284,6 +284,28 @@ class CfgMovesMaleSdr : CfgMovesBasic
             disableWeaponsLong = 1;
             canPullTrigger = 0;
         };
+        
+        class AmovPercMstpSnonWnonDnon_exercisePushup;
+        class AmovPercMstpSnonWnonDnon_exercisekneeBendA;
+        class AmovPercMstpSnonWnonDnon_exercisekneeBendB;
+        class rt_exercisePushup: AmovPercMstpSnonWnonDnon_exercisePushup
+        {
+            looped = 1;
+            ConnectTo[] = {"rt_exercisePushup",0.1};
+            InterpolateTo[] = {"rt_exercisePushup",0.01};
+        };
+        class rt_exercisekneeBendA: AmovPercMstpSnonWnonDnon_exercisekneeBendA
+        {
+            looped = 1;
+            ConnectTo[] = {"rt_exercisekneeBendA",0.1};
+            InterpolateTo[] = {"rt_exercisekneeBendA",0.01};
+        };
+        class rt_exercisekneeBendB: AmovPercMstpSnonWnonDnon_exercisekneeBendB
+        {
+            looped = 1;
+            ConnectTo[] = {"rt_exercisekneeBendB",0.1};
+            InterpolateTo[] = {"rt_exercisekneeBendB",0.01};
+        };
     };
 };
 
@@ -292,53 +314,7 @@ class CfgGesturesMale
     class Default;
 
     class BlendAnims {
-        bothArms[]=
-        {
-            "RightShoulder", 1,
-            "RightArm", 1,
-            "RightArmRoll", 1,
-            "RightForeArm", 1,
-            "RightForeArmRoll", 1,
-            "RightHand", 1,
-            "RightHandThumb1", 1,
-            "RightHandThumb2", 1,
-            "RightHandThumb3", 1,
-            "RightHandIndex1", 1,
-            "RightHandIndex2", 1,
-            "RightHandIndex3", 1,
-            "RightHandMiddle1", 1,
-            "RightHandMiddle2", 1,
-            "RightHandMiddle3", 1,
-            "RightHandRing", 1,
-            "RightHandRing1", 1,
-            "RightHandRing2", 1,
-            "RightHandRing3", 1,
-            "RightHandPinky1", 1,
-            "RightHandPinky2", 1,
-            "RightHandPinky3", 1,
-            "LeftShoulder", 1,
-            "LeftArm", 1,
-            "LeftArmRoll", 1,
-            "LeftForeArm", 1,
-            "LeftForeArmRoll", 1,
-            "LeftHand", 1,
-            "LeftHandThumb1", 1,
-            "LeftHandThumb2", 1,
-            "LeftHandThumb3", 1,
-            "LeftHandIndex1", 1,
-            "LeftHandIndex2", 1,
-            "LeftHandIndex3", 1,
-            "LeftHandMiddle1", 1,
-            "LeftHandMiddle2", 1,
-            "LeftHandMiddle3", 1,
-            "LeftHandRing", 1,
-            "LeftHandRing1", 1,
-            "LeftHandRing2", 1,
-            "LeftHandRing3", 1,
-            "LeftHandPinky1", 1,
-            "LeftHandPinky2", 1,
-            "LeftHandPinky3", 1
-        };
+
     };
 
     class States {
@@ -368,7 +344,6 @@ class CfgGesturesMale
         class rt_gesture_left_hand: rt_gesture_base
         {
             mask="leftHand";
-            // leftHandIKEnd = 1;
 
             leftHandIKCurve[] = {0};
             rightHandIKCurve[]={1};
@@ -382,7 +357,7 @@ class CfgGesturesMale
 
         class rt_gesture_both_hands: rt_gesture_base
         {
-            mask="bothArms";
+            mask = "handsWeapon_pst_context";
             rightHandIKCurve[]={1};
             leftHandIKCurve[]={1};
         };

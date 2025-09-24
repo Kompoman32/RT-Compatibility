@@ -21,8 +21,4 @@ if (!(isNil "_emote")) exitWith {
 	gestureState _player == _emote
 };
 
-
-
-
-
 RT_ANIMATIONS_AVAILABLE_EMOTES findif { gestureState _player == _x } != -1

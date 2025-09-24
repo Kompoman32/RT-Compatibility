@@ -3,8 +3,6 @@ if ([_this, true, false] call RT_Utils_fnc_callByScriptName) exitWith {};
 
 params ["_player"];
 
-if (!weaponLowered _player) then {_player action ["WeaponOnBack", _player]; sleep 0.2; if (!weaponLowered _player) then {sleep 0.1}};  //-- Try to lower weapon, else; screw it
-
 private _outAnim = "";
 
 switch (gestureState _player) do {

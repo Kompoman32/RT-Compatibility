@@ -27,7 +27,7 @@ class CfgVehicles
                 {
                     displayName="$STR_RT_ANIMATIONS_Dances_Category";
                     icon="rt\animations\gui\dances.paa";
-                    condition = "RT_SETTINGS_ANIMATIONS_Dances_enable call CBA_settings_fnc_get";
+                    condition = "RT_SETTINGS_ANIMATIONS_Dances_enable call CBA_settings_fnc_get && stance _player != 'PRONE'";
 
                     class A2_Dances {
                         displayName="Arma 2 Dances";
@@ -127,13 +127,14 @@ class CfgVehicles
                 class Emotes
                 {
                     displayName="$STR_RT_ANIMATIONS_Emotes_Category";
-                    icon="rt\animations\gui\emotes.paa";
-                    condition = "RT_SETTINGS_ANIMATIONS_Emotes_enable call CBA_settings_fnc_get";
+                    icon="rt\animations\gui\horns.paa";
+                    condition = "RT_SETTINGS_ANIMATIONS_Emotes_enable call CBA_settings_fnc_get && stance _player != 'PRONE'";
 
                     class tsp_animate_bird_in {};
                     class tsp_animate_bird_loop
                     {
                         displayName="Fck U";
+                        icon="rt\animations\gui\middleFinger.paa";
 
                         condition="!([_player, 'tsp_animate_bird_loop'] call RT_ANIMATIONS_fnc_isEmoting)";
                         statement="[player, 'tsp_animate_bird_loop'] call RT_Animations_fnc_emote";
@@ -142,6 +143,7 @@ class CfgVehicles
                     class tsp_animate_thumbsup_loop
                     {
                         displayName="Thumbs Up";
+                        icon="rt\animations\gui\thumbup.paa";
 
                         condition="!([_player, 'tsp_animate_thumbsup_loop'] call RT_ANIMATIONS_fnc_isEmoting)";
                         statement="[player, 'tsp_animate_thumbsup_loop'] call RT_Animations_fnc_emote";
@@ -149,6 +151,7 @@ class CfgVehicles
                     class tsp_animate_thumbsdown_loop
                     {
                         displayName="Thumbs Down";
+                        icon="rt\animations\gui\thumbdown.paa";
 
                         condition="!([_player, 'tsp_animate_thumbsdown_loop'] call RT_ANIMATIONS_fnc_isEmoting)";
                         statement="[player, 'tsp_animate_thumbsdown_loop'] call RT_Animations_fnc_emote";
@@ -156,6 +159,7 @@ class CfgVehicles
                     class tsp_animate_ok_loop
                     {
                         displayName="Ok";
+                        icon="rt\animations\gui\ok.paa";
 
                         condition="!([_player, 'tsp_animate_ok_loop'] call RT_ANIMATIONS_fnc_isEmoting)";
                         statement="[player, 'tsp_animate_ok_loop'] call RT_Animations_fnc_emote";
@@ -165,6 +169,7 @@ class CfgVehicles
                     {
                         displayName="Jack Off";
 
+                        icon="rt\animations\gui\jackoff.paa";
                         condition="!([_player, 'tsp_animate_jackoff_loop'] call RT_ANIMATIONS_fnc_isEmoting)";
                         statement="[player, 'tsp_animate_jackoff_loop'] call RT_Animations_fnc_emote";
                     };
@@ -172,19 +177,22 @@ class CfgVehicles
                     {
                         displayName="Mahalo";
 
+                        icon="rt\animations\gui\mahalo.paa";
                         condition="!([_player, 'tsp_animate_mahalo_loop'] call RT_ANIMATIONS_fnc_isEmoting)";
                         statement="[player, 'tsp_animate_mahalo_loop'] call RT_Animations_fnc_emote";
                     };
                     class tsp_animate_loser_loop
                     {
-                        displayName="L";
+                        displayName="Loser";
 
+                        icon="rt\animations\gui\loser.paa";
                         condition="!([_player, 'tsp_animate_loser_loop'] call RT_ANIMATIONS_fnc_isEmoting)";
                         statement="[player, 'tsp_animate_loser_loop'] call RT_Animations_fnc_emote";
                     };
                     class tsp_animate_horns_loop
                     {
                         displayName="Eee Rock!";
+                        icon="rt\animations\gui\horns.paa";
 
                         condition="!([_player, 'tsp_animate_horns_loop'] call RT_ANIMATIONS_fnc_isEmoting)";
                         statement="[player, 'tsp_animate_horns_loop'] call RT_Animations_fnc_emote";
@@ -193,6 +201,7 @@ class CfgVehicles
                     {
                         displayName="Peace";
 
+                        icon="rt\animations\gui\peace.paa";
                         condition="!([_player, 'tsp_animate_peace_loop'] call RT_ANIMATIONS_fnc_isEmoting)";
                         statement="[player, 'tsp_animate_peace_loop'] call RT_Animations_fnc_emote";
                     };
@@ -200,6 +209,7 @@ class CfgVehicles
                     {
                         displayName="Dab";
 
+                        icon="rt\animations\gui\dab.paa";
                         condition="currentWeapon _player == '' && !([_player, 'tsp_animate_dab_loop'] call RT_ANIMATIONS_fnc_isEmoting)";
                         statement="[player, 'tsp_animate_dab_loop'] call RT_Animations_fnc_emote";
                     };
@@ -207,31 +217,44 @@ class CfgVehicles
                     {
                         displayName="Heart";
 
+                        icon="rt\animations\gui\heart.paa";
                         condition="currentWeapon _player == '' && !([_player, 'tsp_animate_heart_loop'] call RT_ANIMATIONS_fnc_isEmoting)";
                         statement="[player, 'tsp_animate_heart_loop'] call RT_Animations_fnc_emote";
                     };
-                    class tsp_animate_rockpaperscissors_in {};
-                    class tsp_animate_rockpaperscissors_rock_loop
-                    {
-                        displayName="RPS: Rock";
 
-                        condition="currentWeapon _player == '' && !([_player, 'tsp_animate_rockpaperscissors_in'] call RT_ANIMATIONS_fnc_isEmoting)";
-                        statement="[player, 'tsp_animate_rockpaperscissors_rock_loop'] call RT_Animations_fnc_emote";
-                    };
-                    class tsp_animate_rockpaperscissors_paper_loop
+                    class rockpaperscissors
                     {
-                        displayName="RPS: Paper";
+                        displayName="Rock Paper Scissors";
+                        condition="true";
+                        icon="rt\animations\gui\rps.paa";
 
-                        condition="currentWeapon _player == '' && !([_player, 'tsp_animate_rockpaperscissors_in'] call RT_ANIMATIONS_fnc_isEmoting)";
-                        statement="[player, 'tsp_animate_rockpaperscissors_paper_loop'] call RT_Animations_fnc_emote";
-                    };
-                    class tsp_animate_rockpaperscissors_scissors_loop
-                    {
-                        displayName="RPS: Scissors";
+                        class tsp_animate_rockpaperscissors_in {};
+                        class tsp_animate_rockpaperscissors_rock_loop
+                        {
+                            displayName="Rock";
 
-                        condition="currentWeapon _player == '' && !([_player, 'tsp_animate_rockpaperscissors_in'] call RT_ANIMATIONS_fnc_isEmoting)";
-                        statement="[player, 'tsp_animate_rockpaperscissors_scissors_loop'] call RT_Animations_fnc_emote";
+                            icon="rt\animations\gui\rock.paa";
+                            condition="currentWeapon _player == '' && !([_player, 'tsp_animate_rockpaperscissors_in'] call RT_ANIMATIONS_fnc_isEmoting)";
+                            statement="[player, 'tsp_animate_rockpaperscissors_rock_loop'] call RT_Animations_fnc_emote";
+                        };
+                        class tsp_animate_rockpaperscissors_paper_loop
+                        {
+                            displayName="Paper";
+
+                            icon="rt\animations\gui\paper.paa";
+                            condition="currentWeapon _player == '' && !([_player, 'tsp_animate_rockpaperscissors_in'] call RT_ANIMATIONS_fnc_isEmoting)";
+                            statement="[player, 'tsp_animate_rockpaperscissors_paper_loop'] call RT_Animations_fnc_emote";
+                        };
+                        class tsp_animate_rockpaperscissors_scissors_loop
+                        {
+                            displayName="Scissors";
+
+                            icon="rt\animations\gui\scissors.paa";
+                            condition="currentWeapon _player == '' && !([_player, 'tsp_animate_rockpaperscissors_in'] call RT_ANIMATIONS_fnc_isEmoting)";
+                            statement="[player, 'tsp_animate_rockpaperscissors_scissors_loop'] call RT_Animations_fnc_emote";
+                        };
                     };
+
                 };
 
                 class Actions 
@@ -243,28 +266,59 @@ class CfgVehicles
                     class WBK_HellDivers_salute_loop {
                         displayName="Helldivers Salute";
                         icon="rt\animations\gui\helldiver.paa";
-                        condition="!([_player, 'WBK_HellDivers_salute_loop'] call RT_ANIMATIONS_fnc_isActing)";
+                        condition="!([_player, 'WBK_HellDivers_salute_loop'] call RT_ANIMATIONS_fnc_isActing) && stance _player != 'PRONE'";
                         statement="[player, 'WBK_HellDivers_salute_loop'] call RT_Animations_fnc_act"
                     };
 
                     class WBK_Workout {
                         displayName="Workout";
                         condition = "true";
+                        icon = "\a3\UI_F_Curator\Data\RscCommon\RscAttributePunishmentAnimation\PushupsLegs.paa";
 
                         class WBK_Workout_1 {
                             displayName="Waist Drop Plank";
+
+                            icon = "\a3\UI_F_Curator\Data\RscCommon\RscAttributePunishmentAnimation\Pushups.paa";
                             condition="!([_player, 'WBK_Workout_1'] call RT_ANIMATIONS_fnc_isActing)";
                             statement="[player, 'WBK_Workout_1'] call RT_Animations_fnc_act"
                         };
                         class WBK_Workout_2 {
                             displayName="Kneeling Plank Thrusts";
+
+                            icon = "\a3\UI_F_Curator\Data\RscCommon\RscAttributePunishmentAnimation\Pushups.paa";
                             condition="!([_player, 'WBK_Workout_2'] call RT_ANIMATIONS_fnc_isActing)";
                             statement="[player, 'WBK_Workout_2'] call RT_Animations_fnc_act"
                         };
                         class WBK_Workout_3 {
                             displayName="Kneeling Hip Thrusts";
+          
+                            icon="rt\animations\gui\hipThrusts.paa";
                             condition="!([_player, 'WBK_Workout_3'] call RT_ANIMATIONS_fnc_isActing)";
                             statement="[player, 'WBK_Workout_3'] call RT_Animations_fnc_act"
+                        };
+
+                        class rt_exercisePushup {
+                            displayName="Push-Ups";
+
+                            icon = "\a3\UI_F_Curator\Data\RscCommon\RscAttributePunishmentAnimation\Pushups.paa";
+                            condition="!([_player, 'rt_exercisePushup'] call RT_ANIMATIONS_fnc_isActing)";
+                            statement="[player, 'rt_exercisePushup'] call RT_Animations_fnc_act"
+                        };
+
+                        class rt_exercisekneeBendA {
+                            displayName="Squats Exercise";
+
+                            icon = "\a3\UI_F_Curator\Data\RscCommon\RscAttributePunishmentAnimation\PushupsLegs.paa";
+                            condition="!([_player, 'rt_exercisekneeBendA'] call RT_ANIMATIONS_fnc_isActing)";
+                            statement="[player, 'rt_exercisekneeBendA'] call RT_Animations_fnc_act"
+                        };
+
+                        class rt_exercisekneeBendB {
+                            displayName="Squats Exercise (Fast)";
+
+                            icon = "\a3\UI_F_Curator\Data\RscCommon\RscAttributePunishmentAnimation\PushupsLegs.paa";
+                            condition="!([_player, 'rt_exercisekneeBendB'] call RT_ANIMATIONS_fnc_isActing)";
+                            statement="[player, 'rt_exercisekneeBendB'] call RT_Animations_fnc_act"
                         };
                     };
                 };
