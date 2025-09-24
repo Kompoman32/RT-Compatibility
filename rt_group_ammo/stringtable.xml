@@ -62,35 +62,35 @@
             <Russian>Слабый ушиб резиновым шариком</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_RadiationBurn">
-            <English>Radiation burn</English>
+            <English>Radiation Burn</English>
             <Russian>Радиационный ожог</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_RadiationBurn_Large">
-            <English>Large radiation burn</English>
+            <English>Large Radiation Burn</English>
             <Russian>Большой радиационный ожог</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_RadiationBurn_Medium">
-            <English>Medium radiation burn</English>
+            <English>Medium Radiation Burn</English>
             <Russian>Средний радиационный ожог</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_RadiationBurn_Minor">
-            <English>Minor radiation burn</English>
+            <English>Minor Radiation Burn</English>
             <Russian>Малый радиационный ожог</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_RadiationBurnBleed">
-            <English>Radiation burn</English>
+            <English>Radiation Burn</English>
             <Russian>Радиационный ожог</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_RadiationBurnBleed_Large">
-            <English>Large radiation burn</English>
+            <English>Large Radiation Burn</English>
             <Russian>Большой радиационный ожог</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_RadiationBurnBleed_Medium">
-            <English>Medium radiation burn</English>
+            <English>Medium Radiation Burn</English>
             <Russian>Средний радиационный ожог</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_RadiationBurnBleed_Minor">
-            <English>Minor radiation burn</English>
+            <English>Minor Radiation Burn</English>
             <Russian>Малый радиационный ожог</Russian>
         </Key>
     </Package>

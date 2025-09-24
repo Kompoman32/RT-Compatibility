@@ -7,7 +7,9 @@ class CfgVehicles {
                     displayName = "Medical Assistant";
                     condition = "RT_SETTINGS_MEDICAL_ASSISTANT_ENABLE call CBA_settings_fnc_get";
                     showDisabled = 0;
-                    icon = "\A3\Ui_f\data\IGUI\RscCustomInfo\Sensors\Threats\missile_ca.paa";
+
+                    icon = "a3\data_f_aow\logos\arma3_aow_logo_ca.paa";
+
 					exceptions[] = {"notOnMap"};
 
                     class RT_MedicalAssistant_Open {
@@ -15,7 +17,7 @@ class CfgVehicles {
                         condition = "true";
                         statement = "(findDisplay 46) createDisplay 'AMA_menu'";
                         showDisabled = 0;
-                        icon = "\A3\Ui_f\data\IGUI\RscCustomInfo\Sensors\Threats\missile_ca.paa";
+                        icon = "a3\data_f_aow\logos\arma3_aow_logo_ca.paa";
                     };
 
                     class RT_MedicalAssistant_Disable {
