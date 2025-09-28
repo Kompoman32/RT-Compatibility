@@ -21,8 +21,10 @@
   * Designed by Voxtell
   */
 
-// run on Server in Sheduled
-if ([_this, true, false] call RT_Utils_fnc_callByScriptName) exitWith {};
+if (!isServer) exitWith {
+    diag_log "[E] RT_Items_fnc_createItemStash : cant spawn items stash on client, please execute it on Server";
+}
+
 
 params ["_obj", "_items"];
 
