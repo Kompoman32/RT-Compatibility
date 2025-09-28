@@ -3,6 +3,8 @@ private _subCategoryStaminaStr = "MEDICAL - STAMINA";
 
 RT_SETTINGS_MEDICAL = "SETTINGS_RT_SETTINGS_MEDICAL";
 
+RT_SETTINGS_MEDICAL_StitchTime = "SETTINGS_RT_SETTINGS_MEDICAL_StitchTime";
+
 RT_SETTINGS_MEDICAL_FieldDressing = "SETTINGS_RT_SETTINGS_MEDICAL_FieldDressing";
 RT_SETTINGS_MEDICAL_PackingBandage = "SETTINGS_RT_SETTINGS_MEDICAL_PackingBandage";
 RT_SETTINGS_MEDICAL_ElasticBandage = "SETTINGS_RT_SETTINGS_MEDICAL_ElasticBandage";
@@ -34,6 +36,14 @@ RT_SETTINGS_MEDICAL_QuikClot = "SETTINGS_RT_SETTINGS_MEDICAL_QuikClot";
     ["Множитель Первичного перевязочного пакета", "Множитель скорости перевязкой используя Первичный перевязочный пакет (чем больше тем дольше)"],
     [RT_SETTINGS_category, _subCategoryStr],
     [0.1, 3, 1, 2],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    RT_SETTINGS_MEDICAL_StitchTime, "SLIDER",
+    ["Время зашивания 1 раны Нитью", "Время зашивания 1 раны используя Нить"],
+    [RT_SETTINGS_category, _subCategoryStr],
+    [1, 10, 2, 2],
     1
 ] call CBA_fnc_addSetting;
 

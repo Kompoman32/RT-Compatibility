@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="RT_Medical">
+        <Key ID="STR_RT_Medical_Use_Suture">
+            <English>Use Suture</English>
+            <Russian>Использовать хирургическую нить</Russian>
+        </Key>
+    </Package>
+</Project>
