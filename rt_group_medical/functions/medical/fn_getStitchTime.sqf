@@ -6,7 +6,7 @@ private _bandagedWoundsOnPart = _bandagedWounds get _bodyPart;
 private _sumOfWounds = 0;
 
 {
-	_sumOfWounds = _sumOfWounds + (_x#1) * (RT_SETTINGS_MEDICAL_StitchTime call CBA_Settings_fnc_get);
+    _sumOfWounds = _sumOfWounds + (_x#1) * (RT_SETTINGS_MEDICAL_StitchTime call CBA_Settings_fnc_get);
 } forEach _bandagedWoundsOnPart;
 
 // if (_useMin) then { _sumOfWounds min 5 } else {_sumOfWounds}

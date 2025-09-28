@@ -1,32 +1,19 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
 #include "RscTitles.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
     class RT_Spectator
     {
-        class Spectator
-        {
-            file = "rt\spectator\Functions\Spectator";
-            class addSpectator
-            {
-            };
-            class spectatorQuotesDisplayOnLoad
-            {
-            };
-            class spectatorGetQuote
-            {
-            };
-            class removeSpectator
-            {
-            };
-            class initServer
-            {
-            };
-            class getAvailableSides
-            {
-            };
-        };
+        name = "RT Compatibility - Spectator";
+        requiredAddons[] = {"RT_Main", "ace_spectator", "ace_medical"};
+        
+        units[] = {};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

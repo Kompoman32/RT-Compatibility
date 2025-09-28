@@ -1,19 +1,18 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
     class RT_Respawn
     {
-        class Respawn
-        {
-            file = "rt\respawn\Functions\Respawn";
-            class addRespawn
-            {
-            };
-            class removeRespawn
-            {
-            };
-        };
+        name = "RT Compatibility - Respawn";
+        requiredAddons[] = {"RT_Main"};
+        
+        units[] = {};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

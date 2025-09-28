@@ -4,49 +4,49 @@ if (!hasInterface) exitwith {};
 if !(RT_SETTINGS_INITIALIZATION_recordings call CBA_settings_fnc_get) exitwith {};
 
 _this spawn {
-	[missionNamespace, "ace_arsenal_displayOpened", RT_RECORDINGS_VAR_ACE_ARSENAL_OPENED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
-	[missionNamespace, "ace_arsenal_displayOpened", RT_RECORDINGS_VAR_ACE_ARSENAL_OPENED_HANDLER, {
-		missionNamespace setVariable [RT_RECORDINGS_VAR_ACE_ARSENAL_TIME_HANDLER, diag_tickTime];
-	}] call Rt_Utils_fnc_addCBAEventhandler;
+    [missionNamespace, "ace_arsenal_displayOpened", RT_RECORDINGS_VAR_ACE_ARSENAL_OPENED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
+    [missionNamespace, "ace_arsenal_displayOpened", RT_RECORDINGS_VAR_ACE_ARSENAL_OPENED_HANDLER, {
+        missionNamespace setVariable [RT_RECORDINGS_VAR_ACE_ARSENAL_TIME_HANDLER, diag_tickTime];
+    }] call Rt_Utils_fnc_addCBAEventhandler;
 
-	[missionNamespace, "ace_arsenal_displayClosed", RT_RECORDINGS_VAR_ACE_ARSENAL_CLOSED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
-	[missionNamespace, "ace_arsenal_displayClosed", RT_RECORDINGS_VAR_ACE_ARSENAL_CLOSED_HANDLER, {
-		private _openTime = diag_tickTime - (missionNamespace getVariable [RT_RECORDINGS_VAR_ACE_ARSENAL_TIME_HANDLER, diag_tickTime]);
+    [missionNamespace, "ace_arsenal_displayClosed", RT_RECORDINGS_VAR_ACE_ARSENAL_CLOSED_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
+    [missionNamespace, "ace_arsenal_displayClosed", RT_RECORDINGS_VAR_ACE_ARSENAL_CLOSED_HANDLER, {
+        private _openTime = diag_tickTime - (missionNamespace getVariable [RT_RECORDINGS_VAR_ACE_ARSENAL_TIME_HANDLER, diag_tickTime]);
 
-		steamGameRecordingEvent ["ArsenalUI", _openTime, [], -_openTime];
-		missionNamespace setVariable [RT_RECORDINGS_VAR_ACE_ARSENAL_TIME_HANDLER, nil];
-	}] call Rt_Utils_fnc_addCBAEventhandler;
-	
+        steamGameRecordingEvent ["ArsenalUI", _openTime, [], -_openTime];
+        missionNamespace setVariable [RT_RECORDINGS_VAR_ACE_ARSENAL_TIME_HANDLER, nil];
+    }] call Rt_Utils_fnc_addCBAEventhandler;
+    
 
-	[missionNameSpace, "ace_unconscious", RT_RECORDINGS_VAR_UNCOSCIOUS_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
-	[missionNameSpace, "ace_unconscious", RT_RECORDINGS_VAR_UNCOSCIOUS_HANDLER, {
-		params ["_unit", "_state"];
+    [missionNameSpace, "ace_unconscious", RT_RECORDINGS_VAR_UNCOSCIOUS_HANDLER] call Rt_Utils_fnc_removeCBAEventhandler;
+    [missionNameSpace, "ace_unconscious", RT_RECORDINGS_VAR_UNCOSCIOUS_HANDLER, {
+        params ["_unit", "_state"];
 
-		if (!(isPlayer _unit) || !(alive _unit) || (_unit != player)) exitWith {};
+        if (!(isPlayer _unit) || !(alive _unit) || (_unit != player)) exitWith {};
 
-		if (_state) then {
-			[] call RT_Recordings_fnc_Spectator_Fall;
-		} else {
-			[] call RT_Recordings_fnc_Spectator_Standup;
-		};
-	}] call Rt_Utils_fnc_addCBAEventhandler;
+        if (_state) then {
+            [] call RT_Recordings_fnc_Spectator_Fall;
+        } else {
+            [] call RT_Recordings_fnc_Spectator_Standup;
+        };
+    }] call Rt_Utils_fnc_addCBAEventhandler;
 
-	[player, "Killed", RT_RECORDINGS_VAR_KILLED_HANDLER] call Rt_Utils_fnc_removeEventhandler;
-	[player, "Killed", RT_RECORDINGS_VAR_KILLED_HANDLER, { 
-		params ["_unit"];
+    [player, "Killed", RT_RECORDINGS_VAR_KILLED_HANDLER] call Rt_Utils_fnc_removeEventhandler;
+    [player, "Killed", RT_RECORDINGS_VAR_KILLED_HANDLER, { 
+        params ["_unit"];
 
-		if (_unit != player) exitWith {};
+        if (_unit != player) exitWith {};
 
-		[] call RT_Recordings_fnc_Spectator_Standup;
-	}] call Rt_Utils_fnc_addEventhandler;
+        [] call RT_Recordings_fnc_Spectator_Standup;
+    }] call Rt_Utils_fnc_addEventhandler;
 
-	[player, "Respawn", RT_RECORDINGS_VAR_RESPAWN_HANDLER] call Rt_Utils_fnc_removeEventhandler;
-	[player, "Respawn", RT_RECORDINGS_VAR_RESPAWN_HANDLER, { 
-		params ["_unit"];
+    [player, "Respawn", RT_RECORDINGS_VAR_RESPAWN_HANDLER] call Rt_Utils_fnc_removeEventhandler;
+    [player, "Respawn", RT_RECORDINGS_VAR_RESPAWN_HANDLER, { 
+        params ["_unit"];
 
-		if (_unit != player) exitWith {};
+        if (_unit != player) exitWith {};
 
-		[] call RT_Recordings_fnc_Spectator_Standup;
-	}] call Rt_Utils_fnc_addEventhandler;
+        [] call RT_Recordings_fnc_Spectator_Standup;
+    }] call Rt_Utils_fnc_addEventhandler;
 
 }

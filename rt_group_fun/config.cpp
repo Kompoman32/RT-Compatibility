@@ -1,22 +1,26 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgSounds.hpp"
 #include "CfgGlasses.hpp"
 #include "CfgEventHandlers.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
     class RT_Fun
     {
-        class Arsenal
-        {
-            file = "rt\fun\Functions\Arsenal";
-            class onOpenArsenal
-            {
-            };
-            class onCloseArsenal
-            {
-            };
-        }
+        name = "RT Compatibility - Fun";
+        requiredAddons[] = {
+            "RT_Main",
+            "RT_Support",
+            "A3_Sounds_F",
+            "ace_common",
+            "ace_goggles",
+        };
+        units[]={"HellDiversSound"};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

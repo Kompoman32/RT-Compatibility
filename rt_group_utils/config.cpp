@@ -1,97 +1,17 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
-    class RT_Utils
-    {
-        class Utils
-        {
-            file = "rt\utils\functions\utils";
-            class timer
-            {
-            };
-            class stopTimer
-            {
-            };
-            class skipTime
-            {
-            };
-            class getAllCuratorUnits
-            {
-            };
-            class getAllPlayersWithoutCurators
-            {
-            };
-            class getUnitRoleInfo
-            {
-            };
-        };
-        class Checking
-        {
-            file = "rt\utils\functions\checking";
-            class hasAce
-            {
-            };
-            class dontHasAce
-            {
-            };
-            class hasDLC
-            {
-            };
-            class isAdmin
-            {
-            };
-            class isZeus
-            {
-            };
-            class isAdminOrZeus
-            {
-            };
-        };
-        class ScriptFlow
-        {
-            file = "rt\utils\functions\scriptFlow";
+    class RT_Utils {
+        name = "RT Compatibility - Utils";
+        requiredAddons[] = {"a3_data_f_mod_loadorder"};        
+        
+        units[] = {};
+        weapons[] = {};
 
-            class callByScriptName
-            {
-            };
-            class addScripthandler
-            {
-            };
-            class addScriptedEventHandler
-            {
-            };
-            class addEventhandler
-            {
-            };
-            class addCBAEventhandler
-            {
-            };
-            class addDisplayEventhandler
-            {
-            };
-            class removeScripthandler
-            {
-            };
-            class removeScriptedEventHandler
-            {
-            };
-            class removeEventhandler
-            {
-            };
-            class removeCBAEventhandler
-            {
-            };
-            class removeDisplayEventhandler
-            {
-            };
-            class waitUntilPlayerInit
-            {
-            };
-            class waitUntilTime
-            {
-            };
-        };
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

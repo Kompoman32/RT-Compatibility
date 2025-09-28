@@ -1,4 +1,4 @@
-// class RscText;	
+// class RscText;    
 // class RscButton;
 
 #include "teleport\TeleporterDialog.hpp"

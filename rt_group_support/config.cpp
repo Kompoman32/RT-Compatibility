@@ -1,19 +1,18 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
     class RT_Support
     {
-        class Support
-        {
-            file = "rt\support\Functions\Support";
-            class expressArtillery
-            {
-            };
-            class fireSupportVirtualSquare
-            {
-            };
-        };
+        name = "RT Compatibility - Support";
+        requiredAddons[] = {"RT_Main", "cba_events"};
+        
+        units[] = {};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

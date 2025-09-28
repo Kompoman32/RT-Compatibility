@@ -1,7 +1,7 @@
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
-		class ACE_SelfActions {
+        class ACE_SelfActions {
             class ACE_Equipment {
                 class RT_MedicalAssistant {
                     displayName = "Medical Assistant";
@@ -10,7 +10,7 @@ class CfgVehicles {
 
                     icon = "a3\data_f_aow\logos\arma3_aow_logo_ca.paa";
 
-					exceptions[] = {"notOnMap"};
+                    exceptions[] = {"notOnMap"};
 
                     class RT_MedicalAssistant_Open {
                         displayName = "$STR_RT_MEDICAL_ASSISTANT_Open";

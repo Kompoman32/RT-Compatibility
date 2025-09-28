@@ -8,12 +8,8 @@ class CfgFunctions
         class Pause
         {
             file = "rt\pause\Functions\Pause";
-            class StopStart
-            {
-            };
-            class ShowHint
-            {
-            };
+            class StopStart;
+            class ShowHint;
         };
     };
 };

@@ -1,4 +1,3 @@
-
 class CfgVehicles
 {
     class Logic;
@@ -31,7 +30,7 @@ class CfgVehicles
 
         scope = 2;
         scopeCurator = 0;
-		curatorCanAttach = 0;
+        curatorCanAttach = 0;
 
         is3DEN = 1;
         isGlobal = 1;
@@ -42,8 +41,8 @@ class CfgVehicles
         canSetAreaShape = 1;
         canSetAreaHeight = 1;
 
-		function = "RT_Teleport_fnc_initTeleporterToPositions";
-		functionPriority = 1;	
+        function = "RT_Teleport_fnc_initTeleporterToPositions";
+        functionPriority = 1;    
 
         class AttributeValues
         {
@@ -62,7 +61,7 @@ class CfgVehicles
 
         scope = 2;
         scopeCurator = 0;
-		curatorCanAttach = 0;
+        curatorCanAttach = 0;
 
         is3DEN = 1;
         isGlobal = 1;
@@ -73,8 +72,8 @@ class CfgVehicles
         canSetAreaShape = 1;
         canSetAreaHeight = 1;
 
-		function = "RT_Teleport_fnc_initTeleportPosition";
-		functionPriority = 1;	
+        function = "RT_Teleport_fnc_initTeleportPosition";
+        functionPriority = 1;    
 
         class AttributeValues
         {
@@ -83,9 +82,9 @@ class CfgVehicles
         };
 
         class Attributes: AttributesBase
-		{
-			class Title
-			{
+        {
+            class Title
+            {
                 displayName = "Title of the position";
                 tooltip = "Title of the position for teleport in teleporter";
                 property = "RT_Teleport_Teleport_Position_Title";
@@ -97,8 +96,8 @@ class CfgVehicles
                 unique = 0;
                 condition="logicModule";
                 typeName = "STRING";
-			};
-		};
+            };
+        };
     };
 
 };

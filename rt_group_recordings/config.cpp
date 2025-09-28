@@ -1,22 +1,19 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
 #include "SteamGameRecording.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
     class RT_Recordings
     {
-        class SpectatorRecordings
-        {
-            file = "rt\recordings\Functions\GameRecordings";
-            class Spectator_Fall
-            {
-                file = "rt\recordings\Functions\GameRecordings\fn_fall.sqf";
-            };
-            class Spectator_Standup
-            {
-                file = "rt\recordings\Functions\GameRecordings\fn_standup.sqf";
-            };
-        };
+        name = "RT Compatibility - Recordings";
+        requiredAddons[] = {"A3_Ui_F", "RT_Main", "RT_Spectator", "ace_arsenal"};
+        
+        units[] = {};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

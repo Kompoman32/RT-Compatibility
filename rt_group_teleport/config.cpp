@@ -1,40 +1,21 @@
-#include "CfgPatches.hpp"
-#include "CfgEventHandlers.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgEventHandlers.hpp"
 
 #include "dialogs\dialogs.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
     class RT_Teleport
     {
-        class Teleporter
-        {
-            file = "rt\teleport\functions\teleporter";
-            class initTeleporterToPositions
-            {
-            };
-            class initTeleporterToPositionsLocal
-            {
-            };
-            class initTeleportPosition
-            {
-            };
-            class teleportDialogOpen
-            {
-            };
-            class teleportDialogSetValues
-            {
-            };
-            class teleportDialogOnLoad
-            {
-            };
-            class teleportDialogOnUnload
-            {
-            };
-            class teleportDialogTeleport
-            {
-            };
-        };
+        name = "RT Compatibility - Teleport";
+        requiredAddons[] = {"RT_Main"};
+        units[] = {"Teleporter_To_Positions_Module", "Teleport_Position_Module"};
+
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

@@ -10,13 +10,13 @@ private _groupTextCtrl = (_display displayCtrl 9581);
 private _name = "";
 
 if (_index == -1) then {
-	_name = "All Units";
+    _name = "All Units";
 } else {
-	if !(isNull _selectedGroup) then {
-		_name = groupID _selectedGroup;
-	} else {
-		_name = format ["No group %1", _index + 1];
-	};
+    if !(isNull _selectedGroup) then {
+        _name = groupID _selectedGroup;
+    } else {
+        _name = format ["No group %1", _index + 1];
+    };
 };
 
 _groupTextCtrl ctrlSetStructuredText (parseText (format ["<t align='center' size='0.8' >%1</t>",_name]));

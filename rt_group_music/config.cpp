@@ -1,28 +1,18 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
     class RT_Music
     {
-        class Music
-        {
-            file = "rt\music\Functions\Music";
-            class SetupMusic
-            {
-            };
-            class PlayRandomMusic
-            {
-            };
-            class StopMusic
-            {
-            };
-            class InitMusicHandler
-            {
-            };
-            class InitMusicHandlerServer
-            {
-            };
-        };
+        name = "RT Compatibility - Music";
+        requiredAddons[] = {"RT_Main"};
+        
+        units[] = {};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

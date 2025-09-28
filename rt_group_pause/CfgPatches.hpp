@@ -3,7 +3,7 @@ class CfgPatches
     class RT_Pause
     {
         name = "RT Compatibility - Pause";
-        requiredAddons[] = {"RT_Main", "RT_Utils"};
+        requiredAddons[] = {"RT_Main"};
         
         units[] = {};
         weapons[] = {};

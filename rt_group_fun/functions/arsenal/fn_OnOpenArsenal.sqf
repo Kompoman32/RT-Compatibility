@@ -12,27 +12,27 @@ missionNamespace setVariable [RT_FUN_VAR_ARSENAL_MUSIC_INDEX, _index];
 missionNamespace setVariable [RT_FUN_VAR_ARSENAL_MUSIC, _sound];
 
 [missionNamespace, RT_FUN_VAR_ARSENAL_MUSIC_POOL_SPAWN, [], {
-	waitUntil {
-		private _sound = missionNamespace getVariable [RT_FUN_VAR_ARSENAL_MUSIC, nil];
-		if (isNil "_sound") exitWith{true};
+    waitUntil {
+        private _sound = missionNamespace getVariable [RT_FUN_VAR_ARSENAL_MUSIC, nil];
+        if (isNil "_sound") exitWith{true};
 
-		if (soundParams _sound isEqualTo []) then {
-			private _index = missionNamespace getVariable [RT_FUN_VAR_ARSENAL_MUSIC_INDEX, nil];
+        if (soundParams _sound isEqualTo []) then {
+            private _index = missionNamespace getVariable [RT_FUN_VAR_ARSENAL_MUSIC_INDEX, nil];
 
-			if (isNil "_index") exitWith{true};
+            if (isNil "_index") exitWith{true};
 
-			_index = (_index + 1) mod (count RT_FUN_VAR_ARSENAL_MUSIC_POOL);
+            _index = (_index + 1) mod (count RT_FUN_VAR_ARSENAL_MUSIC_POOL);
 
-			private _soundName = RT_FUN_VAR_ARSENAL_MUSIC_POOL select _index;
-	
-			_sound = playSoundUI [_soundName];
+            private _soundName = RT_FUN_VAR_ARSENAL_MUSIC_POOL select _index;
+    
+            _sound = playSoundUI [_soundName];
 
-			missionNamespace setVariable [RT_FUN_VAR_ARSENAL_MUSIC_INDEX, _index];
-			missionNamespace setVariable [RT_FUN_VAR_ARSENAL_MUSIC, _sound];
-		};
+            missionNamespace setVariable [RT_FUN_VAR_ARSENAL_MUSIC_INDEX, _index];
+            missionNamespace setVariable [RT_FUN_VAR_ARSENAL_MUSIC, _sound];
+        };
 
-		sleep 1;
+        sleep 1;
 
-		false
-	}	
+        false
+    }    
 }] call RT_Utils_fnc_addScriptHandler;

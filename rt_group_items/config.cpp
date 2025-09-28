@@ -1,19 +1,19 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
 
-class CfgFunctions
+
+class CfgPatches
 {
-    class RT_Items
+    class RT_Pause
     {
-        class Items
-        {
-            file = "rt\items\Functions\Items";
-            class CreateItemStash
-            {
-            };
-            class CreateResupply
-            {
-            };
-        };
+        name = "RT Compatibility - Items";
+        requiredAddons[] = {"RT_Main"};
+        
+        units[] = {};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

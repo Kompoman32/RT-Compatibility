@@ -1,16 +1,18 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgDialog.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
     class RT_Dialog
     {
-        class Dialog
-        {
-            file = "rt\dialog\functions\Dialog";
-            class ShowStage{};
-            class OpenDialog{};
-            class ButtonClick{};
-        };
+        name = "RT Compatibility - Dialog";
+        requiredAddons[] = {"RT_Main"};
+        
+        units[] = {};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

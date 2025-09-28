@@ -6,13 +6,13 @@ sleep 0.1;
 params ["_player", ["_anim", "Acts_Dance_01"]];
 
 if ([_player] call RT_ANIMATIONS_fnc_isEmoting) then {
-	[_player] call RT_ANIMATIONS_fnc_stopEmoting;
-	sleep 0.2;
+    [_player] call RT_ANIMATIONS_fnc_stopEmoting;
+    sleep 0.2;
 };
 
 if ([_player] call RT_ANIMATIONS_fnc_isDancing) then {
-	[_player] call RT_ANIMATIONS_fnc_stopDancing;
-	sleep 0.2;
+    [_player] call RT_ANIMATIONS_fnc_stopDancing;
+    sleep 0.2;
 };
 
 private _inAnim = "";
@@ -27,7 +27,7 @@ switch (_anim) do {
 if (_inAnim != "" && animationState _player == _inAnim) exitWith {};
 
 if (_inAnim != "") then {
-	[_player, [_inAnim, 0, 0.1]] remoteExec ["switchMove", 0, true];
+    [_player, [_inAnim, 0, 0.1]] remoteExec ["switchMove", 0, true];
 
     sleep (_inAnim call RT_ANIMATIONS_fnc_getMoveDuration);
 };

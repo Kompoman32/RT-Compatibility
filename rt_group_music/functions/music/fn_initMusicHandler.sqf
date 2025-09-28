@@ -1,5 +1,5 @@
 addMusicEventHandler ["MusicStop", {
     params ["_musicClassname", "_ehId"];
 
-	[] remoteExec ["RT_Music_fnc_playRandomMusic", 2];
+    [] remoteExec ["RT_Music_fnc_playRandomMusic", 2];
 }];

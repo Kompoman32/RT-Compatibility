@@ -26,7 +26,7 @@ if (!hasInterface) exitWith {};
         hintSilent format[_text, [_time, "MM:SS"] call BIS_fnc_secondsToString];
         sleep 1;
     };
-}] call Rt_Utils_fnc_addScripthandler;	
+}] call Rt_Utils_fnc_addScripthandler;    
 
 
 

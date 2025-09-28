@@ -1,0 +1,192 @@
+class RscControlsGroup;
+class RscButtonTextOnly;
+class RscText;
+class RscStructuredText;
+class ScrollBar;
+class RscPicture;
+class MedAssistRscTextCenter: RscText
+{
+    style=2;
+};
+
+class AMA_menu {
+    idd=180025;
+    name="AMA_menu";
+    movingEnable=0;
+    enableSimulation=1;
+    onLoad = "call RT_Medical_Assistant_fnc_displayLoad";
+    onUnload = "call RT_Medical_Assistant_fnc_displayUnload";
+    onKeyDown = "call RT_Medical_Assistant_fnc_displayKeyDown";
+    onKeyUp = "call RT_Medical_Assistant_fnc_displayKeyUp";
+
+    class controlsBackground
+    {
+        class Background_Tablet_Image: RscPicture
+        {
+            idc=-1;
+            text="\rt\medical_assistant\images\tablet_ca.paa";
+            x="0.242604 * safezoneW + safezoneX";
+            y="0.0743704 * safezoneH + safezoneY";
+            w="0.509948 * safezoneW";
+            h="0.871889 * safezoneH";
+        };
+        class Background_Line_Left_RSC: RscText
+        {
+            idc=-1;
+            x="0.432969 * safezoneW + safezoneX";
+            y="0.236 * safezoneH + safezoneY";
+            w="0.002 * safezoneW";
+            h="0.528 * safezoneH";
+            colorBackground[]={0,0,0,0.69999999};
+        };
+        class Background_Line_Right_RSC: RscText
+        {
+            idc=-1;
+            x="0.566606 * safezoneW + safezoneX";
+            y="0.236 * safezoneH + safezoneY";
+            w="0.002 * safezoneW";
+            h="0.528 * safezoneH";
+            colorBackground[]={0,0,0,0.69999999};
+        };
+    };
+    class controls
+    {
+        class Main_ControlGroup: RscControlsGroup
+        {
+            idc=956;
+            x="0.298906 * safezoneW + safezoneX";
+            y="0.236 * safezoneH + safezoneY";
+            w="0.402187 * safezoneW";
+            h="0.528 * safezoneH";
+            class Controls
+            {
+            };
+        };
+
+        class Additional_ControlGroup: RscControlsGroup
+        {
+            idc=957;
+            x="0.298906 * safezoneW + safezoneX ";
+            y="(0.236 + 0.528) * safezoneH + safezoneY";
+            w="0.402187 * safezoneW";
+            h="0.3 * safezoneH";
+            class Controls
+            {
+                class ExitButton: RscButtonTextOnly
+                {
+                    idc=-1;
+                    x="0.23 * safezoneW";
+                    y="0.042 * safezoneH";
+                    w="0.0171 * safezoneW";
+                    h="0.0275 * safezoneH";
+                    text="";
+                    tooltip="Close"
+                    onButtonClick="(findDisplay RT_MEDICAL_ASSSISTANT_VAR_DISPLAY_IDC) closeDisplay 2"
+                };
+
+                class Group1Button: RscButtonTextOnly
+                {
+                      idc=-1;
+                    x="0.0733 * safezoneW";
+                    y="0.042 * safezoneH";
+                    w="0.016 * safezoneW";
+                    h="0.0275 * safezoneH";
+                    text="";
+                    tooltip="Group 1"
+                    onButtonClick="0 call RT_Medical_Assistant_fnc_onGroupButtonClick"
+                };
+
+                class Group2Button: RscButtonTextOnly
+                {
+                      idc=-1;
+                    x="0.0925 * safezoneW";
+                    y="0.042 * safezoneH";
+                    w="0.016 * safezoneW";
+                    h="0.0275 * safezoneH";
+                    text="";
+                    tooltip="Group 2"
+                    onButtonClick="1 call RT_Medical_Assistant_fnc_onGroupButtonClick"
+                };
+
+                class Group3Button: RscButtonTextOnly
+                {
+                      idc=-1;
+                    x="0.1117 * safezoneW";
+                    y="0.042 * safezoneH";
+                    w="0.016 * safezoneW";
+                    h="0.0275 * safezoneH";
+                    text="";
+                    tooltip="Group 3"
+                    onButtonClick="2 call RT_Medical_Assistant_fnc_onGroupButtonClick"
+                };
+
+                class Group4Button: RscButtonTextOnly
+                {
+                      idc=-1;
+                    x="0.131 * safezoneW";
+                    y="0.042 * safezoneH";
+                    w="0.016 * safezoneW";
+                    h="0.0275 * safezoneH";
+                    text="";
+                    tooltip="Group 4"
+                    onButtonClick="3 call RT_Medical_Assistant_fnc_onGroupButtonClick"
+                };
+
+                class Group5Button: RscButtonTextOnly
+                {
+                      idc=-1;
+                    x="0.1502 * safezoneW";
+                    y="0.042 * safezoneH";
+                    w="0.016 * safezoneW";
+                    h="0.0275 * safezoneH";
+                    text="";
+                    tooltip="Group 5"
+                    onButtonClick="4 call RT_Medical_Assistant_fnc_onGroupButtonClick"
+                };
+
+                class Group6Button: RscButtonTextOnly
+                {
+                      idc=-1;
+                    x="0.1694 * safezoneW";
+                    y="0.042 * safezoneH";
+                    w="0.016 * safezoneW";
+                    h="0.0275 * safezoneH";
+                    text="";
+                    tooltip="Group 6"
+                    onButtonClick="5 call RT_Medical_Assistant_fnc_onGroupButtonClick"
+                };
+
+                class GroupAllButton: RscButtonTextOnly
+                {
+                      idc=-1;
+                    x="0.191 * safezoneW";
+                    y="0.032 * safezoneH";
+                    w="0.017 * safezoneW";
+                    h="0.022 * safezoneH";
+                    text="";
+                    tooltip="All Units"
+                    onButtonClick="-1 call RT_Medical_Assistant_fnc_onGroupButtonClick"
+                };
+            };
+        };
+
+        class GroupTextBG: RscStructuredText
+        {
+            idc=9580;
+            x="0.5 - (0.025 * safezoneW) / 2";
+            y="1 - 0.02873333 * safezoneH";
+            w="0.025 * safezoneW";
+            h="0.01833333 * safezoneH";
+            colorBackground[] = {0,0,0,1};
+            text="";
+            align = "center";
+            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)/1.5";
+        };
+        class GroupText: GroupTextBG
+        {
+            idc=9581;
+            colorBackground[] = {0,0.0941176,0.25098,0.8};
+            text="Group 1";
+        };
+    };
+};

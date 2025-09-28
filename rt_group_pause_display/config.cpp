@@ -1,24 +1,19 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
 #include "RSC.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
-    class RT_PauseDisplay
+    class RT_PauseMenu
     {
-        class PauseDisplay
-        {
-            file = "rt\pausedisplay\Functions\Display";
-            class SetPlayerInfo {};
-        };
+        name = "RT Compatibility - Pause Menu";
+        requiredAddons[] = {"RT_Main", "A3_Ui_F"};
+        
+        units[] = {};
+        weapons[] = {};
 
-        class AdminPanel
-        {
-            file = "rt\pausedisplay\Functions\adminPanel";
-            class SetSoundSlider {};
-            class SetSoundSliderText {};
-            class SetSound {};
-            class HideControlIfNoZeus {};
-        };
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

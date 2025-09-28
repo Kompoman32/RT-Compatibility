@@ -16,19 +16,19 @@ private _index = 0;
 private _position = nil;
 private _text = "";
 {
-	_index = _x + (_currentPage - 1) * 5;
+    _index = _x + (_currentPage - 1) * 5;
 
-	_position = nil;
+    _position = nil;
 
-	if (_index <  _allPositionsCount) then {
-		_position = _allPositions select _index;
-	};
+    if (_index <  _allPositionsCount) then {
+        _position = _allPositions select _index;
+    };
 
-	_text = "";
-	if (!(isNil "_position")) then {
-		_text = _position getVariable ["title", "Position"];
-	};
+    _text = "";
+    if (!(isNil "_position")) then {
+        _text = _position getVariable ["title", "Position"];
+    };
 
- 	ctrlSetText [21430 + _x, _text];
-	ctrlShow [21430 + _x, _index < _allPositionsCount];
+     ctrlSetText [21430 + _x, _text];
+    ctrlShow [21430 + _x, _index < _allPositionsCount];
 } forEach [0,1,2,3,4];

@@ -16,8 +16,8 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
     RT_SETTINGS_category_initialization,
     true,
     1,
-	{},
-	true
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -26,8 +26,8 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
     RT_SETTINGS_category_initialization,
     true,
     1,
-	{},
-	true
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -36,8 +36,8 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
     RT_SETTINGS_category_initialization,
     true,
     1,
-	{},
-	true
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -46,8 +46,8 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
     RT_SETTINGS_category_initialization,
     true,
     1,
-	{},
-	true
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -56,8 +56,8 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
     RT_SETTINGS_category_initialization,
     true,
     1,
-	{},
-	true
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -66,8 +66,8 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
     RT_SETTINGS_category_initialization,
     true,
     1,
-	{},
-	true
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -76,8 +76,8 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
     RT_SETTINGS_category_initialization,
     true,
     1,
-	{},
-	true
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -86,8 +86,8 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
     RT_SETTINGS_category_initialization,
     true,
     1,
-	{},
-	true
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -96,8 +96,8 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
     RT_SETTINGS_category_initialization,
     true,
     1,
-	{},
-	true
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -106,8 +106,8 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
     RT_SETTINGS_category_initialization,
     true,
     1,
-	{},
-	true
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -116,7 +116,7 @@ RT_SETTINGS_INITIALIZATION_units = "SETTINGS_RT_SETTINGS_INITIALIZATION_units";
     RT_SETTINGS_category_initialization,
     true,
     1,
-	{},
-	true
+    {},
+    true
 ] call CBA_fnc_addSetting;
 

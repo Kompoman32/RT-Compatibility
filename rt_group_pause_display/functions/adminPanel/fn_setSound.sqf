@@ -14,23 +14,23 @@ private _function = if (_isMusic) then {"fadeMusic"} else {"fadeSound"};
 [5, _value] remoteExec [_function, 0, true];
 
 [_sliderCtrl, _isMusic] spawn {
-	params [["_sliderCtrl", controlNull], ["_isMusic", false]];
+    params [["_sliderCtrl", controlNull], ["_isMusic", false]];
 
-	private _counter = 5;
+    private _counter = 5;
 
-	while {_counter > 0} do {
-		if (isNull _sliderCtrl) exitWith {};
+    while {_counter > 0} do {
+        if (isNull _sliderCtrl) exitWith {};
 
 
-		private _newValue = 0;
+        private _newValue = 0;
 
-		_newValue = if (_isMusic) then {musicVolume} else {soundVolume};
+        _newValue = if (_isMusic) then {musicVolume} else {soundVolume};
 
-		_sliderCtrl sliderSetPosition _newValue;
-		[_sliderCtrl, _newValue] call RT_PauseDisplay_fnc_setSoundSliderText;
-		_sliderCtrl ctrlCommit 0;
+        _sliderCtrl sliderSetPosition _newValue;
+        [_sliderCtrl, _newValue] call RT_PauseDisplay_fnc_setSoundSliderText;
+        _sliderCtrl ctrlCommit 0;
 
-		_counter = _counter - 0.01;
-		sleep 0.01;
-	};
+        _counter = _counter - 0.01;
+        sleep 0.01;
+    };
 }

@@ -1,22 +1,22 @@
 /*
-	Author: Vaclav "Watty Watts" Oliva & Kompoman32
+    Author: Vaclav "Watty Watts" Oliva & Kompoman32
 
-	Description:
-	Virtual fire support of artillery/mortar unit.
+    Description:
+    Virtual fire support of artillery/mortar unit.
 
-	Parameters:
-	Select 0 - ARRAY of parameters as in function BIS_fnc_fireSupportVirtual
-	Select 1 - ARRAY: area to bomb (must have length 4 or 5) (0-3: center, a, b, rotation, 4: isRectangle (default: true))
-	Select 2 - (OPTIONAL) ARRAY: safe area (must have length 4 or 5) (0-3: center, a, b, rotation, 4: isRectangle (default: true))
-	
-	Returns:
-	Boolean
+    Parameters:
+    Select 0 - ARRAY of parameters as in function BIS_fnc_fireSupportVirtual
+    Select 1 - ARRAY: area to bomb (must have length 4 or 5) (0-3: center, a, b, rotation, 4: isRectangle (default: true))
+    Select 2 - (OPTIONAL) ARRAY: safe area (must have length 4 or 5) (0-3: center, a, b, rotation, 4: isRectangle (default: true))
+    
+    Returns:
+    Boolean
 
-	Examples:
-	_barrage = [[BIS_Player,"Sh_82mm_AMOS",100,24,10], [[0,0,0], 10,10, 0], [0,0,0], 0,0, 0]] spawn RT_Support_fnc_fireSupportVirtualSquare;
-	// you can set 5th element in "area to bomb" or "safe area" to false to calculate area as Ellipse
-	_barrage = [[BIS_Player,"Sh_82mm_AMOS",100,24,10], [[0,0,0], 10,10, 0, false], [0,0,0], 0,0, 0]] spawn RT_Support_fnc_fireSupportVirtualSquare;
-	_barrage = [[[3600,3600,0],nil,100,24,10], (_trigger call BIS_fnc_getArea) select [0, 5]] spawn RT_Support_fnc_fireSupportVirtualSquare;
+    Examples:
+    _barrage = [[BIS_Player,"Sh_82mm_AMOS",100,24,10], [[0,0,0], 10,10, 0], [0,0,0], 0,0, 0]] spawn RT_Support_fnc_fireSupportVirtualSquare;
+    // you can set 5th element in "area to bomb" or "safe area" to false to calculate area as Ellipse
+    _barrage = [[BIS_Player,"Sh_82mm_AMOS",100,24,10], [[0,0,0], 10,10, 0, false], [0,0,0], 0,0, 0]] spawn RT_Support_fnc_fireSupportVirtualSquare;
+    _barrage = [[[3600,3600,0],nil,100,24,10], (_trigger call BIS_fnc_getArea) select [0, 5]] spawn RT_Support_fnc_fireSupportVirtualSquare;
 */
 
 params [["_virtualSupportParams", [[]]], ["_bombArea", [], [[]]], ["_safeArea", [], [[]]]];
@@ -27,22 +27,22 @@ if ((_safeArea isEqualType []) and {!(count _safeArea == 0 or count _safeArea ==
 _noSafeArea = count _safeArea == 0;
 
 if (!_noSafeArea) then {
-	_safeArea = [_safeArea#0, _safeArea#1, _safeArea#2, _safeArea#3, _safeArea param [4, true]];
+    _safeArea = [_safeArea#0, _safeArea#1, _safeArea#2, _safeArea#3, _safeArea param [4, true]];
 };
 
 // Params
 _virtualSupportParams params
 [
-	["_position",objNull],
-	["_ammo","Sh_82mm_AMOS",[""]],
-	["_radius",100],
-	["_limit",10,[999]],
-	["_delay",10,[999,[]]],
-	["_condition",{false},[{}]],
-	["_safeZone",0],
-	["_altitude",250,[999]],
-	["_velocity",150,[999]],
-	["_shellSounds",[""],[[]]]
+    ["_position",objNull],
+    ["_ammo","Sh_82mm_AMOS",[""]],
+    ["_radius",100],
+    ["_limit",10,[999]],
+    ["_delay",10,[999,[]]],
+    ["_condition",{false},[{}]],
+    ["_safeZone",0],
+    ["_altitude",250,[999]],
+    ["_velocity",150,[999]],
+    ["_shellSounds",[""],[[]]]
 ];
 
 
@@ -78,51 +78,51 @@ if (_delay isEqualType []) then {_minDelay = _delay select 0; _maxDelay = _delay
 // Fire support
 while
 {
-	(_roundsFired < _limit)
+    (_roundsFired < _limit)
 }
 do
 {
-	// if the condition is triggered, stop the barrage
-	if (!(isNil _condition) and (_condition)) exitWith {/*["VIRTUAL ARTILLERY SUPPORT: Condition to end bombardment activated."] call BIS_fnc_log*/};
+    // if the condition is triggered, stop the barrage
+    if (!(isNil _condition) and (_condition)) exitWith {/*["VIRTUAL ARTILLERY SUPPORT: Condition to end bombardment activated."] call BIS_fnc_log*/};
 
-	// Getting the position - done each time to be able to track moving targets
-	if (_bombArea isEqualType []) then {_targetPos = _bombArea};
+    // Getting the position - done each time to be able to track moving targets
+    if (_bombArea isEqualType []) then {_targetPos = _bombArea};
 
-	_finalPos = _targetPos;
+    _finalPos = _targetPos;
 
-	// Selecting the final position where the AI should fire
-	// _finalPos = [_targetPos,(random (_radius - _safeZone)) + _safeZone, random 360] call BIS_fnc_relPos;
+    // Selecting the final position where the AI should fire
+    // _finalPos = [_targetPos,(random (_radius - _safeZone)) + _safeZone, random 360] call BIS_fnc_relPos;
 
-	// if we cant find prefered location for 100000 iterations we will stop
-	_errorCounter = 0;
+    // if we cant find prefered location for 100000 iterations we will stop
+    _errorCounter = 0;
 
-	while {true} do {
-		_finalPos = [_targetPos#0, _targetPos#1, _targetPos#2, _targetPos#3, _targetPos param [4, true]] call BIS_fnc_randomPosTrigger;
+    while {true} do {
+        _finalPos = [_targetPos#0, _targetPos#1, _targetPos#2, _targetPos#3, _targetPos param [4, true]] call BIS_fnc_randomPosTrigger;
 
-		if (_errorCounter > 10000) then { break; };
-		
-		if (_noSafeArea) then {
-			break;
-		};
+        if (_errorCounter > 10000) then { break; };
+        
+        if (_noSafeArea) then {
+            break;
+        };
 
-		if (!(_finalPos inArea _safeArea)) then {
-			break;
-		};
+        if (!(_finalPos inArea _safeArea)) then {
+            break;
+        };
 
-		_errorCounter = _errorCounter + 1;
-	};
+        _errorCounter = _errorCounter + 1;
+    };
 
-	if (_errorCounter > 10000) then { break; };
+    if (_errorCounter > 10000) then { break; };
 
-	_shell = _ammo createVehicle [_finalPos select 0, _finalPos select 1, _altitude];
-	_shell setVectorUp [0,0,-1];
-	_shell setVelocity [0,0,-(abs _velocity)];
-	_roundsFired = _roundsFired + 1;
+    _shell = _ammo createVehicle [_finalPos select 0, _finalPos select 1, _altitude];
+    _shell setVectorUp [0,0,-1];
+    _shell setVelocity [0,0,-(abs _velocity)];
+    _roundsFired = _roundsFired + 1;
 
-	if !(_shellSounds isEqualTo [""]) then {[_shell,(selectRandom _shellSounds)] remoteExec ["say3D"]};
+    if !(_shellSounds isEqualTo [""]) then {[_shell,(selectRandom _shellSounds)] remoteExec ["say3D"]};
 
-	_finalDelay = _minDelay + (random (_maxDelay - _minDelay));
-	sleep _finalDelay;
+    _finalDelay = _minDelay + (random (_maxDelay - _minDelay));
+    sleep _finalDelay;
 };
 
 // if !(_roundsFired < _limit) then {["VIRTUAL ARTILLERY SUPPORT: Fire mission finished, shell limit:%1 reached.",_limit] call BIS_fnc_logFormat};

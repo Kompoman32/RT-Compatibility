@@ -8,6 +8,6 @@ uiNamespace setVariable [RT_TELEPORT_VAR_TELEPORTER_MODULE, _teleporter];
 private _dialog = createDialog "TeleporterDialog";
 
 if (!_dialog) exitWith {
-	uiNamespace setVariable [RT_TELEPORT_VAR_TELEPORTER_MODULE, nil];
+    uiNamespace setVariable [RT_TELEPORT_VAR_TELEPORTER_MODULE, nil];
 };
 

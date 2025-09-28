@@ -1,19 +1,18 @@
-#include "CfgPatches.hpp"
+#include "CfgUnitInsignia.hpp"
 
-class CfgUnitInsignia
+class CfgPatches
 {
-    class RTGroupID
+    class RT_Insigina
     {
-        displayName = "RT Group Emblem (2018)";
-        author = "Voxtell";
-        texture = "rt\insignia\data\RT18.paa";
-        textureVehicle = "";
-    };
-    class RTGroup17ID
-    {
-        displayName = "RT Group Emblem (2017)";
-        author = "Voxtell";
-        texture = "rt\insignia\data\RT17.paa";
-        textureVehicle = "";
+        name = "RT Compatibility - Insigina";
+        requiredAddons[] = {"RT_Main"};
+        
+        units[] = {};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };
+

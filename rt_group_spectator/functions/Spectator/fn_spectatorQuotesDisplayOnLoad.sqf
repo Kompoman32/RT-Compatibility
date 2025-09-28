@@ -19,7 +19,7 @@ if !(player getVariable ["ACE_isUnconscious", false]) exitWith {};
         "Rsc_RT_Spectator_Quotes_UI" cutFadeOut 0;
     }
 }
-	
+    
 
 // disableSerialization;
 // private _dsp = _this#0;

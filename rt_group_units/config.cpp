@@ -1,29 +1,22 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgSurfaces.hpp"
 #include "CfgEventHandlers.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
     class RT_Units
     {
-        class Units
-        {
-            file = "rt\units\functions\units";
-            class enemyWaves
-            {
-            };
-            class stalkF
-            {
-            };
-            class addCarry
-            {
-            };
-        };
+        name = "RT Compatibility - Units";
+        requiredAddons[] = {"RT_Main"};     
+        
+        units[] = {};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };
 
-class CfgSurfaces {
-	class Default {
-		AIAvoidStance = 2;
-	};
-};
+

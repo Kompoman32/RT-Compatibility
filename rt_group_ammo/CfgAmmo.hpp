@@ -3,19 +3,19 @@ class CfgWeapons {
     class Throw: GrenadeLauncher {
         muzzles[] += {"RT_PotatoMuzzle", "RT_Af_PotatoMuzzle", "RT_HandGrenade_RubberMuzzle"};
 
-		class ThrowMuzzle;
+        class ThrowMuzzle;
         class RT_PotatoMuzzle: ThrowMuzzle {
             magazines[] = {"RT_Potato"};
-		};
+        };
 
         class RT_Af_PotatoMuzzle: ThrowMuzzle {
             magazines[] = {"RT_Af_Potato"};
-		};
+        };
 
         class RT_HandGrenade_RubberMuzzle: ThrowMuzzle {
             magazines[] = {"RT_HandGrenade_Rubber"};
-		};
-	};
+        };
+    };
 
 
     class Rifle_Long_Base_F;
@@ -46,7 +46,7 @@ class CfgWeapons {
 
 class CfgAmmo {
     class SmokeShell;
-	class RT_G_Potato: SmokeShell {
+    class RT_G_Potato: SmokeShell {
         model = "rt\ammo\assets\potato.p3d";
         dangerRadiusHit = -1;
         suppressionRadiusHit = 1;
@@ -64,14 +64,14 @@ class CfgAmmo {
     };
 
     class GrenadeHand;
-	class RT_G_Af_Potato: GrenadeHand {
+    class RT_G_Af_Potato: GrenadeHand {
         model = "rt\ammo\assets\potata.p3d";
         hit = 4;
         indirectHit = 4;
         explosionTime = 3;
     };
 
-	class RT_GrenadeHand_Rubber: GrenadeHand {
+    class RT_GrenadeHand_Rubber: GrenadeHand {
         ACE_damageType = "rubbergrenade";
     };
 
@@ -222,7 +222,7 @@ class CfgAmmo {
 
 class CfgMagazines {
     class HandGrenade;
-	class RT_Potato: HandGrenade {
+    class RT_Potato: HandGrenade {
         author = "Kompoman32";
         displayname = "$STR_RT_AMMO_Potato_itemName";
         descriptionShort = "$STR_RT_AMMO_Potato_itemDescription";

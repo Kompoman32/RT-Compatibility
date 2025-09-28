@@ -11,27 +11,27 @@ private _showAll = (RT_SETTINGS_MEDICAL_ASSISTANT_GROUP_TYPE call CBA_settings_f
 private _showPlayers = (RT_SETTINGS_MEDICAL_ASSISTANT_GROUP_TYPE call CBA_settings_fnc_get) == RT_SETTINGS_MEDICAL_ASSISTANT_GROUP_TYPE_PLAYERS;
 
 if (_showAll || _showPlayers) then {
-	{
-		_groups pushBackUnique _x;
-	} forEach ((_players apply { group _x }) select { side _x == _playerSide})
+    {
+        _groups pushBackUnique _x;
+    } forEach ((_players apply { group _x }) select { side _x == _playerSide})
 };
 
 if (_showAll) then {
-	{
-		_groups pushBackUnique _x;
-	} forEach (groups _playerSide);
+    {
+        _groups pushBackUnique _x;
+    } forEach (groups _playerSide);
 };
 
 if (_index == -1) exitWith {
-	RT_MEDICAL_ASSSISTANT_VAR_MENU_CURRENT_INDEX = _index;
-	[_groups] call RT_Medical_Assistant_fnc_initMenuAll;
-	[objNull, _index] call RT_Medical_Assistant_fnc_setGroupText;
+    RT_MEDICAL_ASSSISTANT_VAR_MENU_CURRENT_INDEX = _index;
+    [_groups] call RT_Medical_Assistant_fnc_initMenuAll;
+    [objNull, _index] call RT_Medical_Assistant_fnc_setGroupText;
 };
 
 private _selectedGroup = objNull;
 
 if (_index < (count _groups)) then {
-	_selectedGroup = (_groups#_index);
+    _selectedGroup = (_groups#_index);
 };
 
 RT_MEDICAL_ASSSISTANT_VAR_MENU_CURRENT_INDEX = _index;

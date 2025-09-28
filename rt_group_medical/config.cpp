@@ -1,47 +1,31 @@
-#include "CfgPatches.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
+#include "AceMedical.hpp"
 
-class ace_medical_treatment_actions
+class CfgPatches
 {
-	class BasicBandage
-	{
-		treatmentTime="call RT_Medical_fnc_getBandageTime";
-	};
+    class RT_Medical
+    {
+        name = "RT Compatibility - Medical";
+        requiredAddons[] = {
+            "RT_Main",
+            "A3_Characters_F",
+            "A3_Ui_F",
+            "A3_Ui_F_Data",
+            "ace_common",
+            "ace_medical",
+            "ace_medical_treatment"
+        };
+        units[] = {};
 
-	class SurgicalKit;
-	class Suture: SurgicalKit {
-		displayName = "$STR_RT_Medical_Use_Suture";
-        items[] = {"ACE_suture"};
-		treatmentTime="RT_Medical_fnc_getStitchTime"
-        medicRequired = "0";
-        callbackProgress = "rt_medical_fnc_sutureProgress";
-        consumeItem = "false";
-        litter[] = {{"ACE_MedicalLitter_suture"}};
-    };
-};
+        weapons[] = {};
 
-class ace_medical_replacementItems {
-    ItemType_401[] = {
-		{"ACE_fieldDressing", 3},
-		{"ACE_painkillers", 1},
-		{"ACE_splint", 1},
-		{"ACE_tourniquet", 1},
-		{"ACE_suture", 3}
-    };
-    ItemType_619[] = {
-		{"ACE_fieldDressing", 6},
-		{"ACE_epinephrine", 2},
-		{"ACE_morphine", 2},
-		{"ACE_tourniquet", 1},
-		{"ACE_splint", 1},
-		{"ACE_suture", 6},
-		{"ACE_painkillers", 1},
-		{"ACE_adenosine", 1},
-		{"ACE_salineIV_250", 1}
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };
 
 class CfgMovesFatigue {
-	staminaCooldown = 0.1;
+    staminaCooldown = 0.1;
 };

@@ -1,13 +1,13 @@
 
 class CfgPatches
 {
-	class RT_Menu
-	{
-		units[] = {};
-		weapons[] = {};
-		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Data_F_Enoch_Loadorder"};
-	};
+    class RT_Menu
+    {
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = 0.1;
+        requiredAddons[] = {"A3_Data_F_Enoch_Loadorder"};
+    };
 };
 class Attributes;
 class RscStandardDisplay;
@@ -66,9 +66,9 @@ class RscButtonTextOnly;
 class RscMainMenuSpotlight: RscControlsGroupNoScrollbars
 {
     fade=0;
-	show = 1;
-	onLoad = "";
-    y="0.9 - (	10 / 2) * 	(pixelH * pixelGridNoUIScale * 2)";
+    show = 1;
+    onLoad = "";
+    y="0.9 - (    10 / 2) *     (pixelH * pixelGridNoUIScale * 2)";
 };
 class RscDisplayMain:RscStandardDisplay{
     class controls {
@@ -93,7 +93,7 @@ class RscDisplayMain:RscStandardDisplay{
             idc=1020;
             show=1;
             onload="";
-            y="0.9 - (	10 / 2) * 	(pixelH * pixelGridNoUIScale * 2)";
+            y="0.9 - (    10 / 2) *     (pixelH * pixelGridNoUIScale * 2)";
         };
         class Spotlight3:RscMainMenuSpotlight {
             idc=1022;
@@ -104,12 +104,12 @@ class RscDisplayMain:RscStandardDisplay{
             idc=1060;
             show=1;
             onload="";
-			y="0.9 - (	10 / 2 + (	10 / 8)) * 	(pixelH * pixelGridNoUIScale * 2)";
+            y="0.9 - (    10 / 2 + (    10 / 8)) *     (pixelH * pixelGridNoUIScale * 2)";
         };
         class SpotlightNext:SpotlightPrev {
             show= 1;
             onload="";
-			y="0.9 + (	10 / 2) * 	(pixelH * pixelGridNoUIScale * 2)";
+            y="0.9 + (    10 / 2) *     (pixelH * pixelGridNoUIScale * 2)";
         };
         class InfoMods:RscControlsgroupNoHScrollbars {
             show=0;
@@ -129,37 +129,37 @@ class RscDisplayMain:RscStandardDisplay{
     };
 };
 class CfgWorlds {
-	class CAWorld;
+    class CAWorld;
 
-	class VR : CAWorld {
-		cutscenes[] = {"mymainmenu"};
-	};
+    class VR : CAWorld {
+        cutscenes[] = {"mymainmenu"};
+    };
 
-	initWorld = "VR";
-	demoWorld = "VR";
+    initWorld = "VR";
+    demoWorld = "VR";
 };
 
 class CfgMissions
 {
-	class Cutscenes
-	{
-		class mymainmenu // Class referenced in 'cutscenes' property in CfgWorlds
-		{
-			directory = "rt\menu\mainmenu.vr"; // Path to scenario with the scene
-		};
-	};
+    class Cutscenes
+    {
+        class mymainmenu // Class referenced in 'cutscenes' property in CfgWorlds
+        {
+            directory = "rt\menu\mainmenu.vr"; // Path to scenario with the scene
+        };
+    };
 };
 
 
 class CfgMainMenuSpotlight 
 {
     class JoinServer
-	{
-		text = "RT Group Server";
-		picture = "rt\menu\assets\rt_group_logo_ca.paa";
-		video = "rt\menu\assets\Logo_RT_Showcase.ogv";
-		action = "connectToServer ['85.190.163.71', 19000, '']";
-		actionText = "Join the RT Group Server";
-		condition = "true";
-	};
+    {
+        text = "RT Group Server";
+        picture = "rt\menu\assets\rt_group_logo_ca.paa";
+        video = "rt\menu\assets\Logo_RT_Showcase.ogv";
+        action = "connectToServer ['85.190.163.71', 19000, '']";
+        actionText = "Join the RT Group Server";
+        condition = "true";
+    };
 };

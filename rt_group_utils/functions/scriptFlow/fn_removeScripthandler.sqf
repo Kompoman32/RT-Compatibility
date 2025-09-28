@@ -4,7 +4,7 @@ params ["_objectWithSavedhandler", "_handlerVariable"];
 private _eventHandler = _objectWithSavedhandler getVariable [_handlerVariable, nil];
 
 if (!(isNil "_eventHandler")) then {
-	terminate _eventHandler;
+    terminate _eventHandler;
 };
 
 _objectWithSavedhandler setVariable [_handlerVariable, nil];

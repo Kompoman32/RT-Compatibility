@@ -16,7 +16,7 @@ switch (animationState _player) do {
 if (_outAnim != "" && animationState _player == _outAnim) exitWith {};
 
 if (_outAnim != "") then {
-	[_player, [_outAnim, 0, 0.1]] remoteExec ["switchMove", 0, true];
+    [_player, [_outAnim, 0, 0.1]] remoteExec ["switchMove", 0, true];
 
     sleep (_outAnim call RT_ANIMATIONS_fnc_getMoveDuration);
 };

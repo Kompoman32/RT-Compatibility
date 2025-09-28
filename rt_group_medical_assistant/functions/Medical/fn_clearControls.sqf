@@ -7,5 +7,5 @@ private _mainCtrlGroup = (_display displayCtrl 956);
 if (isNull _mainCtrlGroup) exitWith {};
 
 {
-	ctrlDelete _x;
+    ctrlDelete _x;
 } forEach (allControls _mainCtrlGroup);

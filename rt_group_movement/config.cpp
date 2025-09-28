@@ -1,65 +1,20 @@
-#include "CfgPatches.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgMoves.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgVehicles.hpp"
 
-class CfgFunctions
+class CfgPatches
 {
     class RT_Movement
     {
-        class Ladder
-        {
-            file = "rt\movement\ladder";
-            class LadderSlideDown
-            {
-            };
-        };
+        name = "RT Compatibility - Movement";
+        author = "Kompoman32 & Alkanet & POLPOX";
+        requiredAddons[] = {"RT_Main", "RT_Medical_Assistant", "A3_Anims_F_Config_Sdr", "A3_Data_F_Sams_Loadorder", "A3_Data_F_AoW_Loadorder"};
+        
+        units[] = {};
+        weapons[] = {};
 
-        class Backpack
-        {
-            file = "rt\movement\backpack";
-            class DropBackpack
-            {
-            };
-            class TakeBackpack
-            {
-            };
-        };
-
-        class Animations
-        {
-            file = "rt\movement\animations";
-            class initAnimations
-            {
-            };
-        };
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
-};
-
-class CfgVehicles
-{
-	class B_Carryall_oli;
-	class FTAC_Invisi_bp: B_Carryall_oli
-	{
-		scope=1;
-		scopeCurator=0;
-		scopeArsenal=0;
-		displayName="";
-		picture="";
-		model="\a3\weapons_f\empty.p3d";
-		author="GNZ";
-		class TransportWeapons
-		{
-		};
-		class TransportMagazines
-		{
-		};
-		class TransportItems
-		{
-		};
-	};
-	class FTAC_Inv_bp: FTAC_Invisi_bp
-	{
-		scopeCurator=2;
-		displayName="Invisible Backpack";
-	};
 };
