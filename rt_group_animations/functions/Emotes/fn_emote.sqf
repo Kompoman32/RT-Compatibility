@@ -1,21 +1,34 @@
+/*
+    Description: Запустить анимацию Эмоций на юните
+    Author: Kompoman32
+    Made for: RT group
+    
+    Arguments:
+    0: _unit - Юнит для применения анимации Эмоций
+    1: _anim - Анимация (см. CfgVehicles >> CAManBase >> ACE_SelfActions >> RT_Animations >> Emotes (все вложенные))
+    
+    Examples:
+    * [_unit, "rt_exercisePushup"] call RT_Animations_fnc_emote;
+*/
+
 // run on Local in Sheduled
 if ([_this, true, false] call RT_Utils_fnc_callByScriptName) exitWith {};
 
 sleep 0.1;
 
-params ["_player", ["_anim", "tsp_animate_bird"]];
+params ["_unit", ["_anim", "tsp_animate_bird"]];
 
-if ([_player] call RT_ANIMATIONS_fnc_isDancing) then {
-    [_player] call RT_ANIMATIONS_fnc_stopDancing;
+if ([_unit] call RT_ANIMATIONS_fnc_isDancing) then {
+    [_unit] call RT_ANIMATIONS_fnc_stopDancing;
     sleep 0.2;
 };
 
-if ([_player] call RT_ANIMATIONS_fnc_isActing) then {
-    [_player] call RT_ANIMATIONS_fnc_stopActing;
+if ([_unit] call RT_ANIMATIONS_fnc_isActing) then {
+    [_unit] call RT_ANIMATIONS_fnc_stopActing;
     sleep 0.2;
 };
 
-if (!weaponLowered _player) then {_player action ["WeaponOnBack", _player]; sleep 0.2; if (!weaponLowered _player) then {sleep 0.1}};  //-- Try to lower weapon, else; screw it
+if (!weaponLowered _unit) then {_unit action ["WeaponOnBack", _unit]; sleep 0.5; if (!weaponLowered _unit) then {sleep 0.1}};  //-- Try to lower weapon, else; screw it
 
 private _inAnim = "";
 
@@ -33,31 +46,31 @@ switch (_anim) do {
     };
 };
 
-if (_inAnim != "" && gestureState _player == _inAnim) exitWith {};
+if (_inAnim != "" && gestureState _unit == _inAnim) exitWith {};
 
 if (_inAnim != "") then {
-    [_player, _inAnim] remoteExec ["playActionNow", 0, true];
+    [_unit, _inAnim] remoteExec ["playActionNow", 0, true];
 
     sleep (_inAnim call RT_ANIMATIONS_fnc_GetGestureDuration);
 };
 
 
-[_player, _anim] remoteExec ["playActionNow", 0, true];
+[_unit, _anim] remoteExec ["playActionNow", 0, true];
 
 waitUntil {
     sleep 0.2;
 
-    if (!alive _player || _player getVariable ["ACE_isUnconscious", false]) exitWith {
-        [_player] call RT_ANIMATIONS_fnc_stopEmoting;
+    if (!alive _unit || _unit getVariable ["ACE_isUnconscious", false]) exitWith {
+        [_unit] call RT_ANIMATIONS_fnc_stopEmoting;
         true;
     };
 
-    if !([_player, _anim] call RT_ANIMATIONS_fnc_isEmoting) exitWith {
+    if !([_unit, _anim] call RT_ANIMATIONS_fnc_isEmoting) exitWith {
         true
     };
 
-    if !(weaponLowered _player) exitWith {
-        [_player] call RT_ANIMATIONS_fnc_stopEmoting;
+    if !(weaponLowered _unit) exitWith {
+        [_unit] call RT_ANIMATIONS_fnc_stopEmoting;
         true;
     }; 
 

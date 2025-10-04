@@ -1,5 +1,5 @@
 /*
-    Description: Shows Pause hint or shows Resume hint
+    Description: Показывает сообщение что игра приостановлена и что игра продолжается
     Author: Kompoman32
     Made for: RT group
     
@@ -8,8 +8,8 @@
     1: _showResumeHint - Optional. Show Resume hint (only if _showPauseHint = false) (default: true)
     
     Examples:
-    * [true] call RT_Utils_fnc_showStopStartHint;
-    * [false, false] call RT_Utils_fnc_showStopStartHint;
+    * [true] call RT_Pause_fnc_showStopStartHint;
+    * [false, false] call RT_Pause_fnc_showStopStartHint;
 */
 
 /** Only local and not in local server */
@@ -38,7 +38,7 @@ if (!_showPauseHint) exitWith {
     params ["_player"];
 
     // Убираем контрол на всякий случай
-    [false, false] call RT_Utils_fnc_showStopStartHint;
+    [false, false] call RT_Pause_fnc_showStopStartHint;
 
     private _text = "<t color='#ff0000' size='4'>ИГРА ПРИОСТАНОВЛЕНА</t>";
 

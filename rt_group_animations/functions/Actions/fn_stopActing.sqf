@@ -1,3 +1,15 @@
+/*
+    Description: Останавливает анимацию Действий на юните
+    Author: Kompoman32
+    Made for: RT group
+    
+    Arguments:
+    0: _unit - Юнит
+    
+    Examples:
+    * [_unit] spawn RT_Animations_fnc_stopActing;
+*/
+
 // run on Local in Sheduled
 if ([_this, true, false] call RT_Utils_fnc_callByScriptName) exitWith {};
 

@@ -1,15 +1,19 @@
-#include "CfgPatches.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
 
-class CfgFunctions
+
+class CfgPatches
 {
     class RT_Pause
     {
-        class Pause
-        {
-            file = "rt\pause\Functions\Pause";
-            class StopStart;
-            class ShowHint;
-        };
+        name = "RT Compatibility - Pause";
+        requiredAddons[] = {"RT_Main"};
+        
+        units[] = {};
+        weapons[] = {};
+
+        author = "Kompoman32";
+        requiredVersion = 1.60;
+        skipWhenMissingDependencies = 0;
     };
 };

@@ -19,7 +19,3 @@ RT_SETTINGS_MOVEMENT_enable_ladderSlide = "SETTINGS_RT_SETTINGS_MOVEMENT_enable_
     true,
     1
 ] call CBA_fnc_addSetting;
-
-
-
-

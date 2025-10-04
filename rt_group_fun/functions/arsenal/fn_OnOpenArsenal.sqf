@@ -1,3 +1,12 @@
+/*
+    Description: Обработчик открытия арсенала
+    Author: Kompoman32
+    Made for: RT group
+    
+    Examples:
+    * call RT_Fun_fnc_onOpenArsenal;
+*/
+
 if !(RT_SETTINGS_FUN_enable call CBA_settings_fnc_get) exitwith {};
 if !(RT_SETTINGS_FUN_enable_arsenal_music call CBA_settings_fnc_get) exitwith {};
 

@@ -1,3 +1,17 @@
+/*
+    Description: Обработка стадии диалога
+    Author: Kompoman32
+    Made for: RT group
+    
+    Arguments:
+    0: _speaker - Юниит, с которым ведётся Диалог
+    1: _stage - хэшмап стадии диалога
+    2: _silent - запуск стадии без звуковой дорожки (default: false)
+    
+    Examples:
+    * [_speaker, _stage, true] call RT_Dialog_fnc_showStage;
+*/
+
 private _TextBottomY = safeZoneY + safeZoneH * 0.95833334;
 private _ControlsGap = 0.02356903;
 

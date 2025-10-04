@@ -1,14 +1,17 @@
+#include "CfgEventHandlers.hpp"
+#include "CfgFunctions.hpp"
+
 class CfgPatches
 {
-    class RT_Pause
+    class RT_Interface
     {
-        name = "RT Compatibility - Pause";
+        name = "RT Compatibility - Interface";
         requiredAddons[] = {"RT_Main"};
         
         units[] = {};
         weapons[] = {};
 
-        author = "Kompoman32";
+        author = "Kompoman32 && WebKnight";
         requiredVersion = 1.60;
         skipWhenMissingDependencies = 0;
     };

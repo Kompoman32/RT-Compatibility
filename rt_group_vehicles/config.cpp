@@ -1,3 +1,4 @@
+#include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"
     
 class CfgPatches

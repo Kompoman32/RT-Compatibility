@@ -1,3 +1,15 @@
+/*
+    Description: Останавливает анимацию Действий, Танцев или Эмоций на юните
+    Author: Kompoman32
+    Made for: RT group
+    
+    Arguments:
+    0: _unit - Юнит для остановки анимации
+    
+    Examples:
+    * [_unit] call RT_Animations_fnc_stopAnimation;
+*/
+
 // run on Local in Sheduled
 if ([_this, true, false] call RT_Utils_fnc_callByScriptName) exitWith {};
 

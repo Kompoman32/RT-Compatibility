@@ -6,6 +6,7 @@ RT_SETTINGS_category_initialization = "RT Group Compatibility - Initialization";
 #include "spectator\settings.sqf";
 #include "support\settings.sqf";
 #include "fun\settings.sqf";
+#include "interface\settings.sqf";
 #include "medical\settings.sqf";
 #include "movement\settings.sqf";
 #include "medical_assistant\settings.sqf";

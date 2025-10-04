@@ -1,3 +1,19 @@
+/*
+    Description: Добавляет в ящик патроны игроков для пополнения
+    Author: Kompoman32 & Voxtell
+    Made for: RT group
+
+    Arguments:
+    0: _ammoBox - ящик
+    1: _numPrim - колличество магазинов к основному оружия
+    2: _numHand - колличество магазинов к пистолету
+    3: _numSec - колличество патронов для Лаунчеров
+    4: _numUndBar - колличество подствольных гранат
+    
+    Examples:
+    * [_ammoBox, 5, 3, 1, 1] call RT_Items_fnc_createResupply;
+*/
+
 // isNill _ammoBox
 if (isNil {_this select 0}) exitWith {};
 

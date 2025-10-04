@@ -1,30 +1,28 @@
-/**
-  * Creates items on the position of the initialized object or with position and direction.
-  * 
-  * 0: _obj - object to get postition and direction (or position and direction => [x, y, z, direction])
-  * 1: _items - array of items with count:
-  *      _itemName   - name of item (ex: "30Rnd_65x39_caseless_mag")
-  *      _itemCount  - count of items
-  *      _isBackpack - is backpack (use it for adding backpacks, default: false)
-  * 
-  * Examples:
-  * 
-  * [this,
-  *     [
-  *         ["30Rnd_65x39_caseless_mag", 5],
-  *         ["Item_U_Rangemaster", 1],
-  *         ["B_Carryall_ocamo", 2, true]
-  *     ]
-  * ] call RT_Items_fnc_createItemStash;
-  * 
-  * Written by Kompoman32
-  * Designed by Voxtell
-  */
+/*
+    Description: Создаёт стэш с предметами на позиции инициализированного объекта, устанавливает то же положение и поворот 
+    Author: Kompoman32 & Voxtell
+    Made for: RT group
+
+    Arguments:
+    0: _posOrObj - объект для получения позиции и поворота (или позиция и направление [x, y, z, direction])
+    1: _items - список предметов для спавна (массив [_itemName, _itemCount, _isBackpack]): 
+        0: _itemName   - название предмета (пример: "30Rnd_65x39_caseless_mag")
+        1: _itemCount  - колличество предметов
+        2: _isBackpack - является ли рюкзаком (используется для добавления рюкзаков, default: false)
+    
+    Examples:
+    * [_posOrObj,
+        [
+          ["30Rnd_65x39_caseless_mag", 5],
+          ["Item_U_Rangemaster", 1],
+          ["B_Carryall_ocamo", 2, true]
+        ]
+      ] call RT_Items_fnc_createItemStash;
+*/
 
 if (!isServer) exitWith {
     diag_log "[E] RT_Items_fnc_createItemStash : cant spawn items stash on client, please execute it on Server";
 }
-
 
 params ["_obj", "_items"];
 

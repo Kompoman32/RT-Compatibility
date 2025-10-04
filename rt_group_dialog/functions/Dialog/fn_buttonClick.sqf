@@ -1,3 +1,15 @@
+/*
+    Description: Обработка нажатия на кнопку в диалоге
+    Author: Kompoman32
+    Made for: RT group
+    
+    Arguments:
+    0: _control - контрол кнопки
+    
+    Examples:
+    * [_control] call RT_Dialog_fnc_ButtonClick;
+*/
+
 params ["_control"];
 
 private _hash = _control getVariable ["_hash", createHashMap];

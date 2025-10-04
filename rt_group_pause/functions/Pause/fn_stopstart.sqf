@@ -1,4 +1,5 @@
 /*
+    Description: Останавливает/запускает симуляцию для игроков
     Author: Kompoman32
     Made for: RT group
     
