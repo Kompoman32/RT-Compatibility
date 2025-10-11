@@ -6,16 +6,16 @@ class ace_medical_treatment_actions
         treatmentTime="call RT_Medical_fnc_getBandageTime";
     };
 
-    // class SurgicalKit;
-    // class Suture: SurgicalKit {
-    //     displayName = "$STR_RT_Medical_Use_Suture";
-    //     items[] = {"ACE_suture"};
-    //     treatmentTime="RT_Medical_fnc_getStitchTime"
-    //     medicRequired = "0";
-    //     callbackProgress = "rt_medical_fnc_sutureProgress";
-    //     consumeItem = "false";
-    //     litter[] = {{"ACE_MedicalLitter_suture"}};
-    // };
+    class SurgicalKit;
+    class Suture: SurgicalKit {
+        displayName = "$STR_RT_Medical_Use_Suture";
+        items[] = {"ACE_suture"};
+        treatmentTime="RT_Medical_fnc_getStitchTime"
+        medicRequired = "0";
+        callbackProgress = "rt_medical_fnc_sutureProgress";
+        consumeItem = "false";
+        litter[] = {{"ACE_MedicalLitter_suture"}};
+    };
 };
 
 class ace_medical_replacementItems {

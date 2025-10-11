@@ -8,4 +8,13 @@ class CfgFunctions
             class wbkimmersive;
         };
     };
+
+    class RSS_IHUD
+    {
+        class Interface
+        {
+            file = "rt\interface\functions\interface";
+            class applyInterface;
+        };
+    };
 };

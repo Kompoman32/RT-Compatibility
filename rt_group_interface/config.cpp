@@ -11,7 +11,7 @@ class CfgPatches
         units[] = {};
         weapons[] = {};
 
-        author = "Kompoman32 && WebKnight";
+        author = "WebKnight && Rei && Kompoman32";
         requiredVersion = 1.60;
         skipWhenMissingDependencies = 0;
     };
