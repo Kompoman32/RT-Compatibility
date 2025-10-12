@@ -8,7 +8,7 @@ class CfgPatches
     class RT_Units
     {
         name = "RT Compatibility - Units";
-        requiredAddons[] = {"RT_Main"};     
+        requiredAddons[] = {"RT_Main", "ace_medical_treatment", "ace_medical_gui"};
         
         units[] = {};
         weapons[] = {};

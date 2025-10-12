@@ -8,6 +8,9 @@ class CfgFunctions
             class enemyWaves;
             class stalkF;
             class addCarry;
+            class canCarryAlivePlayer;
+            class canLoadAlivePlayer;
+            class canUnloadAlivePlayer;
         };
     };
 };

@@ -9,5 +9,14 @@
             <English>Disallow to carry yourself</English>
             <Russian>Запретить таскать себя</Russian>
         </Key>
+
+        <Key ID="STR_RT_UNITS_GUI_LoadAlivePlayer">
+            <English>Load AFK Player</English>
+            <Russian>Погрузить AFK игрока</Russian>
+        </Key>
+        <Key ID="STR_RT_UNITS_GUI_UnloadAlivePlayer">
+            <English>Unload AFK Player</English>
+            <Russian>Выгрузить AFK игрока</Russian>
+        </Key>
     </Package>
 </Project>
