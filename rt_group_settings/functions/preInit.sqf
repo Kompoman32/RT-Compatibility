@@ -9,6 +9,7 @@ RT_SETTINGS_category_initialization = "RT Group Compatibility - Initialization";
 #include "interface\settings.sqf";
 #include "medical\settings.sqf";
 #include "movement\settings.sqf";
+#include "pager\settings.sqf";
 #include "medical_assistant\settings.sqf";
 #include "vehicles\settings.sqf";
 
