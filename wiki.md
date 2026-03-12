@@ -869,7 +869,7 @@ default:
 [] remoteExec ["RT_Utils_fnc_stopTimer", 0, true]
 ```
 
-###  RT_Utils_getAllPlayersWithoutCurators
+###  RT_Utils_fnc_getAllPlayersWithoutCurators
 **Описание**:  Возвращает список юнитов Игроков, исключая юниты, принадлежащие Зевсам.
 
 **Локальность**: Loc A
@@ -886,7 +886,7 @@ default:
 call RT_Utils_fnc_getAllPlayersWithoutCurators; // если на сервере player1, player2, zeus1 то возвращается [player1, player2]
 ```
 
-###  RT_Utils_getAllCuratorUnits
+###  RT_Utils_fnc_getAllCuratorUnits
 **Описание**:  Возвращает список юнитов, принадлежащих Зевсам.
 
 **Локальность**: Loc A
@@ -900,7 +900,7 @@ call RT_Utils_fnc_getAllPlayersWithoutCurators; // если на сервере 
 
 **Примеры**: 
 ```sqf
-call RT_Utils_getAllCuratorUnits; // если на сервере player1, player2, zeus1 то возвращается [zeus1]
+call RT_Utils_fnc_getAllCuratorUnits; // если на сервере player1, player2, zeus1 то возвращается [zeus1]
 ```
 
 ## rt_group_vehicles

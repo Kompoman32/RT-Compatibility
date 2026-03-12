@@ -3,6 +3,7 @@
 #include "CfgSounds.hpp"
 #include "CfgGlasses.hpp"
 #include "CfgEventHandlers.hpp"
+#include "RscAttributes.hpp"
 
 class CfgPatches
 {
@@ -12,6 +13,8 @@ class CfgPatches
         requiredAddons[] = {
             "RT_Main",
             "RT_Support",
+            "A3_Ui_F",
+            "A3_3DEN",
             "A3_Sounds_F",
             "ace_common",
             "ace_goggles",

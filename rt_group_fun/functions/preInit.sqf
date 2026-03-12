@@ -13,9 +13,15 @@ RT_FUN_VAR_ARSENAL_CLOSED_HANDLER = "VARS_RT_FUN_VAR_ARSENAL_CLOSED_HANDLER";
 // (local missionNamespace) sound id при открытом арсенале
 RT_FUN_VAR_ARSENAL_MUSIC = "VARS_RT_FUN_VAR_ARSENAL_MUSIC";
 
+// (local missionNamespace) IDD дисплея Ace Арсенала
+RT_FUN_VAR_ARSENAL_IDD = 1127001;
+RT_FUN_VAR_ARSENAL_SOUND_BUTTON_IDC = 999;
 // (local missionNamespace) пул музык при открытом арсенале
-RT_FUN_VAR_ARSENAL_MUSIC_POOL = ["RTArsenalMusic"];
+RT_FUN_VAR_ARSENAL_MUSIC_POOL = [];
 // (local missionNamespace) spawn на проверку что музыка закончилась и надо новую поставить
 RT_FUN_VAR_ARSENAL_MUSIC_POOL_SPAWN = "VARS_RT_FUN_VAR_ARSENAL_MUSIC_POOL_SPAWN";
 // (local missionNamespace) индекс текущей музыки в пуле музыки при открытом арсенале
 RT_FUN_VAR_ARSENAL_MUSIC_INDEX = "VARS_RT_FUN_VAR_ARSENAL_MUSIC_INDEX";
+
+// (local missionNamespace) Выключена ли музыка локально
+RT_FUN_VAR_ARSENAL_DISABLE_MUSIC = false;

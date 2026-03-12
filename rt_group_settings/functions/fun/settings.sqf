@@ -34,6 +34,7 @@ RT_SETTINGS_FUN_enable_arsenal_music = "SETTINGS_RT_SETTINGS_FUN_enable_arsenal_
     ["Включить фоновую музыку в арсенале", ""],
     [RT_SETTINGS_category, _subCategoryStr],
     false,
-    1
+    1,
+    RT_FUN_fnc_arsenalOnSettingChange
 ] call CBA_fnc_addSetting;
 

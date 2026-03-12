@@ -7,41 +7,32 @@
     * call RT_Fun_fnc_onOpenArsenal;
 */
 
-if !(RT_SETTINGS_FUN_enable call CBA_settings_fnc_get) exitwith {};
-if !(RT_SETTINGS_FUN_enable_arsenal_music call CBA_settings_fnc_get) exitwith {};
+if !(RT_SETTINGS_FUN_enable call CBA_settings_fnc_get && RT_SETTINGS_FUN_enable_arsenal_music call CBA_settings_fnc_get) exitwith {
+    [false] call RT_FUN_fnc_arsenalMusicShowButton;
+};
 
-private _soundName = selectRandom RT_FUN_VAR_ARSENAL_MUSIC_POOL;
-private _index = RT_FUN_VAR_ARSENAL_MUSIC_POOL find _soundName;
+if (!RT_FUN_VAR_ARSENAL_DISABLE_MUSIC) then {
 
-if (_index < 0) exitWith {};
+    private _index = [] call RT_FUN_fnc_startArsenalMusic;
 
-private _sound = playSoundUI [_soundName];
+    if (_index < 0) exitWith {};
 
-missionNamespace setVariable [RT_FUN_VAR_ARSENAL_MUSIC_INDEX, _index];
-missionNamespace setVariable [RT_FUN_VAR_ARSENAL_MUSIC, _sound];
+    [missionNamespace, RT_FUN_VAR_ARSENAL_MUSIC_POOL_SPAWN, [], {
+        waitUntil {
+            private _sound = missionNamespace getVariable [RT_FUN_VAR_ARSENAL_MUSIC, nil];
+            if (isNil "_sound") exitWith{true};
 
-[missionNamespace, RT_FUN_VAR_ARSENAL_MUSIC_POOL_SPAWN, [], {
-    waitUntil {
-        private _sound = missionNamespace getVariable [RT_FUN_VAR_ARSENAL_MUSIC, nil];
-        if (isNil "_sound") exitWith{true};
+            if ((soundParams _sound) isEqualTo []) then {
+                private _index = [true] call RT_FUN_fnc_startArsenalMusic;
 
-        if (soundParams _sound isEqualTo []) then {
-            private _index = missionNamespace getVariable [RT_FUN_VAR_ARSENAL_MUSIC_INDEX, nil];
+                if (isNil "_index") exitWith{true};
+            };
 
-            if (isNil "_index") exitWith{true};
+            sleep 1;
 
-            _index = (_index + 1) mod (count RT_FUN_VAR_ARSENAL_MUSIC_POOL);
-
-            private _soundName = RT_FUN_VAR_ARSENAL_MUSIC_POOL select _index;
-    
-            _sound = playSoundUI [_soundName];
-
-            missionNamespace setVariable [RT_FUN_VAR_ARSENAL_MUSIC_INDEX, _index];
-            missionNamespace setVariable [RT_FUN_VAR_ARSENAL_MUSIC, _sound];
+            false
         };
+    }] call RT_Utils_fnc_addScriptHandler;
+};
 
-        sleep 1;
-
-        false
-    }    
-}] call RT_Utils_fnc_addScriptHandler;
+[true] call RT_FUN_fnc_arsenalMusicShowButton;

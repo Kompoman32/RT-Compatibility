@@ -1,2 +1,7 @@
-params [["_time", 0]];
-waitUntil {(time > _time)};
+params [["_time", 1]];
+waitUntil {
+	if (time > _time) exitWith {true};
+
+	sleep 0.1;
+	false
+};

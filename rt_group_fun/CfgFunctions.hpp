@@ -7,6 +7,11 @@ class CfgFunctions
             file = "rt\fun\Functions\Arsenal";
             class onOpenArsenal;
             class onCloseArsenal;
+            class startArsenalMusic;
+            class stopArsenalMusic;
+            class arsenalOnSettingChange;
+            class onDisableLocalArsenalMusic;
+            class arsenalMusicShowButton;
         }
     };
 };

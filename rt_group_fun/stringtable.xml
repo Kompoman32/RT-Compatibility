@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="RT">
+    <Package name="FUN">
+        <Key ID="STR_RT_FUN_disable_music">
+            <English>Enable/Disable music</English>
+            <Russian>Включить/Выключить музыку</Russian>
+        </Key>
+    </Package>
+</Project>
