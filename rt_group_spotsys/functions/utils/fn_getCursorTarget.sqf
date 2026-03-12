@@ -1,0 +1,1 @@
+if (cursorTarget isEqualTo objNull) then {cursorObject} else {cursorTarget}
