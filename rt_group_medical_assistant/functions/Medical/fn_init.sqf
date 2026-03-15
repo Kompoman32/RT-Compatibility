@@ -15,7 +15,7 @@ if !(hasInterface) exitWith {};
                     private _unit = _x;
                     private _old_state = _unit getVariable ["RT_MedicalAssistentLastState", false];
 
-                    private _new_state = _unit getVariable ["ACE_isUnconscious", false];
+                    private _new_state = _unit getVariable ["ACE_isUnconscious", false] || !(alive _unit);
                     if (!(_new_state isEqualTo _old_state) && _new_state) then
                     {
                         playSound "warning_medical";

@@ -7,6 +7,7 @@ class CfgFunctions
             class init
             {
                 file="rt\medical_assistant\Functions\Medical\fn_init.sqf";
+				postInit=0;
             };
         };
     };
