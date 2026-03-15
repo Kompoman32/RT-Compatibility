@@ -1,10 +1,17 @@
 params ["_unitFrom", "_unitTo", ["_debug", false]];
 
-private _validSide = [_unitTo] call RT_SpotSystem_fnc_canSeeBySide;
+private _valid = [_unitTo] call RT_SpotSystem_fnc_canSeeBySide;
 
-if (!_validSide) exitWith {false};
+if (!_valid) exitWith {false};
 
-if !(([_unitFrom, "VIEW", vehicle _unitTo] checkVisibility [eyePos _unitFrom, eyePos _unitTo]) > 0.8) exitWith {false};
+_minVisibility = 0.8;
+_visibility =  ([_unitFrom, "VIEW", vehicle _unitTo] checkVisibility [eyePos _unitFrom, eyePos _unitTo]);
+
+if ([_unitTo] call RT_SPOTSYSTEM_fnc_isGrenade) then {
+	_minVisibility = 0.2;
+};
+
+if (_visibility < _minVisibility) exitWith {false};
 
 _unitTo = vehicle _unitTo;
 
@@ -16,13 +23,17 @@ private _maxAngle = 58;
 if (abs _angle >= _maxAngle) exitWith {false};
 
 
-if (isPlayer _unitFrom && _unitFrom == player) then {
-	_center = _unitTo modelToWorldVisual (_unitTo selectionPosition "head_axis");
+if (_unitFrom == player) then {
+	_center = [_unitTo, "head_axis"] call RT_SpotSystem_fnc_drawEventGetCords;
 
 	if (_unitTo isKindOf "Man") then {
 		_positionHead = [_unitTo, "Head"] call RT_SpotSystem_fnc_drawEventGetCords;
 		_positionPelvis = [_unitTo, "Pelvis"] call RT_SpotSystem_fnc_drawEventGetCords;
 		_center = ((_positionHead vectorDiff _positionPelvis) vectorMultiply 1/2) vectorAdd _positionPelvis;
+	};
+
+	if ([_unitTo] call RT_SPOTSYSTEM_fnc_isGrenade) then {
+		_center = [_unitTo, "grenade"] call RT_SpotSystem_fnc_drawEventGetCords;
 	};
 
 	_cordOnScreen = worldToScreen _center;

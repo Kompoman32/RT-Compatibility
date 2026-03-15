@@ -18,7 +18,7 @@ if (_enable) then {
 						[_x, true] call RT_SpotSystem_fnc_clientSpotTarget;
 					};
 				};
-			} forEach allUnits;
+			} forEach (allUnits + ((position player) nearObjects ["Grenade", 50]));
 
             sleep 1;
 

@@ -1,9 +1,21 @@
 params ["_unit"];
 
-_positionHeadAxis = _unit modelToWorldVisual (_unit selectionPosition "head_axis");
-// _positionHeadAxis set[2,(_positionHeadAxis select 2)+0.5];
+if (_unit isKindOf "Grenade" && !(RT_SETTINGS_SPOTSYSTEM_WALLHACK_spot_grenades call CBA_settings_fnc_get)) exitWith {};
 
-_distance = (player) distance (_positionHeadAxis); 
+_center = [_unit, "head_axis"] call RT_SpotSystem_fnc_drawEventGetCords;
+_isGrenade = [_unit] call RT_SPOTSYSTEM_fnc_isGrenade;
+
+if (_isGrenade) then {
+	_center = [_unit, "grenade"] call RT_SpotSystem_fnc_drawEventGetCords;
+};
+
+if (_unit isKindOf "Man") then {
+	_positionHead = [_unit, "Head"] call RT_SpotSystem_fnc_drawEventGetCords;
+	_positionPelvis = [_unit, "Pelvis"] call RT_SpotSystem_fnc_drawEventGetCords;
+	_center = ((_positionHead vectorDiff _positionPelvis) vectorMultiply 1/2) vectorAdd _positionPelvis;
+};
+
+_distance = (player) distance (_center); 
 
 _dif = ((getObjectViewDistance select 0)-_distance); 
 _alpha = (_dif/(getObjectViewDistance select 0)); 
@@ -20,19 +32,9 @@ _color = switch (side group _unit) do
 	default {[0.7,0.6,0,_alpha]}; 
 };
 
-_center = _positionHeadAxis;
-
-if (_unit isKindOf "Man") then {
-	_positionHead = [_unit, "Head"] call RT_SpotSystem_fnc_drawEventGetCords;
-	_positionPelvis = [_unit, "Pelvis"] call RT_SpotSystem_fnc_drawEventGetCords;
-	_center = ((_positionHead vectorDiff _positionPelvis) vectorMultiply 1/2) vectorAdd _positionPelvis;
+if (_isGrenade) then {
+	_color = [0.8,0,0, _alpha];
 };
-
-// _cordOnScreen = worldToScreen _center;
-
-// if (_cordOnScreen isEqualTo []) exitWith {};
-// if ((_cordOnScreen#0 + 0.5) > (safeZoneW + safeZoneX) || (_cordOnScreen#0 - 0.5) < safeZoneX) exitWith {};
-// if ((_cordOnScreen#1 + 0.5) > (safeZoneH + safeZoneY) || (_cordOnScreen#1 - 0.5) < safeZoneY) exitWith {};
 
 private _showName = (RT_SETTINGS_SPOTSYSTEM_show_text call CBA_settings_fnc_get) == 1;
 private _showDistance = (RT_SETTINGS_SPOTSYSTEM_show_text call CBA_settings_fnc_get) == 2;
@@ -49,8 +51,12 @@ if (_showName) then {
 	}
 };
 
-// _text = str (_unit getVariable["SpotTime", true]);
-
 _icon = RT_SETTINGS_SPOTSYSTEM_spot_icon call CBA_settings_fnc_get;
+_size = [1, 1];
 
-drawIcon3D [_icon,_color,_center, 1,1, 0, _text, 2, 0.02825, "RobotoCondensedBold","center",false]; 
+if (_isGrenade) then {
+	_icon = "rt\spotsys\images\grenade-icon-ca.paa";
+	_size = [0.4, 0.4];
+};
+
+drawIcon3D [_icon,_color,_center, _size#0,_size#1, 0, _text, 2, 0.02825, "RobotoCondensedBold","center",false]; 

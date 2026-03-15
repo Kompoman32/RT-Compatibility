@@ -35,6 +35,7 @@ class CfgFunctions
 			class canSee;
 			class canSeeBySide;
 			class isWallhackEnabled;
+			class isGrenade;
 		}
 	};
 };

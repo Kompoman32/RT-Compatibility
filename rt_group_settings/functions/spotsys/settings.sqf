@@ -17,6 +17,7 @@ RT_SETTINGS_SPOTSYSTEM_WALLHACK_enable = "SETTINGS_RT_SETTINGS_SPOTSYSTEM_WALLHA
 RT_SETTINGS_SPOTSYSTEM_WALLHACK_max_spot_time = "SETTINGS_RT_SETTINGS_SPOTSYSTEM_WALLHACK_max_spot_time";
 RT_SETTINGS_SPOTSYSTEM_WALLHACK_required_item = "SETTINGS_RT_SETTINGS_SPOTSYSTEM_WALLHACK_required_item";
 RT_SETTINGS_SPOTSYSTEM_WALLHACK_required_item_equipped = "SETTINGS_RT_SETTINGS_SPOTSYSTEM_WALLHACK_required_item_equipped";
+RT_SETTINGS_SPOTSYSTEM_WALLHACK_spot_grenades = "SETTINGS_RT_SETTINGS_SPOTSYSTEM_WALLHACK_spot_grenades";
 
 [
     RT_SETTINGS_SPOTSYSTEM_enable, "CHECKBOX",
@@ -139,7 +140,15 @@ RT_SETTINGS_SPOTSYSTEM_WALLHACK_required_item_equipped = "SETTINGS_RT_SETTINGS_S
 
 [
     RT_SETTINGS_SPOTSYSTEM_WALLHACK_required_item_equipped, "CHECKBOX",
-    ["Необходимый предмет должен быть экипирован", "Необходимый предмет должен быть экипирован, чтобы live-wallhack отмечал цели"],
+    ["Предмет должен быть экипирован", "Необходимый предмет должен быть экипирован, чтобы live-wallhack отмечал цели"],
+    [RT_SETTINGS_category, _subCategoryWalhackStr],
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    RT_SETTINGS_SPOTSYSTEM_WALLHACK_spot_grenades, "CHECKBOX",
+    ["Учитывать гранаты", "Гранаты тоже будут отмечаться, исключая гранаты на основе SmokeShell, incendiary и flashbang из ACE включаются"],
     [RT_SETTINGS_category, _subCategoryWalhackStr],
     false,
     1
