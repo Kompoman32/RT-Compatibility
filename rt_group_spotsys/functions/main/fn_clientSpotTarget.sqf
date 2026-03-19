@@ -14,6 +14,7 @@ if (_target in RT_SPOTSYS_AllSpottedTargets) then {
 		)
 	   ) exitWith {};
 	if (!([_target] call RT_SpotSystem_fnc_canSeeBySide)) exitWith {};
+	if (_target in RT_SPOTSYS_NonSpottableTargets) exitWith {};
 
 	RT_SPOTSYS_VAR_Hold_Key_Delay_LastCall = time;
 

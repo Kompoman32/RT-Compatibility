@@ -3,6 +3,7 @@ private _subCategoryWalhackStr = "SPOT SYSTEM - Anduril EagleEye";
 
 RT_SETTINGS_SPOTSYSTEM_enable = "SETTINGS_RT_SETTINGS_SPOTSYSTEM_enable";
 RT_SETTINGS_SPOTSYSTEM_spot_icon = "SETTINGS_RT_SETTINGS_SPOTSYSTEM_spot_icon";
+RT_SETTINGS_SPOTSYSTEM_check_uav = "SETTINGS_RT_SETTINGS_SPOTSYSTEM_check_uav";
 RT_SETTINGS_SPOTSYSTEM_spot_sound = "SETTINGS_RT_SETTINGS_SPOTSYSTEM_spot_sound";
 RT_SETTINGS_SPOTSYSTEM_spot_add_voice_and_anim = "SETTINGS_RT_SETTINGS_SPOTSYSTEM_spot_add_voice_and_anim";
 RT_SETTINGS_SPOTSYSTEM_max_spot_time = "SETTINGS_RT_SETTINGS_SPOTSYSTEM_max_spot_time";
@@ -21,7 +22,7 @@ RT_SETTINGS_SPOTSYSTEM_WALLHACK_spot_grenades = "SETTINGS_RT_SETTINGS_SPOTSYSTEM
 
 [
     RT_SETTINGS_SPOTSYSTEM_enable, "CHECKBOX",
-    ["Включить Spot систему", "Включить Simple Spot System by crub (+Anduril EagleEye)"],
+    ["Включить Spot систему*", "Включить Simple Spot System by crub (+Anduril EagleEye)"],
     [RT_SETTINGS_category, _subCategoryStr],
     false,
     1,
@@ -54,9 +55,17 @@ RT_SETTINGS_SPOTSYSTEM_WALLHACK_spot_grenades = "SETTINGS_RT_SETTINGS_SPOTSYSTEM
 
 [
     RT_SETTINGS_SPOTSYSTEM_spot_icon, "EDITBOX",
-    ["Иконка", "Показываемая иконка (+Anduril EagleEye)"],
+    ["Иконка*", "Показываемая иконка (+Anduril EagleEye)"],
     [RT_SETTINGS_category, _subCategoryStr],
     "a3\ui_f\data\igui\cfg\targeting\markedtarget_ca.paa",
+    1
+] call CBA_fnc_addSetting;
+
+[
+    RT_SETTINGS_SPOTSYSTEM_check_uav, "CHECKBOX",
+    ["Маркировать от лица UAV/UGV*", "Маркировать юнитов, при просмотре от лица UAV/UGV (+Anduril EagleEye)"],
+    [RT_SETTINGS_category, _subCategoryStr],
+    false,
     1
 ] call CBA_fnc_addSetting;
 
@@ -70,7 +79,7 @@ RT_SETTINGS_SPOTSYSTEM_WALLHACK_spot_grenades = "SETTINGS_RT_SETTINGS_SPOTSYSTEM
 
 [
     RT_SETTINGS_SPOTSYSTEM_show_text, "LIST",
-    ["Текст под иконкой", "Какой тип текста показывать под иконкой цели (+Anduril EagleEye)"],
+    ["Текст под иконкой*", "Какой тип текста показывать под иконкой цели (+Anduril EagleEye)"],
     [RT_SETTINGS_category, _subCategoryStr],
     [
         [0,1,2],
@@ -82,28 +91,28 @@ RT_SETTINGS_SPOTSYSTEM_WALLHACK_spot_grenades = "SETTINGS_RT_SETTINGS_SPOTSYSTEM
 
 [
     RT_SETTINGS_SPOTSYSTEM_show_EAST, "CHECKBOX",
-    ["Маркировать EAST", "Маркировать юнитов стороны EAST (+Anduril EagleEye)"],
+    ["Маркировать EAST*", "Маркировать юнитов стороны EAST (+Anduril EagleEye)"],
     [RT_SETTINGS_category, _subCategoryStr],
     true,
     1
 ] call CBA_fnc_addSetting;
 [
     RT_SETTINGS_SPOTSYSTEM_show_WEST, "CHECKBOX",
-    ["Маркировать WEST", "Маркировать юнитов стороны WEST (+Anduril EagleEye)"],
+    ["Маркировать WEST*", "Маркировать юнитов стороны WEST (+Anduril EagleEye)"],
     [RT_SETTINGS_category, _subCategoryStr],
     true,
     1
 ] call CBA_fnc_addSetting;
 [
     RT_SETTINGS_SPOTSYSTEM_show_RESISTANCE, "CHECKBOX",
-    ["Маркировать RESISTANCE", "Маркировать юнитов стороны RESISTANCE (+Anduril EagleEye)"],
+    ["Маркировать RESISTANCE*", "Маркировать юнитов стороны RESISTANCE (+Anduril EagleEye)"],
     [RT_SETTINGS_category, _subCategoryStr],
     true,
     1
 ] call CBA_fnc_addSetting;
 [
     RT_SETTINGS_SPOTSYSTEM_show_CIVILIAN, "CHECKBOX",
-    ["Маркировать CIVILIAN", "Маркировать юнитов стороны CIVILIAN (+Anduril EagleEye)"],
+    ["Маркировать CIVILIAN*", "Маркировать юнитов стороны CIVILIAN (+Anduril EagleEye)"],
     [RT_SETTINGS_category, _subCategoryStr],
     true,
     1
